@@ -1,0 +1,143 @@
+/* Global responsive fixes shared across root + school pages */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img,
+video,
+iframe,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Keep fixed headers from crowding content on smaller viewports */
+@media (max-width: 1024px) {
+  .mainHeader,
+  .main-header {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .logoSec img,
+  .logo img {
+    max-height: 52px;
+    width: auto;
+  }
+
+  .page-header {
+    padding: 120px 16px 36px !important;
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.6rem, 6vw, 2.6rem) !important;
+    letter-spacing: 1px !important;
+    line-height: 1.2;
+  }
+
+  .content-section,
+  .gallery-container,
+  .facility-grid,
+  .academics,
+  .about-section,
+  .working-hours-section,
+  .school-outfit-section,
+  .reel-testimonials,
+  .footer {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* Mobile-first stacking for common multi-column blocks */
+@media (max-width: 768px) {
+  .facility-grid,
+  .reels-wrapper,
+  .footer-container,
+  .collage-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .mainDiv .mainSec h1,
+  .coverDiv .mainDiv .mainSec > h1 {
+    font-size: clamp(1.4rem, 6vw, 2rem) !important;
+    line-height: 1.25;
+  }
+
+  .mainDiv .mainSec p,
+  .coverDiv .mainDiv .mainSec > p {
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
+
+  .event-card,
+  .inspiring-container,
+  section[style*="display: flex"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .mainHeader .navItems a,
+  .main-header .main-nav a,
+  .navItems a {
+    font-size: 0.98rem !important;
+  }
+
+  /* Show mobile menu when active */
+  .main-nav.active {
+    display: flex !important;
+  }
+
+  /* Move mobile menu to right */
+  .main-nav {
+    right: 0 !important;
+    left: auto !important;
+    align-items: flex-end !important;
+    background: #ffe066 !important;
+  }
+  .main-nav a {
+    color: #111 !important;
+    font-weight: bold;
+    text-shadow: none !important;
+  }
+  .main-nav.active {
+    right: 0 !important;
+    left: auto !important;
+    align-items: flex-end !important;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding-top: 106px !important;
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.35rem, 7vw, 1.9rem) !important;
+  }
+
+  .gallery-container,
+  .facility-grid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}

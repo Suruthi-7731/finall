@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Procedure</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #bf50ac 0%, #2359b6 50%, #fbbf24 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 16px;
+      color: #111827;
+    }
+
+    .page-wrapper {
+      max-width: 960px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    }
+
+    .page-main {
+      padding: 32px 32px 28px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(59,130,246,0.06);
+      color: #1d4ed8;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    h1 {
+      font-size: clamp(1.7rem, 2.2vw, 2.2rem);
+      line-height: 1.25;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 20px;
+    }
+
+    .highlight-box {
+      background: #fef3c7;
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      color: #92400e;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .highlight-box strong {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .steps-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .steps-list {
+      list-style: none;
+      counter-reset: step;
+      display: grid;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .steps-list li {
+      position: relative;
+      padding-left: 34px;
+      font-size: 0.95rem;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    .steps-list li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #bf50ac, #f97316);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(191,80,172,0.35);
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .schools-links-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .schools-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .school-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: #111827;
+      background: #f9fafb;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .school-link span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+
+    .school-link.school1 span.dot {
+      background: #bf50ac;
+    }
+
+    .school-link.school2 span.dot {
+      background: #2359b6;
+    }
+
+    .school-link:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+      border-color: rgba(59,130,246,0.7);
+    }
+
+    .page-aside {
+      padding: 28px 24px;
+      background: radial-gradient(circle at top, #eff6ff, #eef2ff 50%, #fdf2ff 100%);
+      border-left: 1px solid rgba(148,163,184,0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-aside::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(191,80,172,0.18), transparent 55%),
+        radial-gradient(circle at 100% 0%, rgba(35,89,182,0.18), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .aside-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .aside-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .aside-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: #374151;
+      display: grid;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+
+    .aside-list li::before {
+      content: '•';
+      color: #6366f1;
+      margin-right: 6px;
+    }
+
+    .contact-box {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #111827;
+    }
+
+    .contact-box strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-box a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 840px) {
+      .page-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .page-aside {
+        border-left: none;
+        border-top: 1px solid rgba(148,163,184,0.4);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page-main {
+        padding: 22px 18px 18px;
+      }
+
+      .page-aside {
+        padding: 20px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <main class="page-main">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Admissions 2026 – 2027
+      </div>
+
+      <h1>Procedure for Admission and Withdrawal</h1>
+      <p class="subtitle">
+        Please read the following admission and withdrawal guidelines carefully before applying for any grade.
+      </p>
+
+      <div class="highlight-box">
+        <div>
+          <strong>Admission Schedule:</strong>
+          Admission to various grades commences in the first week of January / February / March, subject to seat availability.
+        </div>
+      </div>
+
+      <p class="steps-title">Admission guidelines</p>
+      <ul class="steps-list">
+        <li>
+          Admission to various grades commences in the first week of January / February / March each academic year.
+        </li>
+        <li>
+          Minimum age limits for admission to the various grades are as follows:<br>
+          LKG: <strong>3 years 5 months</strong> &nbsp;&nbsp;&nbsp; UKG: <strong>4 years 5 months</strong> &nbsp;&nbsp;&nbsp; Grade I: <strong>5 years onwards</strong>.
+        </li>
+        <li>
+          The cut off dates as mentioned above will be considered from June. The age criteria will apply correspondingly for all successive classes.
+        </li>
+        <li>
+          During admission, an original copy of the performance card, Birth Certificate, Community Certificate and Transfer Certificate should be submitted along with the filled‑in application. These documents will remain in the custody of the school administration.
+        </li>
+        <li>
+          The child&apos;s passport size photograph should be affixed on the application form at the time of submission.
+        </li>
+        <li>
+          An entrance exam will be conducted for students seeking admission from Std I to X during the second week of March. The list of selected students will be displayed on the school notice board.
+        </li>
+        <li>
+          Admission is confirmed only on submission of all the required documents and payment of the registration fee as notified by the school.
+        </li>
+      </ul>
+
+      <p class="steps-title">Withdrawal policy</p>
+      <p class="note">
+        The school management would appreciate a written request filed by the parent for the withdrawal of their child by <strong>January</strong>. In case such a request is not submitted, kindly note that the first terminal fee is to be remitted.
+      </p>
+
+      <p class="steps-title">Fees remittance</p>
+      <ul class="steps-list">
+        <li>
+          Fees may be paid annually or in three scheduled instalments through the challan in the bank notified by the school. Fees once paid are <strong>not refundable</strong>.
+        </li>
+        <li>
+          In cases of non‑payment of fees, a sum of <strong>one hundred rupees per day</strong> will be charged as fine up to a maximum of 7 days, after which the name of the student will be struck off from the rolls.
+        </li>
+        <li>
+          Students joining or leaving the school during the academic year should pay the fees for the <strong>whole year</strong>.
+        </li>
+        <li>
+          Students with fee arrears will not be permitted to attend the examinations.
+        </li>
+      </ul>
+
+      <p class="note" style="font-style: italic; text-align: right;">
+        “With God, all things are possible.”
+      </p>
+
+      <p class="schools-links-title">Quick navigation</p>
+      <div class="schools-links">
+        <a href="school1/index.html" class="school-link school1">
+          <span class="dot"></span>
+          <span>Bharathi Vidhyaa Kendhra</span>
+        </a>
+        <a href="school2/index.html" class="school-link school2">
+          <span class="dot"></span>
+          <span>Bharathi Kids Kshethralaya</span>
+        </a>
+      </div>
+    </main>
+
+    <aside class="page-aside">
+      <div class="aside-inner">
+        <p class="aside-title">What to keep ready?</p>
+        <ul class="aside-list">
+          <li>Student&apos;s birth certificate</li>
+          <li>Recent passport size photographs</li>
+          <li>Previous school progress report / TC (for higher classes)</li>
+          <li>Address proof of parent / guardian</li>
+          <li>Community certificate (if applicable)</li>
+        </ul>
+<br>
+        <div class="contact-box">
+          <strong>For admission assistance – Bharathi Vidhyaa Kendhra</strong>
+          <span>Bharathi Vidhyaa Kendhra</span><br>
+          <span>Mangalam to Avinashi Main Road, Avinashi - 641 654</span><br>
+          <span>Phone: +91 87540 91999</span><br>
+          <span>Email:bvkicse@gmail.com</span>
+        </div>
+        <br>
+        <div class="contact-box">
+          <strong>For admission assistance – Bharathi Kids Kshethralaya</strong>
+          <span>Bharathi Kids Kshethralaya</span><br>
+          <span>No.7 , College Road , Konganagiri Bus Stop , Tiruppur - 641602</span><br>
+          <span>Phone: 0421-2208573 , 0421-2239299</span><br>
+          <span>Email: bharathikidskshethralaya@gmail.com</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>

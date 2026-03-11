@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure - BVK School</title>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style>
+
+/* ================= HEADER ================= */
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.mainHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #003399;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.navItems a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navItems a:hover,
+.navItems a.active {
+    color: #FFD700;
+}
+
+/* ================= PAGE HEADER ================= */
+
+  .page-header {
+            padding: 120px 20px 40px;
+           background: linear-gradient(rgba(0, 51, 255, 0.908), rgba(4, 42, 130, 0.982)), url('../school1.jpg');
+            text-align: center;
+            color: white;
+        }
+
+
+/* ================= FACILITY GRID ================= */
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 80px 10%;
+}
+
+.facility-card {
+    background: #faf9f7;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.facility-card h3 {
+    padding: 20px 20px 10px;
+    color: #003399;
+}
+
+.facility-card p {
+    padding: 0 20px 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #003399;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* ================= GALLERY MODAL ================= */
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-modal img {
+    max-width: 85%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close-gallery {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+.gallery-prev { left: 40px; }
+.gallery-next { right: 40px; }
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .facility-grid {
+        padding: 50px 20px;
+    }
+
+    .gallery-modal img {
+        max-width: 95%;
+        max-height: 70%;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        font-size: 28px;
+    }
+
+    .close-gallery {
+        font-size: 30px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+  .navItems {
+    display: none;
+  }
+}
+
+</style>
+
+  <link rel='stylesheet' href='../mobile-fixes.css'>
+</head>
+
+<body>
+
+<header class="mainHeader">
+    <div>
+        <a href="index.html"><img src="img/logo2.png" alt="Logo" style="height:50px;"></a>
+    </div>
+    <nav class="navItems">
+        <a href="index.html">Home</a>
+        <a href="infrastructure.html" class="active">Infrastructure</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Our Infrastructure</h1>
+    <p>World-class facilities for a world-class education</p>
+</section>
+
+<section class="facility-grid">
+
+    <div class="facility-card" onclick="openGallery(0)">
+        <img src="img/infra.jpeg" alt="Smart classrooms">
+        <h3>Smart Classrooms</h3>
+        <p>Spacious, airy, E-smart classrooms with personalized attention.</p>
+    </div>
+
+    <div class="facility-card" onclick="openGallery(1)">
+        <img src="img/chem_lab.png" alt="Science laboratory">
+        <h3>Advanced Science Labs</h3>
+        <p>Fully equipped Physics, Chemistry, Computer and Biology labs.</p>
+    </div>
+
+    <div class="facility-card" onclick="openGallery(2)">
+        <img src="img/library.jpeg" alt="School library">
+        <h3>World Class Library</h3>
+        <p>Well-equipped library to kindle the spirit of inquiry.</p>
+    </div>
+
+    <div class="facility-card" onclick="openGallery(3)">
+        <img src="img/ground.jpeg" alt="School playground">
+        <h3>Largest Play Ground</h3>
+        <p>Exclusive practice and coaching for sports activities.</p>
+    </div>
+
+    <div class="facility-card" onclick="openGallery(4)">
+        <img src="img/play3.jpeg" alt="Kids play area">
+        <h3>Kids Play Area</h3>
+        <p>The Palyground is only for the Kindergarden students.</p>
+    </div>
+
+</section>
+
+<footer class="footer">
+    &copy; 2026 Bharathi Kids Kshethralaya. All Rights Reserved.
+</footer>
+
+<!-- GALLERY MODAL -->
+<div class="gallery-modal" id="galleryModal">
+    <span class="close-gallery">&times;</span>
+    <span class="gallery-prev">&#10094;</span>
+    <img id="galleryImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Gallery image">
+    <span class="gallery-next">&#10095;</span>
+</div>
+
+<script>
+
+const galleries = [
+
+    ["img/infra.jpeg","img/infra5.jpeg","img/infra3.jpeg","img/infra4.jpeg","img/infra2.jpeg"],
+    ["img/chem_lab.jpeg","img/chem_lab2.jpeg","img/chem_lab3.jpeg","img/phy_lab.jpeg","img/phy_lab2.jpeg","img/phy_lab3.jpeg","img/phy_lab4.jpeg","img/bio_lab.jpeg","img/computer_lab3.jpeg","img/computer_lab.jpeg","img/computer_lab2.jpeg"],
+    ["img/library.jpeg"],
+    ["img/ground.jpeg"],
+    ["img/play3.jpeg","img/play4.jpeg","img/play.jpeg","img/play2.jpeg"]
+
+];
+
+let currentGallery = [];
+let currentIndex = 0;
+
+const modal = document.getElementById("galleryModal");
+const modalImg = document.getElementById("galleryImage");
+
+function openGallery(index) {
+    currentGallery = galleries[index];
+    currentIndex = 0;
+    modal.style.display = "flex";
+    showImage();
+}
+
+function showImage() {
+    modalImg.src = currentGallery[currentIndex];
+}
+
+function changeImage(step) {
+    currentIndex += step;
+    if (currentIndex >= currentGallery.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = currentGallery.length - 1;
+    showImage();
+}
+
+document.querySelector(".gallery-next").onclick = () => changeImage(1);
+document.querySelector(".gallery-prev").onclick = () => changeImage(-1);
+document.querySelector(".close-gallery").onclick = () => modal.style.display = "none";
+
+/* Swipe Support */
+let startX = 0;
+
+modal.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+});
+
+modal.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) changeImage(1);
+    if (endX - startX > 50) changeImage(-1);
+});
+
+</script>
+
+    <script src="../js/mobile-nav-school-pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - BVK School</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index-responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='../mobile-fixes.css'>
+
+    <style>
+        /* 🔥 Prevent Layout Issues */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            padding-top: 100px; /* space for fixed header */
+        }
+
+         .page-header {
+            padding: 35px 20px 40px;
+            background:  linear-gradient(135deg, #c64fb9cf 0%, #a94899e1 100%), url('../school1.jpg');
+            text-align: center;
+            color: white;
+        }
+      
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            padding: 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: stretch;
+            justify-items: stretch;
+        }
+
+        .event-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 🔥 CRITICAL FIX FOR DESKTOP */
+        .event-img {
+            height: 240px !important;
+            min-height: 240px;
+            width: 100%;
+            background-color: #f0f0f0;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            display: block !important;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .event-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .event-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .event-content h3 {
+            color: #D6008D;
+            margin-bottom: 5px;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .event-date {
+            font-weight: 700;
+            color: #FF6600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+        }
+
+        .event-content p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .mainHeader {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #a94899e1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navItems a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navItems a:hover,
+        .navItems a.active {
+            color: #FF6600;
+            /* Orange Hover/Active */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mainHeader">
+        <div class="logoSec">
+            <a href="index.html">
+                <img src="img/logo.png" alt="BVK School Logo" style="height: 60px; width: auto;">
+            </a>
+        </div>
+        <nav class="navItems">
+            <a href="index.html">Home</a>
+            <a href="infrastructure.html">Infrastructure</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html" class="text-orange">Events</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Upcoming &amp; Past Events</h1>
+        <p style="color:aliceblue;">Celebrating milestones and fostering community</p>
+    </section>
+
+    <div class="events-grid">
+
+        <div class="event-card">
+            <div class="event-img">
+                <img src="img/brown.png" alt="Brown Day Celebration">
+            </div>
+            <div class="event-content">
+                <span class="event-date">March 9, 2025</span>
+                <h3>Brown Day Celebration</h3>
+                <p>A day of athletic excellence and house spirit. Join us for a variety of track and field events.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-img">
+                <img src="img/christmas.png" alt="Christmas Celebration">
+            </div>
+            <div class="event-content">
+                <span class="event-date">December 25, 2025</span>
+                <h3>Christmas Celebration</h3>
+                <p>Witness the creativity and innovation of our students as they showcase their Extra-Curricular Activities.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-img">
+                <img src="img/diwali.png" alt="Diwali Celebration">
+            </div>
+            <div class="event-content">
+                <span class="event-date">November 10, 2026</span>
+                <h3>Diwali Celebration</h3>
+                <p>An evening filled with music, dance, and drama, celebrating the diverse talents of our BVK community.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-img">
+                <img src="img/grandparents.png" alt="Grandparents Day Celebration">
+            </div>
+            <div class="event-content">
+                <span class="event-date">April 5, 2025</span>
+                <h3>Grandparents Day Celebration</h3>
+                <p>An evening filled with music, dance, and drama, celebrating the diverse talents of our BVK community.
+                </p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-img">
+                <img src="img/green.png" alt="Green Day">
+            </div>
+            <div class="event-content">
+                <span class="event-date">March 16, 2025</span>
+                <h3>Green Day</h3>
+                <p>An evening filled with music, dance, and drama, celebrating the diverse talents of our BVK community.
+                </p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-img">
+                <img src="img/onam.png" alt="Onam Celebration">
+            </div>
+            <div class="event-content">
+                <span class="event-date">August 26, 2026</span>
+                <h3>Onam Celebration</h3>
+                <p>An evening filled with music, dance, and drama, celebrating the diverse talents of our BVK community.
+                </p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-img">
+                <img src="img/pink.png" alt="Pink Day">
+            </div>
+            <div class="event-content">
+                <span class="event-date">February 10, 2026</span>
+                <h3>Pink Day</h3>
+                <p>An evening filled with music, dance, and drama, celebrating the diverse talents of our BVK community.
+                </p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-img">
+                <img src="img/pongal.png" alt="Pongal Celebration">
+            </div>
+            <div class="event-content">
+                <span class="event-date">January 13, 2026</span>
+                <h3>Pongal Celebration</h3>
+                <p>An evening filled with music, dance, and drama, celebrating the diverse talents of our BVK community.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer style=" background: #9b5098e7; color:white; padding:40px; text-align:center;">
+        <p style="color:rgb(247, 245, 243);">&copy; 2026 Bharathi Vidhyaa Kendhra School. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/mobile-nav-school-pages.js"></script>
+</body>
+
+
+</html>
+
+
+
+

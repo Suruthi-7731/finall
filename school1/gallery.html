@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - BVK School</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index-responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .page-header {
+            padding: 130px 20px 50px;
+            background:  linear-gradient(135deg, #c64fb9cf 0%, #a94899e1 100%), url('../school1.jpg');
+            text-align: center;
+            color: white;
+        }
+
+        .gallery-container {
+            padding: 80px 10%;
+            columns: 3 300px;
+            column-gap: 20px;
+        }
+
+        .gallery-item {
+            margin-bottom: 20px;
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+        }
+
+        .mainHeader {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background:  #a94899e1;
+            /* Solid Pink */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navItems a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navItems a:hover,
+        .navItems a.active {
+            color: #FF6600;
+            /* Orange Hover/Active */
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                columns: 1 100%;
+                padding: 50px 16px;
+                column-gap: 0;
+            }
+        }
+    </style>
+
+  <link rel='stylesheet' href='../mobile-fixes.css'>
+</head>
+
+<body>
+
+    <header class="mainHeader">
+        <div class="logoSec">
+            <a href="index.html">
+                <img src="img/logo.png" alt="BVK School Logo" style="height: 60px; width: auto;">
+            </a>
+        </div>
+        <nav class="navItems">
+            <a href="index.html">Home</a>
+            <a href="infrastructure.html">Infrastructure</a>
+            <a href="gallery.html" class="text-orange">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>School Gallery</h1>
+        <p style="color:aliceblue;">Capturing the vibrant life at BVK</p>
+    </section>
+
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="img/TON00012.JPG" alt="Photo 1"></div>
+        <div class="gallery-item"><img src="img/TON00019.JPG" alt="Photo 2"></div>
+        <div class="gallery-item"><img src="img/TON00023.JPG" alt="Photo 3"></div>
+        <div class="gallery-item"><img src="img/TON00028.JPG" alt="Photo 4"></div>
+        <div class="gallery-item"><img src="img/TON00075.JPG" alt="Photo 6"></div>
+        <div class="gallery-item"><img src="img/TON00091.JPG" alt="Photo 7"></div>
+        <div class="gallery-item"><img src="img/TON00098.JPG" alt="Photo 8"></div>
+        <div class="gallery-item"><img src="img/TON00106.JPG" alt="Photo 9"></div>
+        <div class="gallery-item"><img src="img/TON00071.JPG" alt="Photo 11"></div>
+        <div class="gallery-item"><img src="img/TON00077.JPG" alt="Photo 12"></div>
+        <div class="gallery-item"><img src="img/TON00103.JPG" alt="Photo 13"></div>
+    </div>
+
+    <footer class="footer" style=" background: #9b5098e7; color:white; padding:40px; text-align:center;">
+        <p style="color:rgb(255, 255, 255);">&copy; 2026 Bharathi Vidhyaa Kendhra School. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/mobile-nav-school-pages.js"></script>
+</body>
+
+
+</html>
+
+
+
+
