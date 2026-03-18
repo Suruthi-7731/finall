@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - BVK School</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index-responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .page-header {
+            padding: 150px 20px 50px;
+            background: linear-gradient(rgba(0, 51, 255, 0.908), rgba(4, 42, 130, 0.982)), url('../school1.jpg');
+            text-align: center;
+            color: white;
+        }
+
+        .thankyou-wrap {
+            display: flex;
+            justify-content: center;
+            padding: 40px 16px 80px;
+        }
+
+        .thankyou-card {
+            width: min(900px, 92%);
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        .thankyou-card h2 {
+            margin-top: 0;
+        }
+
+        .thankyou-card p {
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .thankyou-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 26px;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+        }
+
+        .primary-btn {
+            background: #003399;
+            color: #ffffff;
+        }
+
+        .primary-btn:hover {
+            background: #002266;
+            transform: translateY(-2px);
+        }
+
+        .secondary-btn {
+            background: #ffffff;
+            color: #003399;
+            border: 1px solid #003399;
+        }
+
+        .secondary-btn:hover {
+            background: #e6ecff;
+            transform: translateY(-2px);
+        }
+
+        .mainHeader {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #003399;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navItems a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navItems a:hover,
+        .navItems a.active {
+            color: #FFD700;
+        }
+    </style>
+
+  <link rel='stylesheet' href='../mobile-fixes.css'>
+</head>
+
+<body>
+    <header class="mainHeader">
+        <div class="logoSec">
+            <a href="index.html">
+                <img src="img/logo2.png" alt="BVK School Logo" style="height: 60px; width: auto;">
+            </a>
+        </div>
+        <nav class="navItems">
+            <a href="index.html">Home</a>
+            <a href="infrastructure.html">Infrastructure</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="text-yellow">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Thank You</h1>
+        <p style="color:#ddd;">We received your message</p>
+    </section>
+
+    <section class="thankyou-wrap">
+        <div class="thankyou-card">
+            <h2 class="text-blue">Message Sent</h2>
+            <p>Our team will review your message and get back to you soon.</p>
+            <div class="thankyou-actions">
+                <a class="primary-btn" href="index.html">Back to Home</a>
+                <a class="secondary-btn" href="contact.html">Send Another</a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#003399; color:white; padding:40px; text-align:center;">
+        <p style="color:aliceblue;">&copy; 2026 Bharathi Kids Kshethralaya. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/mobile-nav-school-pages.js"></script>
+</body>
+
+</html>
