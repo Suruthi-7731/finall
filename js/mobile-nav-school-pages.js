@@ -57,11 +57,7 @@
       }
 
       .mainHeader .mobile-menu-header {
-        display: flex !important;
-        align-items: center;
-        justify-content: space-between;
-        padding: 14px 18px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        display: none !important;
       }
 
       .mainHeader .mobile-menu-header .school-name {

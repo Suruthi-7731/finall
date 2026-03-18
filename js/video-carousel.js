@@ -192,48 +192,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Desktop-specific hover functionality ---
+    // --- Desktop-specific hover functionality (drag removed) ---
     if (isDesktop) {
         cards.forEach((card, index) => {
-            // Enable drag scrolling for desktop
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
             card.addEventListener('mousedown', (e) => {
-                isDown = true;
                 bookCursor.style.transform = 'translate(-50%, -50%) rotate(45deg) scale(1.2)';
-                startX = e.pageX - scrollContainer.offsetLeft;
-                scrollLeft = scrollContainer.scrollLeft;
-                e.preventDefault();
             });
 
             card.addEventListener('mouseleave', () => {
-                isDown = false;
                 if (!isHovering) {
                     bookCursor.style.transform = 'translate(-50%, -50%) rotate(0deg) scale(1)';
                 }
             });
 
             card.addEventListener('mouseup', () => {
-                isDown = false;
                 if (!isHovering) {
                     bookCursor.style.transform = 'translate(-50%, -50%) rotate(0deg) scale(1)';
                 }
             });
-
-            card.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - scrollContainer.offsetLeft;
-                const walk = (x - startX) * 2;
-                scrollContainer.scrollLeft = scrollLeft - walk;
-                
-                // Animate book while dragging
-                bookCursor.style.transform = `translate(-50%, -50%) rotate(${45 + Math.sin(Date.now() * 0.01) * 10}deg) scale(1.2)`;
-            });
         });
     }
+
+    // --- Arrow Button Navigation (Event Delegation) ---
+    document.addEventListener('click', (e) => {
+        // Find closest button in case they clicked the inner <i> icon
+        const prevBtn = e.target.closest('.reel-prev');
+        const nextBtn = e.target.closest('.reel-next');
+        
+        if (!scrollContainer) return;
+        
+        const getScrollAmount = () => {
+            const card = scrollContainer.querySelector('.story-card');
+            return card ? card.offsetWidth + 24 : 300;
+        };
+
+        if (prevBtn) {
+            e.preventDefault();
+            scrollContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        } else if (nextBtn) {
+            e.preventDefault();
+            scrollContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        }
+    });
 
     // --- Add CSS animations ---
     const style = document.createElement('style');
@@ -350,18 +350,8 @@ unmuteBtns.forEach((btn, index) => {
             bookCursor.innerHTML = '📖';
             bookCursor.style.animation = '';
         }, 500);
-            btn.textContent = video.muted ? "UNMUTE 🔊" : "MUTE 🔇";
-            
-            // Book animation on mute/unmute
-            bookCursor.innerHTML = video.muted ? '📖' : '📗';
-            bookCursor.style.animation = 'bookBounce 0.5s ease-out';
-            
-            setTimeout(() => {
-                bookCursor.innerHTML = '📖';
-                bookCursor.style.animation = '';
-            }, 500);
-        });
     });
+});
 
     // --- Progress Tracking ---
 
@@ -372,16 +362,7 @@ unmuteBtns.forEach((btn, index) => {
         track.style.width = percentage + '%';
     });
 
-    // Smooth horizontal wheel scroll while pointer is over testimonials.
-    scrollContainer.addEventListener('wheel', (e) => {
-        const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-        if (delta === 0) return;
-        e.preventDefault();
-        scrollContainer.scrollBy({
-            left: delta * 0.9,
-            behavior: 'smooth'
-        });
-    }, { passive: false });
+    // Wheel scroll disabled to enforce arrow-only navigation
 
     // --- Handle window resize ---
     window.addEventListener('resize', () => {

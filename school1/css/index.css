@@ -1006,7 +1006,7 @@ p {
 @media (max-width: 900px) {
    .inspiring-container {
       flex-direction: column;
-      text-align: center;
+      text-align: left;
    }
 
    .collage-grid {
@@ -1020,10 +1020,17 @@ p {
 
    .inspiring-heading {
       font-size: 2.2rem;
-      margin-top: 30px;
+      margin-top: 20px !important;
+      text-align: left;
    }
 
    .view-all-btn {
-      margin: 0 auto;
+      margin: 0;
+   }
+}
+
+@media (max-width: 768px) {
+   .events-section-premium > div {
+      justify-content: flex-start !important;
    }
 }

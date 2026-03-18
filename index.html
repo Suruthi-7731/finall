@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bharathi group of Schools </title>
+  <title>Bharathi Group of Schools | Quality Education in Tiruppur & Avinashi</title>
+  <meta name="description" content="Bharathi Group of Schools offers holistic education through Bharathi Vidhyaa Kendhra (Avinashi) and Bharathi Kids Kshethralaya (Tiruppur). 25+ years of academic excellence, character building, and individual care.">
+  <meta property="og:title" content="Bharathi Group of Schools | Quality Education in Tiruppur">
+  <meta property="og:description" content="Two trusted schools with 25+ years of excellence — Bharathi Vidhyaa Kendhra & Bharathi Kids Kshethralaya.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="school1/img/logo.png">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel='stylesheet' href='mobile-fixes.css'>
   <link rel="stylesheet" href="school1/css/animations.css">
@@ -13,7 +19,8 @@
 
   <style>
     /* Custom cursor removed - using book-cursor.js instead */
-    body, html {
+    body,
+    html {
       background-color: #ffffff;
     }
 
@@ -63,55 +70,60 @@
       overflow: hidden;
     }
 
-      .hero-wrapper {
-        width: 100%;
+    .hero-wrapper {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0;
+    }
+
+    /* Maintain hero alignment for desktop zoom up to 190% */
+    @media (min-width: 1025px) {
+      .hero-section {
+        height: clamp(760px, 46vw, 1280px);
+        min-height: clamp(760px, 46vw, 1280px);
+      }
+
+      .container {
+        width: 100vw;
         max-width: 100vw;
-        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: stretch;
+        height: 100%;
+        min-height: 100%;
       }
 
-      /* Maintain hero alignment for desktop zoom up to 190% */
-      @media (min-width: 1025px) {
-        .hero-section {
-          height: clamp(760px, 46vw, 1280px);
-          min-height: clamp(760px, 46vw, 1280px);
-        }
-        .container {
-          width: 100vw;
-          max-width: 100vw;
-          display: flex;
-          flex-direction: row;
-          justify-content: stretch;
-          align-items: stretch;
-          height: 100%;
-          min-height: 100%;
-        }
-        .hero-section .card {
-          flex: 0 0 50%;
-          width: 50vw;
-          min-width: 320px;
-          height: 100%;
-          min-height: 100%;
-        }
-        .hero-section .card .slide2 {
-          padding: 0 8vw;
-        }
+      .hero-section .card {
+        flex: 0 0 50%;
+        width: 50vw;
+        min-width: 320px;
+        height: 100%;
+        min-height: 100%;
       }
 
-      /* Prevent zoom fix from affecting mobile */
-      @media (max-width: 1024px) {
-        .hero-section,
-        .container,
-        .hero-section .card {
-          /* Use original mobile styles */
-          min-width: unset;
-          min-height: unset;
-          width: 100%;
-          flex: 1 1 100%;
-        }
-        .hero-section .card .slide2 {
-          padding: 0 8%;
-        }
+      .hero-section .card .slide2 {
+        padding: 0 8vw;
       }
+    }
+
+    /* Prevent zoom fix from affecting mobile */
+    @media (max-width: 1024px) {
+
+      .hero-section,
+      .container,
+      .hero-section .card {
+        /* Use original mobile styles */
+        min-width: unset;
+        min-height: unset;
+        width: 100%;
+        flex: 1 1 100%;
+      }
+
+      .hero-section .card .slide2 {
+        padding: 0 8%;
+      }
+    }
 
     .hero-section::before {
       content: '';
@@ -222,7 +234,7 @@
       line-height: 1.25;
       letter-spacing: 0.06em;
       text-transform: none;
-      text-shadow: 
+      text-shadow:
         -1px -1px 0 #ffd4a4,
         1px -1px 0 #ffd4a4,
         -1px 1px 0 #ffd4a4,
@@ -231,14 +243,14 @@
         0 0 5px #ffd4a4;
     }
 
-     .hero-split-title2 {
+    .hero-split-title2 {
       color: #15008a;
       font-weight: 800;
       font-size: clamp(1.8rem, 3.2vw, 2.6rem);
       line-height: 1.25;
       letter-spacing: 0.06em;
       text-transform: none;
-      text-shadow: 
+      text-shadow:
         -1px -1px 0 #fffec9,
         1px -1px 0 #fffec8,
         -1px 1px 0 #fffebd,
@@ -269,14 +281,14 @@
       cursor: pointer;
       transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.0);
-      
+
     }
 
     .hero-split-cta:hover {
       background: #ffd325;
       color: #111827;
       box-shadow: 0 0 18px rgba(250, 204, 21, 0.35);
-      
+
       transform: translateY(-2px);
     }
 
@@ -303,9 +315,12 @@
 
     /* Header Scrolled State */
     header.scrolled {
-      background: transparent;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     /* SVG Drawing Line */
@@ -420,7 +435,7 @@
       }
     }
 
- 
+
 
     a {
       text-decoration: none;
@@ -502,10 +517,10 @@
 
     /* Menu Item Hover Animation */
     .nav-link-animate {
-     
+
       position: relative;
       padding: 10px 36px;
-      font-family:sans-serif;
+      font-family: sans-serif;
       font-size: 1rem;
       color: black;
       /* Default Black */
@@ -678,7 +693,7 @@
     /* WHY CHOOSE US */
     .why-section {
       padding: 60px 20px;
-      background: linear-gradient(135deg, #dee3ea, #f6f2d1);
+      background: linear-gradient(135deg, #dee3ea, #fffbd6);
     }
 
     .why-container {
@@ -729,7 +744,7 @@
     /* ICON */
     .why-card i {
       font-size: 44px;
-      color: #f6ff00;
+      color: #d97706;
       margin-bottom: 20px;
       display: inline-block;
       animation: floatIcon 3s ease-in-out infinite;
@@ -830,7 +845,7 @@
         grid-template-columns: 1fr;
         text-align: center;
       }
-      
+
       .social-links {
         justify-content: center;
       }
@@ -1006,28 +1021,36 @@
 
       /* Mobile Menu Dropdown */
       .main-nav {
-        display: none; /* hidden by default on mobile */
+        display: none;
+        /* hidden by default on mobile */
         position: absolute;
         top: 60px;
         right: 16px;
         width: 220px;
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        border-radius: 0 0 0 14px;
-        padding: 10px 14px 14px;
+        background: #fefce8;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 14px;
+        padding: 15px;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
         z-index: 1001;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       }
 
       .main-nav a {
         width: 100%;
         text-align: left;
-        padding: 8px 4px;
-        color: #fefce8 !important;
+        padding: 10px 12px;
+        color: #111 !important;
         text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+
+      .main-nav a:hover {
+        background: rgba(0,0,0,0.05);
       }
     }
 
@@ -1217,7 +1240,7 @@
       position: relative;
       width: 100%;
       max-width: 460px;
-      min-height: 460px;
+      min-height: 400px;
       margin: 0 auto;
     }
 
@@ -1343,12 +1366,13 @@
 
       .about-content p {
         font-size: 0.95rem;
-        color:black;
+        color: black;
       }
 
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       #about .about-images,
       #about .about-content {
         opacity: 1;
@@ -1390,23 +1414,23 @@
       filter: none;
     }
 
-    #about.about-in-view .about-images > div > div {
+    #about.about-in-view .about-images>div>div {
       animation: aboutTileIn 0.7s ease both;
     }
 
-    #about.about-in-view .about-images > div > div:nth-child(1) {
+    #about.about-in-view .about-images>div>div:nth-child(1) {
       animation-delay: 0.08s;
     }
 
-    #about.about-in-view .about-images > div > div:nth-child(2) {
+    #about.about-in-view .about-images>div>div:nth-child(2) {
       animation-delay: 0.16s;
     }
 
-    #about.about-in-view .about-images > div:last-child > div:nth-child(1) {
+    #about.about-in-view .about-images>div:last-child>div:nth-child(1) {
       animation-delay: 0.24s;
     }
 
-    #about.about-in-view .about-images > div:last-child > div:nth-child(2) {
+    #about.about-in-view .about-images>div:last-child>div:nth-child(2) {
       animation-delay: 0.32s;
     }
 
@@ -1414,16 +1438,28 @@
       animation: checkPop 0.45s ease both;
     }
 
-    #about.about-in-view .about-content > div:nth-of-type(2) > div:nth-child(1) i.fa-check { animation-delay: 0.2s; }
-    #about.about-in-view .about-content > div:nth-of-type(2) > div:nth-child(2) i.fa-check { animation-delay: 0.3s; }
-    #about.about-in-view .about-content > div:nth-of-type(2) > div:nth-child(3) i.fa-check { animation-delay: 0.4s; }
-    #about.about-in-view .about-content > div:nth-of-type(2) > div:nth-child(4) i.fa-check { animation-delay: 0.5s; }
+    #about.about-in-view .about-content>div:nth-of-type(2)>div:nth-child(1) i.fa-check {
+      animation-delay: 0.2s;
+    }
+
+    #about.about-in-view .about-content>div:nth-of-type(2)>div:nth-child(2) i.fa-check {
+      animation-delay: 0.3s;
+    }
+
+    #about.about-in-view .about-content>div:nth-of-type(2)>div:nth-child(3) i.fa-check {
+      animation-delay: 0.4s;
+    }
+
+    #about.about-in-view .about-content>div:nth-of-type(2)>div:nth-child(4) i.fa-check {
+      animation-delay: 0.5s;
+    }
 
     @keyframes aboutTileIn {
       from {
         opacity: 0;
         transform: translateY(24px) scale(0.96);
       }
+
       to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -1435,6 +1471,7 @@
         opacity: 0;
         transform: translateY(8px) scale(0.5) rotate(-20deg);
       }
+
       to {
         opacity: 1;
         transform: translateY(0) scale(1) rotate(0deg);
@@ -1442,6 +1479,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       .anim-up,
       .anim-left,
       .anim-right,
@@ -1540,11 +1578,11 @@
         height: 100%;
       }
 
-    .reel-caption {
-      font-size: 12px;
-      padding: 6px;
+      .reel-caption {
+        font-size: 12px;
+        padding: 6px;
+      }
     }
-  }
 
     /* Moved from body: mobile layout for circle row */
     @media (max-width: 768px) {
@@ -1559,6 +1597,15 @@
       max-width: 1400px;
       margin: 4rem auto;
       padding: 0 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .stories-container {
+      position: relative;
     }
 
     .section-header {
@@ -1599,14 +1646,12 @@
 
     .stories-scroll {
       display: flex;
-      overflow-x: auto;
+      overflow-x: hidden; /* Hide horizontal scrollbar but allow JS scroll */
+      overflow-y: hidden;
       gap: 1.5rem;
       padding: 1rem 0 2rem;
-      scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
     }
 
     .stories-scroll::-webkit-scrollbar {
@@ -1621,7 +1666,6 @@
       border-radius: 16px;
       overflow: hidden;
       position: relative;
-      scroll-snap-align: center;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -1710,6 +1754,50 @@
       }
     }
 
+    /* Testimonial Reel Arrows */
+    .reel-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      color: #333;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100 !important;
+      transition: all 0.3s ease;
+    }
+
+    .reel-nav-btn:hover {
+      background: #fbbf24;
+      color: #000;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 16px rgba(251, 191, 36, 0.4);
+    }
+
+    .reel-prev { left: -10px; }
+    .reel-next { right: -10px; }
+
+    @media (max-width: 768px) {
+      .reel-nav-btn {
+        display: none !important;
+      }
+      .stories-scroll {
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory;
+      }
+      .story-card {
+        scroll-snap-align: center;
+      }
+    }
+
     /* Animation Keyframes */
     @keyframes fadeInUp {
       from {
@@ -1792,12 +1880,13 @@
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
   <script src="js/vanilla-tilt.js"></script>
   <script src="js/video-carousel.js"></script>
-  <script src="../js/counter.js"></script>
+  <script src="js/counter.js"></script>
 
 
-  <link rel='stylesheet' href='mobile-fixes.css'>
   <link rel='stylesheet' href='css/school-faq-chatbot.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-ieVFO2R0j20g35yLOIjoiqlc7qwvd+wd+TLPu8=" crossorigin="anonymous" referrerpolicy="no-referrer-when-downgrade">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer-when-downgrade">
 </head>
 
 <body>
@@ -1818,19 +1907,23 @@
     <!-- Hero Section -->
     <section class="hero-section" style="position: relative; overflow: hidden;">
       <!-- Floating Book and Pencil Icons in Hero -->
-      <div class="floating" style="position: absolute; top: 15%; left: 8%; font-size: 3rem; color: #000000; opacity: 0.08; transform: rotate(-15deg); z-index: 0;">
+      <div class="floating" aria-hidden="true"
+        style="position: absolute; top: 15%; left: 8%; font-size: 3rem; color: #000000; opacity: 0.08; transform: rotate(-15deg); z-index: 0;">
         <i class="fa fa-book"></i>
       </div>
-      <div class="floating-delayed" style="position: absolute; top: 25%; right: 10%; font-size: 2.5rem; color: #fbbf24; opacity: 0.12; transform: rotate(20deg); z-index: 0;">
+      <div class="floating-delayed" aria-hidden="true"
+        style="position: absolute; top: 25%; right: 10%; font-size: 2.5rem; color: #fbbf24; opacity: 0.12; transform: rotate(20deg); z-index: 0;">
         <i class="fa fa-pencil"></i>
       </div>
-      <div class="floating" style="position: absolute; top: 65%; left: 6%; font-size: 2.8rem; color: #fbbf24; opacity: 0.09; transform: rotate(35deg); z-index: 0;">
+      <div class="floating" aria-hidden="true"
+        style="position: absolute; top: 65%; left: 6%; font-size: 2.8rem; color: #fbbf24; opacity: 0.09; transform: rotate(35deg); z-index: 0;">
         <i class="fa fa-book"></i>
       </div>
-      <div class="floating-delayed" style="position: absolute; top: 75%; right: 8%; font-size: 2.2rem; color: #000000; opacity: 0.07; transform: rotate(-30deg); z-index: 0;">
+      <div class="floating-delayed" aria-hidden="true"
+        style="position: absolute; top: 75%; right: 8%; font-size: 2.2rem; color: #000000; opacity: 0.07; transform: rotate(-30deg); z-index: 0;">
         <i class="fa fa-pencil"></i>
       </div>
-      
+
       <div class="hero-wrapper reveal reveal-up active" style="position: relative; z-index: 1;">
         <header class="main-header">
           <!-- Mobile Logo (Centered) -->
@@ -1852,7 +1945,7 @@
 
         <div class="container reveal reveal-up">
           <div class="card hover-premium magnetic-target" onclick="location.href='school1/index.html'" data-tilt>
-            <div class="slide1" style="background-image: url('school1/img/school2.JPG');"></div>
+            <div class="slide1" style="background-image: url('school1/img/school2.JPG'); background-repeat: no-repeat;"></div>
             <div class="slide2">
               <div class="hero-logo-circle">
                 <img src="school1/img/logo.png" alt="Bharathi Vidhyaa Kendhra Logo" class="hero-logo-img">
@@ -1873,125 +1966,146 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>    <section id="campus-showcase" class="campus-section fadeInUp"
+      style="background-color: #f9f9f9; padding: 10px 40px; position: relative; margin-top: -30px;">
+      <!-- Floating Book and Pencil Icons in Testimonials -->
+      <div class="floating"
+        style="position: absolute; top: 5%; left: 5%; font-size: 2.2rem; color: #000000; opacity: 0.06; transform: rotate(-25deg); z-index: 0;">
+        <i class="fa fa-book"></i>
+      </div>
+      <div class="floating-delayed"
+        style="position: absolute; top: 15%; right: 8%; font-size: 2.6rem; color: #fbbf24; opacity: 0.08; transform: rotate(18deg); z-index: 0;">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <div class="floating"
+        style="position: absolute; bottom: 20%; left: 6%; font-size: 2.1rem; color: #fbbf24; opacity: 0.07; transform: rotate(40deg); z-index: 0;">
+        <i class="fa fa-book"></i>
+      </div>
+      <div class="floating-delayed"
+        style="position: absolute; bottom: 15%; right: 8%; font-size: 2.4rem; color: #000000; opacity: 0.05; transform: rotate(-35deg); z-index: 0;">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <br>
+      <div class="section-header" style="position: relative; z-index: 1;">
+        <h2>Our Testimonials</h2>
+        <p>Discover life at Bharathi Schools as seen through the eyes of our Students and Parents.</p>
+      </div>
 
-  <section id="campus-showcase" class="campus-section fadeInUp" style="background-color: #f9f9f9; padding: 10px 40px; position: relative; overflow: hidden; margin-top: -30px;">
-        <!-- Floating Book and Pencil Icons in Testimonials -->
-        <div class="floating" style="position: absolute; top: 5%; left: 5%; font-size: 2.2rem; color: #000000; opacity: 0.06; transform: rotate(-25deg); z-index: 0;">
-          <i class="fa fa-book"></i>
-        </div>
-        <div class="floating-delayed" style="position: absolute; top: 15%; right: 8%; font-size: 2.6rem; color: #fbbf24; opacity: 0.08; transform: rotate(18deg); z-index: 0;">
-          <i class="fa fa-pencil"></i>
-        </div>
-        <div class="floating" style="position: absolute; bottom: 20%; left: 6%; font-size: 2.1rem; color: #fbbf24; opacity: 0.07; transform: rotate(40deg); z-index: 0;">
-          <i class="fa fa-book"></i>
-        </div>
-        <div class="floating-delayed" style="position: absolute; bottom: 15%; right: 8%; font-size: 2.4rem; color: #000000; opacity: 0.05; transform: rotate(-35deg); z-index: 0;">
-          <i class="fa fa-pencil"></i>
-        </div>
-        <br>
-        <div class="section-header" style="position: relative; z-index: 1;">
-            <h2>Our Testimonials</h2>
-            <p>Discover life at Bharathi Schools as seen through the eyes of our Students and Parents.</p>
-        </div>
+      <div class="stories-container" style="position: relative;">
+        <!-- Left Arrow -->
+        <button class="reel-nav-btn reel-prev" aria-label="Previous Testimonial">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <!-- Right Arrow -->
+        <button class="reel-nav-btn reel-next" aria-label="Next Testimonial">
+          <i class="fa fa-chevron-right"></i>
+        </button>
 
-        <div class="stories-container">
-            <div class="stories-scroll">
-                <!-- Video Card 1 -->
-                <div class="story-card" data-index="0">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="school1/videos/testi2.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
-
-                <!-- Video Card 2 -->
-                <div class="story-card" data-index="1">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="school1/videos/testi1.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
-
-                <!-- Video Card 3 -->
-                  <div class="story-card" data-index="6">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="school2/videos/testi3.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
-
-                <!-- Video Card 4 -->
-                <div class="story-card" data-index="3">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="school2/videos/testi2.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
-
-                <!-- Video Card 5 -->
-                <div class="story-card" data-index="4">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="school1/videos/testi4.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
-
-                <!-- Video Card 6 -->
-                <div class="story-card" data-index="5">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="school2/videos/testi1.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
-
-                
-             
+        <div class="stories-scroll" id="testimonials-reel">
+          <!-- Video Card 1 -->
+          <div class="story-card" data-index="0">
+            <video class="story-video" playsinline muted loop>
+              <source src="school1/videos/testi2.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
             </div>
+          </div>
 
-            <div class="stories-progress-container">
-                <div id="stories-track" class="stories-track"></div>
+          <!-- Video Card 2 -->
+          <div class="story-card" data-index="1">
+            <video class="story-video" playsinline muted loop>
+              <source src="school1/videos/testi1.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
             </div>
+          </div>
+
+          <!-- Video Card 3 -->
+          <div class="story-card" data-index="6">
+            <video class="story-video" playsinline muted loop>
+              <source src="school2/videos/testi3.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
+            </div>
+          </div>
+
+          <!-- Video Card 4 -->
+          <div class="story-card" data-index="3">
+            <video class="story-video" playsinline muted loop>
+              <source src="school2/videos/testi2.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
+            </div>
+          </div>
+
+          <!-- Video Card 5 -->
+          <div class="story-card" data-index="4">
+            <video class="story-video" playsinline muted loop>
+              <source src="school1/videos/testi4.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
+            </div>
+          </div>
+
+          <!-- Video Card 6 -->
+          <div class="story-card" data-index="5">
+            <video class="story-video" playsinline muted loop>
+              <source src="school2/videos/testi1.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
+            </div>
+          </div>
         </div>
+      </div>
+
+
+
+        </div>
+
+        <div class="stories-progress-container">
+          <div id="stories-track" class="stories-track"></div>
+        </div>
+      </div>
     </section>
 
     <!-- About Us Section -->
     <section id="about" class="about-section reveal about-section-styled"
       style="background: #fffdf2; padding: 30px 10px; position: relative; overflow: hidden;">
-      
+
       <!-- Floating Book and Pencil Icons -->
-      <div class="floating" style="position: absolute; top: 10%; left: 5%; font-size: 2.5rem; color: #000000; opacity: 0.1; transform: rotate(-20deg); z-index: 0;">
+      <div class="floating"
+        style="position: absolute; top: 10%; left: 5%; font-size: 2.5rem; color: #000000; opacity: 0.1; transform: rotate(-20deg); z-index: 0;">
         <i class="fa fa-book"></i>
       </div>
-      <div class="floating-delayed" style="position: absolute; top: 15%; right: 8%; font-size: 2rem; color: #fbbf24; opacity: 0.15; transform: rotate(15deg); z-index: 0;">
+      <div class="floating-delayed"
+        style="position: absolute; top: 15%; right: 8%; font-size: 2rem; color: #fbbf24; opacity: 0.15; transform: rotate(15deg); z-index: 0;">
         <i class="fa fa-pencil"></i>
       </div>
-      <div class="floating" style="position: absolute; top: 60%; left: 8%; font-size: 2.8rem; color: #fbbf24; opacity: 0.12; transform: rotate(30deg); z-index: 0;">
+      <div class="floating"
+        style="position: absolute; top: 60%; left: 8%; font-size: 2.8rem; color: #fbbf24; opacity: 0.12; transform: rotate(30deg); z-index: 0;">
         <i class="fa fa-book"></i>
       </div>
-      <div class="floating-delayed" style="position: absolute; top: 70%; right: 6%; font-size: 2.2rem; color: #000000; opacity: 0.08; transform: rotate(-25deg); z-index: 0;">
+      <div class="floating-delayed"
+        style="position: absolute; top: 70%; right: 6%; font-size: 2.2rem; color: #000000; opacity: 0.08; transform: rotate(-25deg); z-index: 0;">
         <i class="fa fa-pencil"></i>
       </div>
-      <div class="floating" style="position: absolute; top: 35%; left: 12%; font-size: 1.8rem; color: #000000; opacity: 0.1; transform: rotate(45deg); z-index: 0;">
+      <div class="floating"
+        style="position: absolute; top: 35%; left: 12%; font-size: 1.8rem; color: #000000; opacity: 0.1; transform: rotate(45deg); z-index: 0;">
         <i class="fa fa-book"></i>
       </div>
-      <div class="floating-delayed" style="position: absolute; top: 45%; right: 15%; font-size: 2.4rem; color: #fbbf24; opacity: 0.14; transform: rotate(-35deg); z-index: 0;">
+      <div class="floating-delayed"
+        style="position: absolute; top: 45%; right: 15%; font-size: 2.4rem; color: #fbbf24; opacity: 0.14; transform: rotate(-35deg); z-index: 0;">
         <i class="fa fa-pencil"></i>
       </div>
-      
-      <div style="max-width: 1100px; margin: 0 auto; display: flex; gap: 60px; align-items: center; flex-wrap: wrap; position: relative; z-index: 1;">
+
+      <div
+        style="max-width: 1100px; margin: 0 auto; display: flex; gap: 60px; align-items: center; flex-wrap: wrap; position: relative; z-index: 1;">
 
         <!-- Left Side: Image Collage -->
         <div class="about-images">
@@ -2003,19 +2117,19 @@
             <div
               style="width: 200px; height: 200px; background-image: url('school2/img/infra.jpeg'); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
             </div>
-            
+
           </div>
-          
+
           <!-- Bottom Row -->
           <div style="display: flex; gap: 12px; justify-content: center;">
             <div
               style="width: 200px; height: 200px; background-image: url('school1/img/TON00028.JPG'); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
             </div>
-           <div
+            <div
               style="width: 200px; height: 200px; background-image: url('school1/img/school2.JPG'); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
             </div>
           </div>
-          
+
         </div>
 
         <!-- Right Side: Content -->
@@ -2023,24 +2137,30 @@
           <div style="color: #fbbf24; font-size: 0.90rem; font-weight: 600; letter-spacing: 1px;">
             ABOUT US</div>
 
-          <h1 style="font-size: 3.2rem; font-weight: 800; margin: 0 0 15px 0; line-height: 1.2;"
+          <h1 style="font-size: 3.1rem; font-weight: 750; margin: 0 0 15px 0; line-height: 1.2;"
             class="theme-hero-text">
             Founded on a Powerful Belief that Education Transforms Lives
           </h1>
 
-             <div style="margin-bottom: 10px;">
+          <div style="margin-bottom: 10px;">
             <div style="display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start;">
               <i class="fa fa-check" style="color: #fbbf24; margin-top: 5px; font-weight: bold;"></i>
-            <span style="color: #252424; font-size: 1rem;line-height:1.6rem;text-align:justify;">The Bharathi Group of schools began its journey from the humblest of beginnings. Established by its
-            Correspondent with a founding strength of just two students, the institution was nurtured with dedication,
-            resilience and an unwavering sense of purpose.</span>
-         </div>
-         </div>
+              <span style="color: #252424; font-size: 1rem;line-height:1.6rem;text-align:justify;">The Bharathi Group of
+                schools began its journey from the humblest of beginnings. Established by its
+                Correspondent with a founding strength of just two students, the institution was nurtured with
+                dedication,
+                resilience and an unwavering sense of purpose.</span>
+            </div>
+          </div>
 
           <div style="margin-bottom: 10px;">
             <div style="display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start;">
               <i class="fa fa-check" style="color: #fbbf24; margin-top: 5px; font-weight: bold;"></i>
-              <span style="color: #252424; font-size: 1rem;line-height:1.6rem;text-align:justify;">Over the past 25 years, this modest beginning has blossomed into two flourishing institutions operating under the Bharathi banner, with excellence at the heart of their mission. The group continues to grow steadily while remaining deeply rooted in its values, placing learning, character, and excellence at the core of education.</span>
+              <span style="color: #252424; font-size: 1rem;line-height:1.6rem;text-align:justify;">Over the past 25
+                years, this modest beginning has blossomed into two flourishing institutions operating under the
+                Bharathi banner, with excellence at the heart of their mission. The group continues to grow steadily
+                while remaining deeply rooted in its values, placing learning, character, and excellence at the core of
+                education.</span>
             </div>
           </div>
         </div>
@@ -2072,13 +2192,14 @@
         <h1 style="font-size: 2.8rem; font-weight: 900; color: #1a1a1a; margin: 0 0 80px 0;">Why Choose Us?</h1>
 
         <!-- Circular Cards Container -->
-        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; max-width: 1200px; margin: 0 auto;">
-        
-        <!-- Circle 1 -->
-          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;" class="circle-hover reveal-blur">
+        <div
+          style="display: flex; justify-content: center; align-items: center; gap: 20px; max-width: 1200px; margin: 0 auto;">
+
+          <!-- Circle 1 -->
+          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;"
+            class="circle-hover reveal-blur">
             <!-- Outer circle border -->
             <div
-
               style="position: absolute; width: 100%; height: 100%; border: 4.5px solid #2d2d2d; border-radius: 50%; background: #fef8e8;">
 
               <!-- Yellow accent on top -->
@@ -2095,18 +2216,21 @@
             <div
               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 85%; z-index: 5;">
 
-              <h3 style="color: #1b1a1a; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Strong Academic <br>Excellence</h3>
-              <p style="color: #0e0e0e; font-size: 0.7rem; line-height: 1.4; margin: 0;">Our structured yet flexible academic approach ensures clarity of concepts, consistent progress and a solid foundation for the future.</p>
+              <h3 style="color: #1b1a1a; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Strong Academic
+                <br>Excellence
+              </h3>
+              <p style="color: #0e0e0e; font-size: 0.7rem; line-height: 1.4; margin: 0;">Our structured yet flexible
+                academic approach ensures clarity of concepts, consistent progress and a solid foundation for the
+                future.</p>
 
             </div>
           </div>
 
           <!-- Circle 2 (now first) -->
-          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;" class="circle-hover reveal-blur delay-200">
+          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;"
+            class="circle-hover reveal-blur delay-200">
             <!-- Outer circle border -->
             <div
-
-   
               style="position: absolute; width: 100%; height: 100%; border: 4.5px solid #2d2d2d; border-radius: 50%; background: #fef8e8;">
 
               <!-- Yellow accent on top -->
@@ -2118,24 +2242,27 @@
             <!-- Icon bubble -->
             <div
               style="position: absolute; top: -20px; left: 20px; width: 50px; height: 50px; background: white; border: 4px solid #2d2d2d; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10;">
-              <i class="fa fa-book"style="font-size: 1.5rem; color: #fbbf24;"></i>
+              <i class="fa fa-book" style="font-size: 1.5rem; color: #fbbf24;"></i>
             </div>
 
             <!-- Content -->
             <div
               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 85%; z-index: 5;">
 
-              <h3 style="color: #141414; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Effective Communication Skills</h3>
-              <p style="color: #0e0e0e; font-size: 0.7rem; line-height: 1.4; margin: 0;">Special focus is placed on language development, helping children gain confidence in speaking, reading and writing from an early age.</p>
+              <h3 style="color: #141414; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Effective
+                Communication Skills</h3>
+              <p style="color: #0e0e0e; font-size: 0.7rem; line-height: 1.4; margin: 0;">Special focus is placed on
+                language development, helping children gain confidence in speaking, reading and writing from an early
+                age.</p>
 
             </div>
           </div>
 
           <!-- Circle 3 -->
-          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;" class="circle-hover reveal-blur delay-300">
+          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;"
+            class="circle-hover reveal-blur delay-300">
             <!-- Outer circle border -->
             <div
-
               style="position: absolute; width: 100%; height: 100%; border: 4.5px solid #2d2d2d; border-radius: 50%; background: #fef8e8;">
 
               <!-- Yellow accent on top -->
@@ -2148,10 +2275,11 @@
             <div
               style="position: absolute; top: -20px; left: 20px; width: 50px; height: 50px; background: white; border: 4px solid #2d2d2d; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10;">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 14L9 21L9 7L12 11L15 7L15 21L12 14Z" fill="#fbbf24" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 14L9 7M12 14L15 7" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="9" cy="21" r="1" fill="#fbbf24"/>
-                <circle cx="15" cy="21" r="1" fill="#fbbf24"/>
+                <path d="M12 14L9 21L9 7L12 11L15 7L15 21L12 14Z" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 14L9 7M12 14L15 7" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" />
+                <circle cx="9" cy="21" r="1" fill="#fbbf24" />
+                <circle cx="15" cy="21" r="1" fill="#fbbf24" />
               </svg>
             </div>
 
@@ -2159,17 +2287,20 @@
             <div
               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 85%; z-index: 5;">
 
-              <h3 style="color: #181818; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Holistic Development</h3>
-              <p style="color: #0e0e0e; font-size: 0.7rem; line-height: 1.4; margin: 0;">Equal importance is given to academics, character building, life skills and co-curricular activities ensuring well-rounded growth.</p>
+              <h3 style="color: #181818; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Holistic Development
+              </h3>
+              <p style="color: #0e0e0e; font-size: 0.7rem; line-height: 1.4; margin: 0;">Equal importance is given to
+                academics, character building, life skills and co-curricular activities ensuring well-rounded growth.
+              </p>
 
             </div>
           </div>
 
           <!-- Circle 4 (now third) -->
-          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;" class="circle-hover reveal-blur delay-400">
+          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;"
+            class="circle-hover reveal-blur delay-400">
             <!-- Outer circle border -->
             <div
-
               style="position: absolute; width: 100%; height: 100%; border: 4.5px solid #2d2d2d; border-radius: 50%; background: #fef8e8;">
 
               <!-- Yellow accent on top -->
@@ -2188,17 +2319,19 @@
             <div
               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 85%; z-index: 5;">
 
-              <h3 style="color: #1e1e1e; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Experienced &amp; Dedicated Educators</h3>
-              <p style="color: #0f0f0f; font-size: 0.7rem; line-height: 1.4; margin: 0;">Our teachers combine expertise with empathy - guiding each child with care, patience and personal attention.</p>
+              <h3 style="color: #1e1e1e; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Experienced &amp;
+                Dedicated Educators</h3>
+              <p style="color: #0f0f0f; font-size: 0.7rem; line-height: 1.4; margin: 0;">Our teachers combine expertise
+                with empathy - guiding each child with care, patience and personal attention.</p>
 
             </div>
           </div>
 
           <!-- Circle 5 (now fourth) -->
-          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;" class="circle-hover reveal-blur delay-500">
+          <div style="position: relative; width: 200px; height: 200px; flex-shrink: 0;"
+            class="circle-hover reveal-blur delay-500">
             <!-- Outer circle border -->
             <div
-
               style="position: absolute; width: 100%; height: 100%; border: 4.5px solid #2d2d2d; border-radius: 50%; background: #fef8e8;">
 
               <!-- Yellow accent on top -->
@@ -2211,10 +2344,11 @@
             <div
               style="position: absolute; top: -20px; left: 20px; width: 50px; height: 50px; background: white; border: 4px solid #2d2d2d; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10;">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 14L9 21L9 7L12 11L15 7L15 21L12 14Z" fill="#fbbf24" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 14L9 7M12 14L15 7" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="9" cy="21" r="1" fill="#fbbf24"/>
-                <circle cx="15" cy="21" r="1" fill="#fbbf24"/>
+                <path d="M12 14L9 21L9 7L12 11L15 7L15 21L12 14Z" fill="#fbbf24" stroke="#fbbf24" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 14L9 7M12 14L15 7" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" />
+                <circle cx="9" cy="21" r="1" fill="#fbbf24" />
+                <circle cx="15" cy="21" r="1" fill="#fbbf24" />
               </svg>
             </div>
 
@@ -2222,8 +2356,10 @@
             <div
               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 85%; z-index: 5;">
 
-              <h3 style="color: #121212; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Balanced Learning Environment</h3>
-              <p style="color: #0f0f0f; font-size: 0.7rem; line-height: 1.4; margin: 0;">Equal importance is given to co-curricular activities, sports and creative pursuits for all-round development.</p>
+              <h3 style="color: #121212; font-size: 0.8rem; font-weight: 700; margin: 0 0 6px 0;">Balanced Learning
+                Environment</h3>
+              <p style="color: #0f0f0f; font-size: 0.7rem; line-height: 1.4; margin: 0;">Equal importance is given to
+                co-curricular activities, sports and creative pursuits for all-round development.</p>
 
             </div>
           </div>
@@ -2237,15 +2373,15 @@
         <!-- Left Side: Profile Image -->
         <div
           style="flex: 0 0 400px; background: linear-gradient(135deg, #fffbf5 0%, #fffaeb 100%); padding: 30px; display: flex; flex-direction: column; justify-content: flex-start; gap: 20px; position: relative;">
-<br>
+          <br>
           <!-- Yellow accent bar -->
           <div style="position: absolute; top: 0; left: 0; width: 12px; height: 100%; background: #fbbf24;"></div>
-<br>
+          <br>
           <!-- Profile Image -->
           <div class="founder-image-card" style="width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.3); ">
             <img src="founder.jpeg" alt="Founder" style="width: 100%; height: 400px; object-fit: cover;">
           </div>
-          </div>
+        </div>
 
         <!-- Right Side: Content -->
         <div style="flex: 1; padding: 20px 0; display: flex; flex-direction: column; justify-content: center;">
@@ -2256,49 +2392,69 @@
           </div>
 
           <!-- Full Story Content -->
-          <p class="founder-story-desktop" style="font-size: 0.95rem;text-align:justify; line-height: 1.7; color: #777; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
-When I first envisioned this school, it was not the grand buildings or large numbers that 
-filled my mind - it was the children. I dreamt of a place where every child, regardless of 
-background or ability, would be given attention, encouragement and a fair chance to 
-grow. 
-We began very small. With only a few students and limited resources, the journey was 
-challenging. There were moments of uncertainty but there was never a lack of belief. 
+          <p class="founder-story-desktop"
+            style="font-size: 0.95rem;text-align:justify; line-height: 1.7; color: #777; margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
+            When I first envisioned this school, it was not the grand buildings or large numbers that
+            filled my mind - it was the children. I dreamt of a place where every child, regardless of
+            background or ability, would be given attention, encouragement and a fair chance to
+            grow.
+            We began very small. With only a few students and limited resources, the journey was
+            challenging. There were moments of uncertainty but there was never a lack of belief.
             <br><br>
- I believed deeply that education should be personal. A child is not just a roll number or a 
-test score each one carries unique gifts, struggles and dreams. From the very beginning, 
-I wanted this school to be a place where every student is known by name, understood 
-individually and supported wholeheartedly. 
-In those early days, our classrooms were simple, but our purpose was strong. We 
-focused on giving individual care, to ensure that no child felt overlooked. I spent time 
-observing, listening and understanding what each learner needed. That spirit of closeness 
-and compassion became the foundation of our school.
-<br><br>
-I have always believed that education must go beyond textbooks and rote learning. 
-Memorizing facts alone does not prepare a child for life. True education should teach 
-students how to think, question, explore and apply knowledge with confidence. It should 
-shape character, nurture creativity and build resilience. That philosophy guided every 
-decision we made as the school began to grow. 
-As the years passed and the school expanded, I remained committed to the same 
-principles we started with : equal opportunity for all, personal attention and holistic 
-development. Growth never meant losing our heart. 
-<br><br>
-Even as our classrooms multiplied 
-our focus on individual care remained unchanged. 
-Looking back, I am grateful for the small beginnings. They taught us perseverance, unity 
-and faith. What started as a modest effort has grown into a thriving learning community - 
-but at its core, it is still driven by the same belief that inspired its founding with care, 
-opportunity and meaningful learning every child can succeed.
-</p>
+            I believed deeply that education should be personal. A child is not just a roll number or a
+            test score each one carries unique gifts, struggles and dreams. From the very beginning,
+            I wanted this school to be a place where every student is known by name, understood
+            individually and supported wholeheartedly.
+            In those early days, our classrooms were simple, but our purpose was strong. We
+            focused on giving individual care, to ensure that no child felt overlooked. I spent time
+            observing, listening and understanding what each learner needed. That spirit of closeness
+            and compassion became the foundation of our school.
+            <br><br>
+            I have always believed that education must go beyond textbooks and rote learning.
+            Memorizing facts alone does not prepare a child for life. True education should teach
+            students how to think, question, explore and apply knowledge with confidence. It should
+            shape character, nurture creativity and build resilience. That philosophy guided every
+            decision we made as the school began to grow.
+            As the years passed and the school expanded, I remained committed to the same
+            principles we started with : equal opportunity for all, personal attention and holistic
+            development. Growth never meant losing our heart.
+            <br><br>
+            Even as our classrooms multiplied
+            our focus on individual care remained unchanged.
+            Looking back, I am grateful for the small beginnings. They taught us perseverance, unity
+            and faith. What started as a modest effort has grown into a thriving learning community -
+            but at its core, it is still driven by the same belief that inspired its founding with care,
+            opportunity and meaningful learning every child can succeed.
+          </p>
 
           <div class="founder-story-mobile" style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
             <p>
-              When I first envisioned this school, it was not the grand buildings or large number that filled my mind - was children. I dreamt of a place where every child, regardless of background or ability, would be given attention, encouragement and a fair chance to grow. We began very small. With only a few students and limited resources, the journey was challenging. There were moments of uncertainty but there was never a lack of belief. I believed deeply that education should be personal. A child is not just a roll number or a test score each one carries unique gifts, struggles and dreams. From the very beginning, I wanted this school to be a place where every student is known by name, understood individually and supported wholeheartedly. In those early days, our classrooms were simple, but our purpose was strong. We focused on giving individual care, ensure that no child felt overlooked. I spent time observing, listening and understanding what each learner needed. That spirit of closeness and compassion became the foundation of our school.
+              When I first envisioned this school, it was not the grand buildings or large number that filled my mind -
+              was children. I dreamt of a place where every child, regardless of background or ability, would be given
+              attention, encouragement and a fair chance to grow. We began very small. With only a few students and
+              limited resources, the journey was challenging. There were moments of uncertainty but there was never a
+              lack of belief. I believed deeply that education should be personal. A child is not just a roll number or
+              a test score each one carries unique gifts, struggles and dreams. From the very beginning, I wanted this
+              school to be a place where every student is known by name, understood individually and supported
+              wholeheartedly. In those early days, our classrooms were simple, but our purpose was strong. We focused on
+              giving individual care, ensure that no child felt overlooked. I spent time observing, listening and
+              understanding what each learner needed. That spirit of closeness and compassion became the foundation of
+              our school.
             </p>
             <p>
-              I have always believed that education must go beyond textbooks and rote learning. Memorizing facts alone does not prepare a child for life. True education should teach students how to think, question, explore and apply knowledge with confidence. It should shape character, nurture creativity and build resilience. That philosophy guided every decision we made as the school began to grow. As the years passed and the school expanded, I remained committed to the same principles we started with: an equal opportunity for all, personal attention and holistic development. Growth never meant loosing our heart.
+              I have always believed that education must go beyond textbooks and rote learning. Memorizing facts alone
+              does not prepare a child for life. True education should teach students how to think, question, explore
+              and apply knowledge with confidence. It should shape character, nurture creativity and build resilience.
+              That philosophy guided every decision we made as the school began to grow. As the years passed and the
+              school expanded, I remained committed to the same principles we started with: an equal opportunity for
+              all, personal attention and holistic development. Growth never meant losing our heart.
             </p>
             <p>
-              Even as our classrooms multiplied our focus on individual care remained unchanged. Looking back, I am grateful for the small beginnings. They taught us perseverance, unity and faith. What started as a modest effort has grown into a thriving learning community - but at its core, it is still driven by the same belief that inspired its founding: that with care, opportunity and meaningful learning every child can succeed.
+              Even as our classrooms multiplied our focus on individual care remained unchanged. Looking back, I am
+              grateful for the small beginnings. They taught us perseverance, unity and faith. What started as a modest
+              effort has grown into a thriving learning community - but at its core, it is still driven by the same
+              belief that inspired its founding: that with care, opportunity and meaningful learning every child can
+              succeed.
             </p>
           </div>
         </div>
@@ -2327,19 +2483,21 @@ opportunity and meaningful learning every child can succeed.
       </div>
 
       <div class="footer-col">
-       
+
         <h2 style="margin-top: -20px;">Contact Info</h2>
 
-        <p style="font-weight: 500; margin-bottom: 1px;"><a href="school1/index.html">Bharathi Vidhyaa Kendhra School</a></p>
-        <p>📍 Mangalam to Avinashi Main Road , Avinashi - 641 654 , Tiruppur</p>
+        <p style="font-weight: 500; margin-bottom: 1px;"><a href="school1/index.html">Bharathi Vidhyaa Kendhra
+            School</a></p>
+        <p>📍 Mangalam to Avinashi Main Road, Avinashi - 641 654, Tiruppur</p>
         <p>📞 +91 87540 91999</p>
         <p>✉️ bvkicse@gmail.com</p>
 
         <br>
 
-        <p style="font-weight: 500; margin-bottom: 1px;"><a href="school2/index.html">Bharathi Kids Kshethralaya School</a></p>
-        <p>📍 No.7 , College Road , Konganagiri Bus Stop , Tiruppur - 641602</p>
-        <p>📞 0421-2208573 , 0421-2239299</p>
+        <p style="font-weight: 500; margin-bottom: 1px;"><a href="school2/index.html">Bharathi Kids Kshethralaya
+            School</a></p>
+        <p>📍 No.7, College Road, Konganagiri Bus Stop, Tiruppur - 641602</p>
+        <p>📞 0421-2208573, 0421-2239299</p>
         <p>✉️ bharathikidskshethralaya@gmail.com</p>
       </div>
     </div>
@@ -2555,8 +2713,8 @@ opportunity and meaningful learning every child can succeed.
         el.style.animation = `fadeInUp 0.6s ease-out ${index * 0.05}s both`;
       });
 
-      // 4. Pulse effect on interactive elements
-      document.querySelectorAll('button, a, .card').forEach(el => {
+      // 4. Pulse effect on interactive elements (exclude testimonial arrows)
+      document.querySelectorAll('button:not(.reel-nav-btn), a, .card').forEach(el => {
         el.addEventListener('mouseenter', () => {
           el.style.animation = 'pulse 0.6s ease-out';
         });
@@ -2685,4 +2843,5 @@ opportunity and meaningful learning every child can succeed.
   </script>
 
 </body>
+
 </html>
