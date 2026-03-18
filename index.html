@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bharathi Group of Schools | Quality Education in Tiruppur & Avinashi</title>
-  <meta name="description" content="Bharathi Group of Schools offers holistic education through Bharathi Vidhyaa Kendhra (Avinashi) and Bharathi Kids Kshethralaya (Tiruppur). 25+ years of academic excellence, character building, and individual care.">
+  <meta name="description"
+    content="Bharathi Group of Schools offers holistic education through Bharathi Vidhyaa Kendhra (Avinashi) and Bharathi Kids Kshethralaya (Tiruppur). 25+ years of academic excellence, character building, and individual care.">
   <meta property="og:title" content="Bharathi Group of Schools | Quality Education in Tiruppur">
-  <meta property="og:description" content="Two trusted schools with 25+ years of excellence — Bharathi Vidhyaa Kendhra & Bharathi Kids Kshethralaya.">
+  <meta property="og:description"
+    content="Two trusted schools with 25+ years of excellence — Bharathi Vidhyaa Kendhra & Bharathi Kids Kshethralaya.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="school1/img/logo.png">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -1036,7 +1038,7 @@
         align-items: flex-start;
         gap: 8px;
         z-index: 1001;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
 
       .main-nav a {
@@ -1050,7 +1052,7 @@
       }
 
       .main-nav a:hover {
-        background: rgba(0,0,0,0.05);
+        background: rgba(0, 0, 0, 0.05);
       }
     }
 
@@ -1646,7 +1648,8 @@
 
     .stories-scroll {
       display: flex;
-      overflow-x: hidden; /* Hide horizontal scrollbar but allow JS scroll */
+      overflow-x: hidden;
+      /* Hide horizontal scrollbar but allow JS scroll */
       overflow-y: hidden;
       gap: 1.5rem;
       padding: 1rem 0 2rem;
@@ -1782,17 +1785,24 @@
       box-shadow: 0 6px 16px rgba(251, 191, 36, 0.4);
     }
 
-    .reel-prev { left: -10px; }
-    .reel-next { right: -10px; }
+    .reel-prev {
+      left: -10px;
+    }
+
+    .reel-next {
+      right: -10px;
+    }
 
     @media (max-width: 768px) {
       .reel-nav-btn {
         display: none !important;
       }
+
       .stories-scroll {
         overflow-x: auto !important;
         scroll-snap-type: x mandatory;
       }
+
       .story-card {
         scroll-snap-align: center;
       }
@@ -1885,8 +1895,7 @@
 
   <link rel='stylesheet' href='css/school-faq-chatbot.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer-when-downgrade">
+    crossorigin="anonymous" referrerpolicy="no-referrer-when-downgrade">
 </head>
 
 <body>
@@ -1945,7 +1954,8 @@
 
         <div class="container reveal reveal-up">
           <div class="card hover-premium magnetic-target" onclick="location.href='school1/index.html'" data-tilt>
-            <div class="slide1" style="background-image: url('school1/img/school2.JPG'); background-repeat: no-repeat;"></div>
+            <div class="slide1" style="background-image: url('school1/img/school2.JPG'); background-repeat: no-repeat;">
+            </div>
             <div class="slide2">
               <div class="hero-logo-circle">
                 <img src="school1/img/logo.png" alt="Bharathi Vidhyaa Kendhra Logo" class="hero-logo-img">
@@ -1966,7 +1976,8 @@
           </div>
         </div>
       </div>
-    </section>    <section id="campus-showcase" class="campus-section fadeInUp"
+    </section>
+    <section id="campus-showcase" class="campus-section fadeInUp"
       style="background-color: #f9f9f9; padding: 10px 40px; position: relative; margin-top: -30px;">
       <!-- Floating Book and Pencil Icons in Testimonials -->
       <div class="floating"
@@ -2066,11 +2077,11 @@
 
 
 
-        </div>
+      </div>
 
-        <div class="stories-progress-container">
-          <div id="stories-track" class="stories-track"></div>
-        </div>
+      <div class="stories-progress-container">
+        <div id="stories-track" class="stories-track"></div>
+      </div>
       </div>
     </section>
 
@@ -2707,10 +2718,11 @@
 
       // Card tilt and glow are now handled by vanilla-tilt.js and hover-premium class.
 
-      // 3. Text highlight animation on scroll
-      const textElements = document.querySelectorAll('h1, h2, h3, p');
-      textElements.forEach((el, index) => {
-        el.style.animation = `fadeInUp 0.6s ease-out ${index * 0.05}s both`;
+      // 3. Text reveal animation on scroll (using established anim-up pattern)
+      document.querySelectorAll('h1, h2, h3, p').forEach((el, i) => {
+        el.classList.add('anim-up');
+        // Add a small stagger based on index if desired, but keep it subtle
+        el.style.transitionDelay = `${(i % 5) * 50}ms`;
       });
 
       // 4. Pulse effect on interactive elements (exclude testimonial arrows)
@@ -2799,7 +2811,9 @@
 
       const addTargets = (selector, className, staggerMs) => {
         document.querySelectorAll(selector).forEach((el, i) => {
-          el.classList.add(className);
+          if (!el.classList.contains(className)) {
+            el.classList.add(className);
+          }
           if (staggerMs) {
             el.style.transitionDelay = `${i * staggerMs}ms`;
           }
@@ -2830,6 +2844,11 @@
         targets.push(aboutQuote);
       }
 
+      // Observe all text elements and other targets
+      document.querySelectorAll('h1, h2, h3, p, .anim-up, .anim-pop, .anim-left, .anim-right').forEach(el => {
+        targets.push(el);
+      });
+
       const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
@@ -2842,6 +2861,7 @@
     })();
   </script>
 
+  <script src="js/video-carousel.js"></script>
 </body>
 
 </html>
