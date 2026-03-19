@@ -23,6 +23,41 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      cursor: none; /* Hide default cursor */
+    }
+
+    /* Modern Custom Cursor (Blue) */
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #003399;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 99999;
+      pointer-events: none;
+      transition: transform 0.2s ease-out;
+    }
+    .cursor-outline {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(255, 215, 0, 0.8); /* Vivid Yellow/Gold */
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 99998;
+      pointer-events: none;
+      transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+    }
+    .cursor-outline.hovering {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 215, 0, 0.2); /* Soft Yellow */
+      border-color: transparent;
     }
     
     main {
@@ -1779,6 +1814,54 @@ To create and prepare young individualsto become lifelong learners and responsib
     window.addEventListener('load', function() {
       // Small delay to ensure page is fully loaded
       setTimeout(showAdmissionsPopup, 500);
+    });
+  </script>
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <script>
+    // Custom Cursor Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const cursorDot = document.querySelector("[data-cursor-dot]");
+      const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+      // Disable custom cursor on touch devices for better UX
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.style.cursor = 'auto';
+        if(cursorDot) cursorDot.style.display = 'none';
+        if(cursorOutline) cursorOutline.style.display = 'none';
+        return;
+      }
+
+      if (cursorDot && cursorOutline) {
+        window.addEventListener("mousemove", function (e) {
+          const posX = e.clientX;
+          const posY = e.clientY;
+
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
+
+          // Smooth trailing effect
+          cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+          }, { duration: 400, fill: "forwards" });
+        });
+
+        // Hover effect on interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, input, .nav-link-animate, .card, .circle-hover, .story-card, .founder-image-card');
+        interactiveElements.forEach((el) => {
+          el.addEventListener('mouseenter', () => {
+            cursorOutline.classList.add('hovering');
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+          });
+          el.addEventListener('mouseleave', () => {
+            cursorOutline.classList.remove('hovering');
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+          });
+        });
+      }
     });
   </script>
 </body>

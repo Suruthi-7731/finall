@@ -26,6 +26,46 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      cursor: none;
+      /* Hide default cursor */
+    }
+
+    /* Modern Custom Cursor (Purple) */
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #84009e;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 99999;
+      pointer-events: none;
+      transition: transform 0.2s ease-out;
+    }
+
+    .cursor-outline {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(255, 140, 0, 0.8);
+      /* Vibrant Orange */
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 99998;
+      pointer-events: none;
+      transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+    }
+
+    .cursor-outline.hovering {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 140, 0, 0.15);
+      /* Soft Orange */
+      border-color: transparent;
     }
 
     main {
@@ -1289,7 +1329,8 @@
               <br><br>&nbsp;&nbsp;&nbsp;<b>1.</b>&nbsp;&nbsp;&nbsp;Our outcome-based curriculum focuses on what students
               know and can do, emphasizing higher-order thinking skills such as analysis, synthesis and application in
               alignment with Bloom’s Taxonomy.<br><br>
-              &nbsp;&nbsp;&nbsp;<b>2.</b>&nbsp;&nbsp;Through research-driven learning and collaborative engagement, we
+              &nbsp;&nbsp;&nbsp;<b>2.</b>&nbsp;&nbsp;
+              Through research-driven learning and collaborative engagement, we
               nurture
               active learners who think critically and creatively.
               BVK provides learner-centered education through inspirational teaching, empowering students to achieve
@@ -1464,12 +1505,12 @@
 
         <!-- Right: Content -->
         <div class="inspiring-content">
-          <h2 class="inspiring-heading reveal-up theme-hero-text-school2" style="font-size:35px; margin-top:-50px;">
+          <h2 class="inspiring-heading reveal-up theme-hero-text-school2" style="font-size:35px; margin-top:-3px;">
             Smart Classrooms<br>for Future Ready<br>Learning
           </h2>
-          <br>
 
-          <p class="inspiring-desc" style="font-size:16px;text-align:justify;">
+
+          <p class="inspiring-desc" style="font-size:15.5px;text-align:justify;">
 
             At Bharathi Vidhyaa Kendhra, each classroom is equipped with interactive digital boards,
             high-speed connectivity, and collaborative learning tools, ensuring students receive a
@@ -1477,14 +1518,14 @@
           </p>
 
 
-          <p class="inspiring-desc" style="font-size:16px;text-align:justify;">
+          <p class="inspiring-desc" style="font-size:15.5px;text-align:justify;">
 
             Beyond traditional classrooms, our collaborative workspaces foster creativity, discussion,
             and innovation. Students engage in group projects and guided research within purpose-built
             environments designed for real-world learning.
           </p>
 
-          <a href="infrastructure.html" class="view-all-btn mt-4" style="margin-top:-5px;">View All <i
+          <a href="infrastructure.html" class="view-all-btn mt-4" style="margin-top:-1px;">View All <i
               class="fa fa-arrow-right"></i></a>
         </div>
       </div>
@@ -1534,7 +1575,7 @@
         <div style="flex: 1.5 1 350px; min-width: 300px; display: flex; flex-direction: column; gap: 50px;">
 
           <!-- Event 1 -->
-          <div style="display: flex; gap: 20px; align-items: flex-start;" class="reveal-up">
+          <div style="display: flex; gap: 20px; align-items: flex-start; margin-top:40px;" class="reveal-up">
             <div style="text-align: center; min-width: 70px;">
               <div style="font-size: 2.5rem; font-weight: 900; color: #ffcd16; line-height: 1;">14</div>
               <div style="font-size: 1rem; font-weight: 900; color: #1a1a1a; text-transform: uppercase;">Nov</div>
@@ -2020,6 +2061,54 @@
     window.addEventListener('load', function () {
       // Small delay to ensure page is fully loaded
       setTimeout(showAdmissionsPopup, 500);
+    });
+  </script>
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <script>
+    // Custom Cursor Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const cursorDot = document.querySelector("[data-cursor-dot]");
+      const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+      // Disable custom cursor on touch devices for better UX
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.style.cursor = 'auto';
+        if (cursorDot) cursorDot.style.display = 'none';
+        if (cursorOutline) cursorOutline.style.display = 'none';
+        return;
+      }
+
+      if (cursorDot && cursorOutline) {
+        window.addEventListener("mousemove", function (e) {
+          const posX = e.clientX;
+          const posY = e.clientY;
+
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
+
+          // Smooth trailing effect
+          cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+          }, { duration: 400, fill: "forwards" });
+        });
+
+        // Hover effect on interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, input, .nav-link-animate, .card, .circle-hover, .story-card, .founder-image-card');
+        interactiveElements.forEach((el) => {
+          el.addEventListener('mouseenter', () => {
+            cursorOutline.classList.add('hovering');
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+          });
+          el.addEventListener('mouseleave', () => {
+            cursorOutline.classList.remove('hovering');
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+          });
+        });
+      }
     });
   </script>
 </body>

@@ -29,9 +29,7 @@
     @layer base, snapping, layout;
 
     @layer snapping {
-      html {
-        /* scroll-behavior: smooth; -- Removed to avoid conflict with Lenis */
-      }
+
 
       body {
         background-color: #fffaeb;
@@ -50,6 +48,41 @@
       scrollbar-width: none;
       /* Firefox */
       -ms-overflow-style: none;
+      cursor: none; /* Hide default cursor */
+    }
+
+    /* Modern Custom Cursor */
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #000000;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 99999;
+      pointer-events: none;
+      transition: transform 0.2s ease-out;
+    }
+    .cursor-outline {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 99998;
+      pointer-events: none;
+      transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
+    }
+    .cursor-outline.hovering {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.08);
+      border-color: transparent;
     }
 
     ::-webkit-scrollbar {
@@ -438,7 +471,6 @@
     }
 
 
-
     a {
       text-decoration: none;
       font-size: 25px;
@@ -513,49 +545,47 @@
 
 
     .main-nav:hover .nav-link-animate {
-      color: #333;
-      /* Turn others grey when hovering container */
+      color: rgba(0, 0, 0, 0.35);
+      /* Professional, elegant fade for unfocused links */
     }
 
     /* Menu Item Hover Animation */
     .nav-link-animate {
-
       position: relative;
-      padding: 10px 36px;
-      font-family: sans-serif;
-      font-size: 1rem;
-      color: black;
-      /* Default Black */
+      padding: 10px 18px;
+      font-family: 'Montserrat', 'Inter', 'Roboto', sans-serif;
+      font-size: 1.05rem;
+      color: #1a1a1a;
       font-weight: 600;
+      letter-spacing: 0.5px;
       z-index: 1;
-      /* Light transparent background */
-      overflow: hidden;
-      border-radius: 20px;
-      transition: color 0.3s ease;
-      /* Rounded corners */
-
+      text-transform: capitalize;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      display: inline-block;
     }
 
-    .nav-link-animate::before {
+    .nav-link-animate::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 0%;
-      height: 100%;
-      /* Blue fill for contrast */
-      z-index: -1;
-      transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      height: 3px;
+      background: linear-gradient(90deg, #facc15 0%, #f59e0b 100%);
+      border-radius: 4px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .nav-link-animate:hover::before {
-      width: 100%;
+    .nav-link-animate:hover::after {
+      width: 80%;
     }
 
     .nav-link-animate:hover {
-      border-color: #ff4757;
-      color: #d8c10b !important;
-      /* Force White on hover */
+      color: #2e0647 !important;
+      /* Premium rich purple */
+      transform: translateY(-2px);
+      /* Classy physical lift effect */
     }
 
     /* About Section */
@@ -685,10 +715,12 @@
 
       .nav-link-animate {
         white-space: nowrap;
-        font-size: clamp(1.1rem, 0.9vw + 0.5rem, 1.5rem) !important;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        padding: 10px clamp(16px, 1.5vw, 34px) !important;
+        font-size: clamp(0.9rem, 0.8vw + 0.4rem, 1.05rem) !important;
+        font-family: 'Montserrat', 'Inter', 'Roboto', sans-serif !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.5px !important;
+        text-transform: capitalize !important;
+        padding: 10px clamp(12px, 1.2vw, 24px) !important;
       }
     }
 
@@ -2862,6 +2894,55 @@
   </script>
 
   <script src="js/video-carousel.js"></script>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <script>
+    // Custom Cursor Logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const cursorDot = document.querySelector("[data-cursor-dot]");
+      const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+      // Disable custom cursor on touch devices for better UX
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.style.cursor = 'auto';
+        if(cursorDot) cursorDot.style.display = 'none';
+        if(cursorOutline) cursorOutline.style.display = 'none';
+        return;
+      }
+
+      if (cursorDot && cursorOutline) {
+        window.addEventListener("mousemove", function (e) {
+          const posX = e.clientX;
+          const posY = e.clientY;
+
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
+
+          // Smooth trailing effect
+          cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+          }, { duration: 400, fill: "forwards" });
+        });
+
+        // Hover effect on interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, input, .nav-link-animate, .card, .circle-hover, .story-card, .founder-image-card');
+        interactiveElements.forEach((el) => {
+          el.addEventListener('mouseenter', () => {
+            cursorOutline.classList.add('hovering');
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+          });
+          el.addEventListener('mouseleave', () => {
+            cursorOutline.classList.remove('hovering');
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+          });
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
