@@ -520,51 +520,41 @@
     /* Main Navigation */
     .main-nav {
       position: fixed;
-      /* Fixes navbar at the top */
       top: 0;
-      /* Aligns to top */
       left: 0;
-      /* Aligns left edge */
       width: 100%;
-      /* Full width */
       z-index: 1000;
-      /* Keeps it above other content */
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 25px;
       flex-wrap: wrap;
-      /* Glass effect */
-      background: rgba(255, 255, 255, 0.1);
-      /* semi-transparent */
-      backdrop-filter: blur(2px);
-      /* blurs whatever is behind */
-      -webkit-backdrop-filter: blur(3px);
-      /* for Safari */
-      border: 0.5px solid rgba(255, 255, 255, 0.3);
-      /* subtle border */
-      padding: 2px 20px;
-      /* optional padding */
+      background: url('bg.PNG') center calc(50% - 6px) / auto 220% no-repeat, linear-gradient(to bottom, #9c28e9, #5e35b1, #3949ab);
+      background-blend-mode: normal;
+      /* Allows the gradient and image to mix nicely */
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 11px 20px;
     }
 
-
     .main-nav:hover .nav-link-animate {
-      color: #555555;
-      /* Light black for unfocused links instead of grey */
+      color: rgba(255, 255, 255, 0.685);
     }
 
     /* Menu Item Hover Animation */
     .nav-link-animate {
       position: relative;
-      padding: 10px 18px;
+      padding: 10px 16px;
       font-family: 'Montserrat', 'Inter', 'Roboto', sans-serif;
-      font-size: 1.05rem;
-      color: #000000;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+      font-size: 0.8rem;
+      color: #ffffff;
+      font-weight: 500;
+      letter-spacing: 1px;
       z-index: 1;
-      text-transform: capitalize;
+      text-transform: uppercase;
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       display: inline-block;
+      text-decoration: none;
     }
 
     .nav-link-animate::after {
@@ -575,8 +565,7 @@
       transform: translateX(-50%);
       width: 0%;
       height: 3px;
-      background: linear-gradient(90deg, #facc15 0%, #f59e0b 100%);
-      border-radius: 4px;
+      background: #ffffff;
       transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -585,10 +574,8 @@
     }
 
     .nav-link-animate:hover {
-      color: #6b5d0e !important;
-      /* Premium rich purple */
+      color: #fbbf24 !important;
       transform: translateY(-2px);
-      /* Classy physical lift effect */
     }
 
     /* About Section */
@@ -718,12 +705,13 @@
 
       .nav-link-animate {
         white-space: nowrap;
-        font-size: clamp(0.9rem, 0.8vw + 0.4rem, 1.05rem) !important;
+        font-size: clamp(0.75rem, 0.6vw + 0.35rem, 0.85rem) !important;
         font-family: 'Montserrat', 'Inter', 'Roboto', sans-serif !important;
-        font-weight: 600 !important;
-        letter-spacing: 0.5px !important;
-        text-transform: capitalize !important;
-        padding: 10px clamp(12px, 1.2vw, 24px) !important;
+        font-weight: 500 !important;
+        letter-spacing: 1px !important;
+        text-transform: uppercase !important;
+        padding: 10px clamp(12px, 1.2vw, 20px) !important;
+        display: inline-block !important;
       }
     }
 
@@ -916,7 +904,8 @@
     .main-footer {
       background: #111;
       color: #fff;
-      padding: 60px 10% 50px; /* Increased bottom padding for better breathing room */
+      padding: 60px 10% 50px;
+      /* Increased bottom padding for better breathing room */
       position: relative;
       z-index: 10;
     }
@@ -991,12 +980,14 @@
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding-top: 25px;
       text-align: center;
-      color: #bbb; /* Improved visibility on dark background */
+      color: #bbb;
+      /* Improved visibility on dark background */
       font-size: 14px;
     }
 
     .footer-bottom p {
-      margin: 0; /* Reset margins to prevent unexpected scrolling/cutoff */
+      margin: 0;
+      /* Reset margins to prevent unexpected scrolling/cutoff */
     }
 
     /* MOBILE HEADER STYLES */
@@ -1984,8 +1975,8 @@
 
           <nav class="main-nav" id="mainNav">
             <a href="#" class="nav-link-animate magnetic-target">Home</a>
-            <a href="#campus-showcase" class="nav-link-animate magnetic-target">Testimonials</a>
             <a href="#about" class="nav-link-animate magnetic-target">About Us</a>
+            <a href="#campus-showcase" class="nav-link-animate magnetic-target">Testimonials</a>
             <a href="#why-choose-us" class="nav-link-animate magnetic-target">Why choose Us</a>
             <a href="#founder" class="nav-link-animate magnetic-target">Founder's story</a>
           </nav>
