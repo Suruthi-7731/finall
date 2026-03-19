@@ -48,7 +48,8 @@
       scrollbar-width: none;
       /* Firefox */
       -ms-overflow-style: none;
-      cursor: none; /* Hide default cursor */
+      cursor: none;
+      /* Hide default cursor */
     }
 
     /* Modern Custom Cursor */
@@ -65,6 +66,7 @@
       pointer-events: none;
       transition: transform 0.2s ease-out;
     }
+
     .cursor-outline {
       width: 40px;
       height: 40px;
@@ -78,6 +80,7 @@
       pointer-events: none;
       transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
     }
+
     .cursor-outline.hovering {
       width: 60px;
       height: 60px;
@@ -545,8 +548,8 @@
 
 
     .main-nav:hover .nav-link-animate {
-      color: rgba(0, 0, 0, 0.35);
-      /* Professional, elegant fade for unfocused links */
+      color: #555555;
+      /* Light black for unfocused links instead of grey */
     }
 
     /* Menu Item Hover Animation */
@@ -555,7 +558,7 @@
       padding: 10px 18px;
       font-family: 'Montserrat', 'Inter', 'Roboto', sans-serif;
       font-size: 1.05rem;
-      color: #1a1a1a;
+      color: #000000;
       font-weight: 600;
       letter-spacing: 0.5px;
       z-index: 1;
@@ -582,7 +585,7 @@
     }
 
     .nav-link-animate:hover {
-      color: #2e0647 !important;
+      color: #6b5d0e !important;
       /* Premium rich purple */
       transform: translateY(-2px);
       /* Classy physical lift effect */
@@ -913,7 +916,7 @@
     .main-footer {
       background: #111;
       color: #fff;
-      padding: 60px 10% 20px;
+      padding: 60px 10% 50px; /* Increased bottom padding for better breathing room */
       position: relative;
       z-index: 10;
     }
@@ -988,8 +991,12 @@
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding-top: 25px;
       text-align: center;
-      color: #888;
+      color: #bbb; /* Improved visibility on dark background */
       font-size: 14px;
+    }
+
+    .footer-bottom p {
+      margin: 0; /* Reset margins to prevent unexpected scrolling/cutoff */
     }
 
     /* MOBILE HEADER STYLES */
@@ -2546,7 +2553,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Bharathi Group of Schools. All Rights Reserved.</p>
+      <p class="anim-visible">&copy; 2026 Bharathi Group of Schools. All Rights Reserved.</p>
     </div>
   </footer>
   <script>
@@ -2751,7 +2758,7 @@
       // Card tilt and glow are now handled by vanilla-tilt.js and hover-premium class.
 
       // 3. Text reveal animation on scroll (using established anim-up pattern)
-      document.querySelectorAll('h1, h2, h3, p').forEach((el, i) => {
+      document.querySelectorAll('h1, h2, h3, p:not(.footer-bottom p)').forEach((el, i) => {
         el.classList.add('anim-up');
         // Add a small stagger based on index if desired, but keep it subtle
         el.style.transitionDelay = `${(i % 5) * 50}ms`;
@@ -2908,8 +2915,8 @@
       // Disable custom cursor on touch devices for better UX
       if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
         document.body.style.cursor = 'auto';
-        if(cursorDot) cursorDot.style.display = 'none';
-        if(cursorOutline) cursorOutline.style.display = 'none';
+        if (cursorDot) cursorDot.style.display = 'none';
+        if (cursorOutline) cursorOutline.style.display = 'none';
         return;
       }
 
