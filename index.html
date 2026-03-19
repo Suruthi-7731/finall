@@ -528,8 +528,7 @@
       justify-content: center;
       gap: 25px;
       flex-wrap: wrap;
-      background: url('bg.PNG') center calc(50% - 6px) / auto 220% no-repeat, linear-gradient(to bottom, #9c28e9, #5e35b1, #3949ab);
-      background-blend-mode: normal;
+      background: linear-gradient(to bottom, #9c28e9, #6f35b1, #3949ab);
       /* Allows the gradient and image to mix nicely */
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
@@ -544,38 +543,35 @@
     /* Menu Item Hover Animation */
     .nav-link-animate {
       position: relative;
-      padding: 10px 16px;
+      padding: 0 16px;
+      height: 38px;
       font-family: 'Montserrat', 'Inter', 'Roboto', sans-serif;
-      font-size: 0.8rem;
+      font-size: 1rem;
       color: #ffffff;
       font-weight: 500;
       letter-spacing: 1px;
       z-index: 1;
       text-transform: uppercase;
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.048), rgba(255, 255, 255, 0.096));
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
       text-decoration: none;
+      box-sizing: border-box;
     }
 
     .nav-link-animate::after {
-      content: "";
-      position: absolute;
-      bottom: 2px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0%;
-      height: 3px;
-      background: #ffffff;
-      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .nav-link-animate:hover::after {
-      width: 80%;
+      display: none;
     }
 
     .nav-link-animate:hover {
-      color: #fbbf24 !important;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.02));
+      color: #ffffff !important;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(245, 217, 156, 0.616);
     }
 
     /* About Section */
@@ -710,8 +706,15 @@
         font-weight: 500 !important;
         letter-spacing: 1px !important;
         text-transform: uppercase !important;
-        padding: 10px clamp(12px, 1.2vw, 20px) !important;
-        display: inline-block !important;
+        padding: 0 clamp(12px, 1.2vw, 20px) !important;
+        height: 38px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.0)) !important;
+        border-radius: 30px !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        box-sizing: border-box !important;
       }
     }
 
@@ -887,8 +890,11 @@
 
       .main-nav {
         flex-direction: column;
-        gap: 18px;
+        gap: 15px;
         align-items: center;
+        background-size: cover !important;
+        background-position: center !important;
+        padding: 20px 10px;
       }
 
       .hero-content {
