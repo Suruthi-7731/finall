@@ -1,0 +1,411 @@
+/* Achievements Page Specific Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-pink: #D6008D;
+    --accent-gold: #FFD700;
+    --dark-pink: #a94899e1;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.achievements-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: var(--dark-pink);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-pink), var(--accent-gold));
+    border-radius: 2px;
+}
+
+/* Academic Excellence Section */
+.academics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.academic-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 0; /* Changed padding to 0 for image-top cards */
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.academic-card:hover .card-img-container img {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.academic-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.academic-card .icon {
+    font-size: 3rem;
+    color: var(--primary-pink);
+    margin-bottom: 20px;
+}
+
+.academic-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.academic-card .score {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-pink);
+    margin: 10px 0;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e0e0e0;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-pink);
+    border: 4px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.timeline-content {
+    width: 45%;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    position: relative;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-year {
+    display: inline-block;
+    padding: 5px 15px;
+    background: var(--primary-pink);
+    color: white;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Sports & Achievements */
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.sport-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(214, 0, 141, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: visible; /* To allow badge to overflow slightly if needed */
+}
+
+.sport-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 24px;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, var(--primary-pink), var(--accent-gold)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.sport-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--primary-pink), #a94899);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+    box-shadow: 0 5px 20px rgba(214, 0, 141, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+.sport-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(214, 0, 141, 0.15);
+}
+
+.sport-card:hover::after {
+    opacity: 1;
+}
+
+.sport-card:hover .sport-badge {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.sport-card h4 {
+    color: var(--primary-pink);
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(214, 0, 141, 0.05);
+}
+
+.sport-card p {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.sport-card p::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-size: 0.8rem;
+    top: 2px;
+}
+
+/* Number Counter Styling */
+.score-count {
+    display: inline-block;
+}
+
+/* Floating Animations for Icons */
+.icon i {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.academic-card:hover .icon i {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Refined Hover Premium */
+.academic-card, .sport-card {
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.academic-card::before, .sport-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: none;
+}
+
+.academic-card:hover::before, .sport-card:hover::before {
+    left: 100%;
+    transition: all 0.8s ease-in-out;
+}
+
+/* Improved Timeline Dot */
+.timeline-dot {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.5);
+    background: var(--accent-gold);
+}
+
+/* Mixed Color Icon Style */
+.mixed-icon i {
+    background: linear-gradient(135deg, #FFD700 0%, #D6008D 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.academic-card .mixed-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+    .achievements-container {
+        padding: 40px 15px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .timeline-content {
+        width: 48%;
+    }
+
+    .academics-grid, .sports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 110px 15px 40px !important;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 35px;
+    }
+
+    /* Mobile Timeline */
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        left: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 50px);
+        margin-left: 50px !important;
+    }
+
+    .timeline-item {
+        margin-bottom: 40px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 50px !important;
+    }
+
+    .academics-grid, .sports-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Academic Cards Mobile */
+    .academic-card .score {
+        font-size: 2rem;
+    }
+
+    .academic-card h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Sports Cards Mobile */
+    .sport-card {
+        padding: 60px 20px 25px; /* More top padding to avoid icon overlap */
+    }
+
+    .sport-badge {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .academic-card .score {
+        font-size: 1.8rem;
+    }
+}
