@@ -95,29 +95,6 @@ svg {
     font-size: 0.98rem !important;
   }
 
-  /* Show mobile menu when active */
-  .main-nav.active {
-    display: flex !important;
-  }
-
-  /* Move mobile menu to right */
-  .main-nav {
-    right: 0 !important;
-    left: auto !important;
-    align-items: flex-end !important;
-    background: #ffe066 !important;
-  }
-  .main-nav a {
-    color: #111 !important;
-    font-weight: bold;
-    text-shadow: none !important;
-  }
-  .main-nav.active {
-    right: 0 !important;
-    left: auto !important;
-    align-items: flex-end !important;
-  }
-
   table {
     display: block;
     overflow-x: auto;

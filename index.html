@@ -1057,38 +1057,55 @@
         /* Push to right */
       }
 
-      /* Mobile Menu Dropdown */
+      /* Mobile Menu Fullscreen Overlay */
       .main-nav {
         display: none;
         /* hidden by default on mobile */
-        position: absolute;
+        position: fixed;
         top: 60px;
-        right: 16px;
-        width: 220px;
-        background: #fefce8;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 14px;
-        padding: 15px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        z-index: 1001;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .main-nav a {
+        left: 0;
         width: 100%;
-        text-align: left;
-        padding: 10px 12px;
-        color: #111 !important;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: background 0.3s;
+        background: linear-gradient(to bottom, #9c28e9, #6f35b1, #3949ab) !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 20px;
+        z-index: 1001;
       }
 
-      .main-nav a:hover {
-        background: rgba(0, 0, 0, 0.05);
+      .main-nav.active {
+        display: flex;
+      }
+
+      .main-nav a, .main-nav .nav-link-animate {
+        width: auto !important;
+        text-align: center !important;
+        color: #ffffff !important;
+        font-size: 1.1rem !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 10px 20px !important;
+        transition: color 0.3s;
+      }
+
+      .main-nav a:hover, .main-nav .nav-link-animate:hover {
+        color: #facc15 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+
+      .main-nav a:hover::after, .main-nav .nav-link-animate:hover::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #facc15;
+        margin-top: 5px;
       }
     }
 
