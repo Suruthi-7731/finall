@@ -7,32 +7,37 @@
    padding-bottom: 12px;
    scroll-snap-type: x mandatory;
 }
+
 .testimonial-scroll-wrapper::-webkit-scrollbar {
    height: 8px;
    background: #eee;
 }
+
 .testimonial-scroll-wrapper::-webkit-scrollbar-thumb {
    background: #ccc;
    border-radius: 4px;
 }
+
 .testimonial-card {
    flex: 0 0 320px;
    max-width: 90vw;
    background: #fff;
    border-radius: 16px;
-   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
    scroll-snap-align: start;
    display: flex;
    flex-direction: column;
    align-items: center;
    padding: 12px 0 0 0;
 }
+
 .testimonial-card video,
 .testimonial-card img {
    width: 100%;
    border-radius: 16px 16px 0 0;
    object-fit: cover;
 }
+
 /* Event date vertical style for upcoming events */
 .event-date {
    display: flex;
@@ -45,6 +50,7 @@
    margin-bottom: 0.2em;
    margin-right: 0.8em;
 }
+
 .event-date .event-month {
    font-size: 1.1rem;
    color: #444;
@@ -52,6 +58,7 @@
    margin-top: -0.3em;
    letter-spacing: 1px;
 }
+
 .event-card {
    display: flex;
    flex-direction: row;
@@ -60,21 +67,24 @@
    margin-bottom: 1.5em;
    background: #fff;
    border-radius: 8px;
-   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
    padding: 1.2em 1em;
 }
+
 .event-details {
    flex: 1;
    display: flex;
    flex-direction: column;
    justify-content: center;
 }
+
 .event-title {
    font-size: 1.1rem;
    font-weight: 700;
    margin-bottom: 0.2em;
    color: #222;
 }
+
 .event-meta {
    font-size: 0.95rem;
    color: #666;
@@ -83,11 +93,13 @@
    flex-wrap: wrap;
    gap: 0.7em;
 }
+
 .event-location {
    color: var(--primary-blue);
    font-size: 0.95rem;
    font-weight: 500;
 }
+
 * {
    box-sizing: border-box;
    margin: 0;
@@ -168,10 +180,9 @@ p {
 @media (max-width: 768px) {
    .coverDiv {
       width: 100%;
-     
       background-attachment: scroll;
       background-position: center;
-      
+      background-size: 170% 100%;
    }
 }
 
@@ -743,7 +754,7 @@ p {
    align-items: center;
    flex-direction: column;
    padding-block: 50px;
-   background:#a94899e1
+   background: #a94899e1
 }
 
 .divSix .overlay .mainSec {
@@ -1030,7 +1041,7 @@ p {
 }
 
 @media (max-width: 768px) {
-   .events-section-premium > div {
+   .events-section-premium>div {
       justify-content: flex-start !important;
    }
 }
