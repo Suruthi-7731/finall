@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bharathi Kids Kshethralaya | Nursery & Primary School in Tiruppur</title>
-  <meta name="description" content="Bharathi Kids Kshethralaya (BKK) is a premier nursery and primary school in Tiruppur offering holistic early childhood education, communication skills development, and a nurturing learning environment.">
+  <meta name="description"
+    content="Bharathi Kids Kshethralaya (BKK) is a premier nursery and primary school in Tiruppur offering holistic early childhood education, communication skills development, and a nurturing learning environment.">
   <link rel="icon" type="image/png" href="img/logo2.png">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/index-responsive.css">
@@ -18,12 +20,14 @@
   <!-- <link rel="stylesheet" href="../fontawesome-free-6.4.2-web/css/all.css"> -->
   <style>
     /* Custom cursor removed - using book-cursor.js instead */
-    html, body {
+    html,
+    body {
       background-color: #ffffff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      cursor: none; /* Hide default cursor */
+      cursor: none;
+      /* Hide default cursor */
     }
 
     /* Modern Custom Cursor (Blue) */
@@ -40,10 +44,12 @@
       pointer-events: none;
       transition: transform 0.2s ease-out;
     }
+
     .cursor-outline {
       width: 40px;
       height: 40px;
-      border: 2px solid rgba(255, 215, 0, 0.8); /* Vivid Yellow/Gold */
+      border: 2px solid rgba(255, 215, 0, 0.8);
+      /* Vivid Yellow/Gold */
       border-radius: 50%;
       position: fixed;
       top: 0;
@@ -53,13 +59,15 @@
       pointer-events: none;
       transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
     }
+
     .cursor-outline.hovering {
       width: 60px;
       height: 60px;
-      background-color: rgba(255, 215, 0, 0.2); /* Soft Yellow */
+      background-color: rgba(255, 215, 0, 0.2);
+      /* Soft Yellow */
       border-color: transparent;
     }
-    
+
     main {
       flex: 1;
     }
@@ -123,7 +131,7 @@
       border-radius: 14px;
       text-align: center;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-      position:relative;
+      position: relative;
     }
 
     /* HEADING */
@@ -417,13 +425,15 @@
 
     /* Responsive for smaller screens */
     @media (max-width: 900px) {
-  .divTwo .headingSec > div > div > div {
-    width: 100% !important; 
-    max-width: 560px;       
-    transform: translateY(0) !important; /* reset any translate for elevation effect */
-    margin: 0 auto 30px;   
-    padding: 60px 20px 40px;/* center the cards and add spacing between them */
-  }
+      .divTwo .headingSec>div>div>div {
+        width: 100% !important;
+        max-width: 560px;
+        transform: translateY(0) !important;
+        /* reset any translate for elevation effect */
+        margin: 0 auto 30px;
+        padding: 60px 20px 40px;
+        /* center the cards and add spacing between them */
+      }
 
       .about-section img,
       .about-text {
@@ -435,138 +445,225 @@
       }
     }
 
-.reel-testimonials {
-    padding: 40px 20px;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-.reel-testimonials h2 {
-color:#031844;
-    font-size: 40px;
-    margin-bottom: 40px;
-}
-
-.reels-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.reel-card {
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.reel-card video {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-.reel-caption {
-  font-weight:600;
-    padding: 8px;
-    font-size: 16px;
-    color: #063ebf;
-}
-
-@media (max-width: 768px) {
-
     .reel-testimonials {
-        padding: 10px 10px;
-        text-align: left;
+      padding: 40px 20px;
+      background: #f9f9f9;
+      text-align: center;
     }
 
     .reel-testimonials h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        padding-left: 5px;
+      color: #031844;
+      font-size: 40px;
+      margin-bottom: 40px;
     }
 
     .reels-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .reel-card {
+      background: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .reel-card video {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .reel-caption {
+      font-weight: 600;
+      padding: 8px;
+      font-size: 16px;
+      color: #063ebf;
+    }
+
+    @media (max-width: 768px) {
+
+      .reel-testimonials {
+        padding: 10px 10px;
+        text-align: left;
+      }
+
+      .reel-testimonials h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-left: 5px;
+      }
+
+      .reels-wrapper {
         display: flex;
         gap: 12px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-    }
+      }
 
-    .reels-wrapper::-webkit-scrollbar {
+      .reels-wrapper::-webkit-scrollbar {
         display: none;
-    }
+      }
 
-    .reel-card {
+      .reel-card {
         min-width: 160px;
         height: 280px;
         flex-shrink: 0;
         scroll-snap-align: start;
-    }
+      }
 
-    .reel-card video {
+      .reel-card video {
         height: 100%;
-    }
+      }
 
-    .reel-caption {
+      .reel-caption {
         font-size: 12px;
         padding: 6px;
+      }
     }
-}
   </style>
   <style>
     /* Mobile responsiveness tweaks for school2 home */
     @media (max-width: 900px) {
+
       /* Header: hide desktop nav and show hamburger */
-            .hamburgerIcon { display: block !important; cursor: pointer; }
-      header.mainHeader { padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; }
-      .logoSec img { height: 48px; }
+      .hamburgerIcon {
+        display: block !important;
+        cursor: pointer;
+      }
+
+      header.mainHeader {
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logoSec img {
+        height: 48px;
+      }
 
       /* Hero adjustments */
-      .mainDiv .mainSec h1 { font-size: 1.6rem; }
-      .mainDiv .mainSec p { font-size: 1rem; }
+      .mainDiv .mainSec h1 {
+        font-size: 1.6rem;
+      }
+
+      .mainDiv .mainSec p {
+        font-size: 1rem;
+      }
 
       /* Stack the main two-column section into single column */
-      section[style*="min-height: 500px"] { flex-direction: column; padding: 30px 16px !important; }
-      section[style*="min-height: 500px"] > div:first-child,
-      section[style*="min-height: 500px"] > div:last-child {
+      section[style*="min-height: 500px"] {
+        flex-direction: column;
+        padding: 30px 16px !important;
+      }
+
+      section[style*="min-height: 500px"]>div:first-child,
+      section[style*="min-height: 500px"]>div:last-child {
         flex: 0 0 100%;
         width: 100%;
         padding: 20px !important;
         box-sizing: border-box;
       }
-      section[style*="min-height: 500px"] .magnetic-target { width: 100% !important; max-width: 720px; margin: 0 auto 18px; transform: none !important; }
+
+      section[style*="min-height: 500px"] .magnetic-target {
+        width: 100% !important;
+        max-width: 720px;
+        margin: 0 auto 18px;
+        transform: none !important;
+      }
 
       /* Ensure the wave cards stack and center */
-      .divTwo [style*="max-width: 1400px"] { flex-direction: column !important; min-height: auto !important; padding: 20px !important; }
-      .divTwo .reveal-blur { width: 98% !important; max-width: 560px; margin: 18px auto !important; transform: none !important; }
+      .divTwo [style*="max-width: 1400px"] {
+        flex-direction: column !important;
+        min-height: auto !important;
+        padding: 20px !important;
+      }
+
+      .divTwo .reveal-blur {
+        width: 98% !important;
+        max-width: 560px;
+        margin: 18px auto !important;
+        transform: none !important;
+      }
 
       /* Inspiring container stacks */
-      .inspiring-container { display: flex; flex-direction: column; gap: 24px; padding: 16px; }
-      .inspiring-collage, .inspiring-content { width: 100%; }
+      .inspiring-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 16px;
+      }
+
+      .inspiring-collage,
+      .inspiring-content {
+        width: 100%;
+      }
 
       /* Events: make each event stack vertically */
-      #events [style*="display: flex; gap: 30px;"] { flex-direction: column; align-items: flex-start; gap: 12px; }
-      #events .reveal-up > div:first-child { min-width: auto; text-align: left; }
+      #events [style*="display: flex; gap: 30px;"] {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      #events .reveal-up>div:first-child {
+        min-width: auto;
+        text-align: left;
+      }
 
       /* Facilities grid -> single column */
-      .divFour section > div[style*="display: grid"] { grid-template-columns: 1fr !important; }
+      .divFour section>div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+      }
 
       /* Reduce overall paddings for smaller screens */
-      .about-section, .academics, .working-hours-section, .school-outfit-section { padding-left: 16px !important; padding-right: 16px !important; }
+      .about-section,
+      .academics,
+      .working-hours-section,
+      .school-outfit-section {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
     }
 
     /* Further small-screen tweaks */
     @media (max-width: 480px) {
-      .mainDiv .mainSec h1 { font-size: 1.4rem; }
-      .divTwo .reveal-blur { width: 100% !important; max-width: 560px; padding: 20px !important; }
-      .inspiring-heading { font-size: 1.4rem !important; }
-      .footer-container { padding: 0 12px; }
-      .footer-social a { margin: 0 8px; }
-      .about-box, .about-section img { width: 100%; }
+      .mainDiv .mainSec h1 {
+        font-size: 1.4rem;
+      }
+
+      .divTwo .reveal-blur {
+        width: 100% !important;
+        max-width: 560px;
+        padding: 20px !important;
+      }
+
+      .inspiring-heading {
+        font-size: 1.4rem !important;
+      }
+
+      .footer-container {
+        padding: 0 12px;
+      }
+
+      .footer-social a {
+        margin: 0 8px;
+      }
+
+      .about-box,
+      .about-section img {
+        width: 100%;
+      }
+
       /* Make profile and collage images responsive */
-      img { max-width: 100%; height: auto; }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
   </style>
   <script>document.documentElement.classList.remove('no-js');</script>
@@ -649,163 +746,163 @@ color:#031844;
   </style>
 
   <style>
-.campus-section {
-    max-width: 1400px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-}
+    .campus-section {
+      max-width: 1400px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
 
-.section-header h2 {
-    font-family: 'Inter', sans-serif;
-    color: #003399;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
+    .section-header h2 {
+      font-family: 'Inter', sans-serif;
+      color: #003399;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-.section-header p {
-    color: #666;
-    font-size: 1.1rem;
-}
+    .section-header p {
+      color: #666;
+      font-size: 1.1rem;
+    }
 
-.stories-container {
-    position: relative;
-    width: 100%;
-}
+    .stories-container {
+      position: relative;
+      width: 100%;
+    }
 
-.stories-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 1.5rem;
-    padding: 1rem 0 2rem;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    /* Hide standard scrollbar */
-    -ms-overflow-style: none;
-    /* Center videos in desktop view */
-    justify-content: center;
-}
+    .stories-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      padding: 1rem 0 2rem;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      /* Hide standard scrollbar */
+      -ms-overflow-style: none;
+      /* Center videos in desktop view */
+      justify-content: center;
+    }
 
-.stories-scroll::-webkit-scrollbar {
-    display: none;
-    /* Hide standard scrollbar */
-}
+    .stories-scroll::-webkit-scrollbar {
+      display: none;
+      /* Hide standard scrollbar */
+    }
 
-.story-card {
-    flex: 0 0 calc(25% - 1.2rem);
-    /* 4 cards visible on desktop */
-    min-width: 280px;
-    aspect-ratio: 9 / 16;
-    background: #000;
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-    scroll-snap-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.story-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-}
-
-.story-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-.story-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 40%);
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.story-card:hover .story-overlay {
-    opacity: 1;
-}
-
-.unmute-btn {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.unmute-btn:hover {
-    background: white;
-    color: black;
-}
-
-.stories-progress-container {
-    width: 100%;
-    height: 4px;
-    background: #e0e0e0;
-    border-radius: 2px;
-    margin-top: 1rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.stories-track {
-    position: absolute;
-    height: 100%;
-    background: #f9dc5d;
-    width: 0;
-    transition: width 0.1s linear;
-}
-
-@media (max-width: 1024px) {
     .story-card {
-        flex: 0 0 calc(50% - 1rem);
+      flex: 0 0 calc(25% - 1.2rem);
+      /* 4 cards visible on desktop */
+      min-width: 280px;
+      aspect-ratio: 9 / 16;
+      background: #000;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      scroll-snap-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Center testimonial videos in desktop view only */
-    @media (min-width: 769px) {
-        .stories-scroll {
-            justify-content: center !important;
-        }
+    .story-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
     }
 
-    /* Keep videos left-aligned in mobile view */
-    @media (max-width: 768px) {
-        .stories-scroll {
-            justify-content: flex-start !important;
-        }
-    }
-}
-
-@media (max-width: 600px) {
-    .story-card {
-        flex: 0 0 85%;
+    .story-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
     }
 
     .story-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 40%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .story-card:hover .story-overlay {
+      opacity: 1;
+    }
+
+    .unmute-btn {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .unmute-btn:hover {
+      background: white;
+      color: black;
+    }
+
+    .stories-progress-container {
+      width: 100%;
+      height: 4px;
+      background: #e0e0e0;
+      border-radius: 2px;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stories-track {
+      position: absolute;
+      height: 100%;
+      background: #f9dc5d;
+      width: 0;
+      transition: width 0.1s linear;
+    }
+
+    @media (max-width: 1024px) {
+      .story-card {
+        flex: 0 0 calc(50% - 1rem);
+      }
+
+      /* Center testimonial videos in desktop view only */
+      @media (min-width: 769px) {
+        .stories-scroll {
+          justify-content: center !important;
+        }
+      }
+
+      /* Keep videos left-aligned in mobile view */
+      @media (max-width: 768px) {
+        .stories-scroll {
+          justify-content: flex-start !important;
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      .story-card {
+        flex: 0 0 85%;
+      }
+
+      .story-overlay {
         opacity: 1;
         background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 30%);
+      }
     }
-}
 
     /* Admissions Popup Modal */
     .admissions-modal {
@@ -920,6 +1017,7 @@ color:#031844;
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -929,6 +1027,7 @@ color:#031844;
       from {
         opacity: 1;
       }
+
       to {
         opacity: 0;
       }
@@ -940,10 +1039,12 @@ color:#031844;
         opacity: 0;
         transform: rotateX(-90deg) scale(0.7);
       }
+
       60% {
         opacity: 1;
         transform: rotateX(12deg) scale(1.02);
       }
+
       100% {
         opacity: 1;
         transform: rotateX(0deg) scale(1);
@@ -955,10 +1056,12 @@ color:#031844;
         opacity: 1;
         transform: rotateX(0deg) scaleX(1) scaleY(1);
       }
+
       50% {
         opacity: 0.9;
         transform: rotateX(15deg) scaleX(0.9) scaleY(0.7);
       }
+
       100% {
         opacity: 0;
         transform: rotateX(90deg) scaleX(0.6) scaleY(0.1);
@@ -979,698 +1082,756 @@ color:#031844;
         font-size: 1.1rem;
       }
     }
-</style>
- 
+  </style>
+
 
   <link rel='stylesheet' href='../mobile-fixes.css'>
   <link rel='stylesheet' href='../css/school-faq-chatbot.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-ieVFO2R0j20g35yLOIjoiqlc7qwvd+wd+TLPu8=" crossorigin="anonymous" referrerpolicy="no-referrer-when-downgrade">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-ieVFO2R0j20g35yLOIjoiqlc7qwvd+wd+TLPu8=" crossorigin="anonymous"
+    referrerpolicy="no-referrer-when-downgrade">
 </head>
 
 <body>
   <main>
-  <div class="coverDiv">
-    <header class="mainHeader">
-      <section class="logoSec">
-        <a href="../index.html" class="logo-link">
-          <img src="img/logo2.png" alt="BKS School Logo" style="height: 60px; width: auto;">
-        </a>
-      </section>
+    <div class="coverDiv">
+      <header class="mainHeader">
+        <section class="logoSec">
+          <a href="../index.html" class="logo-link">
+            <img src="img/logo2.png" alt="BKS School Logo" style="height: 60px; width: auto;">
+          </a>
+        </section>
 
-      <section class="navItems" id="navItems">
-  
-        <span><a href="index.html" class="nav-link-animate magnetic-target active">Home</a></span>
-        <span><a href="infrastructure.html" class="nav-link-animate magnetic-target">Infrastructure</a></span>
-        <span><a href="gallery.html" class="nav-link-animate magnetic-target">Gallery</a></span>
-        <span><a href="events.html" class="nav-link-animate magnetic-target">Events</a></span>
-        <span><a href="achievements.html" class="nav-link-animate magnetic-target">Achievements</a></span>
-        <span><a href="about.html" class="nav-link-animate magnetic-target">About Us</a></span>
-        <span><a href="contact.html" class="nav-link-animate magnetic-target">Contact Us</a></span>
-      </section>
+        <section class="navItems" id="navItems">
 
-      <div class="hamburgerIcon" id="hamburgerIcon" onclick="showMenu()">
-        <i class="fa-solid fa-bars"></i>
+          <span><a href="index.html" class="nav-link-animate magnetic-target active">Home</a></span>
+          <span><a href="about.html" class="nav-link-animate magnetic-target">About Us</a></span>
+
+          <span><a href="infrastructure.html" class="nav-link-animate magnetic-target">Infrastructure</a></span>
+          <span><a href="gallery.html" class="nav-link-animate magnetic-target">Gallery</a></span>
+          <span><a href="events.html" class="nav-link-animate magnetic-target">Events</a></span>
+          <span><a href="achievements.html" class="nav-link-animate magnetic-target">Achievements</a></span>
+          <span><a href="contact.html" class="nav-link-animate magnetic-target">Contact Us</a></span>
+        </section>
+
+        <div class="hamburgerIcon" id="hamburgerIcon" onclick="showMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+
+      <div class="mainDiv">
+        <section class="mainSec reveal reveal-down">
+          <h1>Welcome to Bharathi Kids Kshethralaya</h1>
+          <p>Where Excellence meets Education</p>
+        </section>
       </div>
-    </header>
-
-    <div class="mainDiv">
-      <section class="mainSec reveal reveal-down">
-       <h1>Welcome to Bharathi Kids Kshethralaya</h1>
-        <p>Where Excellence meets Education</p>
-      </section>
     </div>
-  </div>
 
-  <section style="display: flex; min-height: 500px; background: rgb(232, 236, 255);">
-        <!-- Right Side: Dark Banner with Text -->
-    <div
-      style="flex: 0 0 40%; background: linear-gradient(135deg, #2f4596dd 0%, #2844a9e9 100%); padding: 60px 40px; display: flex; flex-direction: column; justify-content: center; color: white;">
-      <h2 style="font-size: 3rem; font-weight: 900; margin: 0 0 30px 0; line-height: 1.2; color: #f0e760;">Our Statement
-      </h2>
-      <p style="font-size: 1rem; line-height: 1.7; margin: 0; opacity: 0.95; color: white;">
-        Our Learning arena is characterized and structured to be <br>Learner - centred, knowledge - centred, Assessment - centred and Community - centred.
-      </p>
-    </div>
-    <!-- Left Side: Two Cards -->
-    <div
-      style="flex: 0 0 60%; padding: 40px 40px; display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap;">
-
-      <!-- Vision Card -->
+    <section style="display: flex; min-height: 500px; background: rgb(232, 236, 255);">
+      <!-- Right Side: Dark Banner with Text -->
       <div
-        style="flex: 1; min-width: 280px; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);"
-        class="magnetic-target reveal-blur hover-premium" data-tilt>
-        <!-- Icon Header -->
-        <div
-          style="background: linear-gradient(135deg, #fdfa57 0%, #f9ff48 100%); padding: 30px; text-align: center;">
-          <i class="fa fa-eye" style="font-size: 2.5rem; color: #4b4949;"></i>
-        </div>
-
-        <!-- Title Bar -->
-        <div style="background: #393299e6; padding: 15px 20px; text-align: center;">
-          <h3 style="color: #f7f029; font-size: 1.2rem; margin: 0; font-weight: 700;">Vision</h3>
-        </div>
-
-        <!-- Content -->
-        <div style="padding: 25px 25px;">
-          <p style="color: #090909; font-size: 0.95rem; line-height: 1.91; margin: 0;">
-            Our ultimate aim in the educational arena is to teach our young minds how to think rather than what to think.It is true that the whole purpose of education is to turn mirrors inot windows.We facilitate and focus on building individuals with conviction, integrity, moral and socail responsibility, streching
-            beyond the limits of a classroom.We ensure that our students are well-equipped to face a friendly as well as hostile world with the same temperament.
-          </p>
-        </div>
-      </div>
-
-      <!-- Mission Card -->
-      <div
-        style="flex: 1; min-width: 280px; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);"
-        class="magnetic-target reveal-blur delay-200 hover-premium" data-tilt>
-        <!-- Icon Header -->
-        <div style="background: linear-gradient(135deg, #fdfa57 0%, #f9ff48 100%); padding: 30px; text-align: center;">
-          <i class="fa fa-lightbulb-o" style="font-size: 2.5rem; color: #1a1a1a;"></i>
-        </div>
-
-        <!-- Title Bar -->
-        <div style="background: #241c90df; padding: 15px 20px; text-align: center;">
-          <h3 style="color: #fbed24; font-size: 1.2rem; margin: 0; font-weight: 700;">Mission</h3>
-        </div>
-
-        <!-- Content -->
-        <div style="padding: 30px 25px;">
-          <p style="color: #1b1919; font-size: 0.95rem; line-height: 1.495; margin: 0 0 15px 0;text-align:justify;">
-Bharathi kids Kshethralaya - Our Educational Hub is now 20 years old. Blessed with a dedicated team of well-trained facilitators led by Experienced members of the management, who 'Inspire, Nurture and Transform' the young minds leading them to excel in Academics, Behaviour, Character and all aspects.<br><br>
-To create and prepare young individualsto become lifelong learners and responsible citizens ready to meet the challenges of the future by changing the world to suit their needs.
-          </p>
-         
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <div class="divTwo reveal reveal-up" style="background-color: #fffee1;">
-    <section class="headingSec">
-      <br>
-      <h1 style="font-size: 45px;" class="theme-hero-text-school2">Academics We Offer</h1>
-
-      <!-- Academics Cards Section - Plain Background with Floating Pencils -->
-      <div style="position: relative; margin-top: 20px; padding: 20px 20px 40px 20px; overflow: hidden;">
-        <!-- Floating Pencil Decorations -->
-        <div class="floating"
-          style="position: absolute; top: 20px; left: 50px; font-size: 3rem; color: #2359b6; opacity: 0.2; transform: rotate(-15deg);">
-          <i class="fa fa-pencil"></i>
-        </div>
-        <div class="floating-delayed"
-          style="position: absolute; top: 60px; right: 80px; font-size: 2.5rem; color: #f9dc5d; opacity: 0.2; transform: rotate(25deg);">
-          <i class="fa fa-pencil"></i>
-        </div>
-        <div class="floating"
-          style="position: absolute; bottom: 40px; left: 100px; font-size: 2rem; color: #2359b6; opacity: 0.15; transform: rotate(45deg);">
-          <i class="fa fa-pencil"></i>
-        </div>
-        <div class="floating-delayed"
-          style="position: absolute; bottom: 80px; right: 120px; font-size: 2.8rem; color: #f9dc5d; opacity: 0.15; transform: rotate(-30deg);">
-          <i class="fa fa-pencil"></i>
-        </div>
-        
-        <div
-          style="max-width: 1400px; margin: auto; position: relative; display: flex; align-items: center; justify-content: center; gap: 20px; min-height: 400px;">
-
-          <!-- Card 1: Teal Card (Left) -->
-          <div
-            style="background: #3c6fc7; width: 360px; padding: 50px 40px 40px; text-align: center; border-radius: 20px; box-shadow: -5px 5px 20px rgba(0,0,0,0.15); position: relative; transform: translateY(0px);"
-            class="reveal-blur magnetic-target hover-premium" data-tilt>
-            <div
-              style="width: 60px; height: 60px; background: rgba(255,255,255,0.3); border-radius: 12px; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
-              <i class="fa fa-graduation-cap" style="font-size: 2rem; color: white;"></i>
-            </div>
-            <h3 style="color: rgb(255, 255, 255); font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 600;">Academic
-              days</h3>
-            <p style="color: rgb(255, 255, 255); font-size: 1rem; line-height: 1.6; margin: 0 0 25px 0;">
-              The Academic year at BKS ensues in the month of June and wraps up in the month of April of the following
-             <br> year.
-            </p>
-          </div>
-
-          <!-- Card 2: Yellow Card (Center) -->
-          <div
-            style="background: #f9dc5d; width: 360px; padding: 50px 40px 40px; text-align: center; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative; transform: translateY(0px); z-index: 10;"
-            class="reveal-blur delay-200 magnetic-target hover-premium" data-tilt>
-            <div
-              style="width: 60px; height: 60px; background: rgba(255,255,255,0.4); border-radius: 12px; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
-              <i class="fa fa-book" style="font-size: 2rem; color: #D4A017;"></i>
-            </div>
-            <h3 style="color: #2d2d2d; font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 600;">Syllabus</h3>
-            <p style="color: #2d2d2d; font-size: 1rem; line-height: 1.6; margin: 0 0 25px 0;">
-              Our school is recognized by the Government of Tamilnadu from Pre KG to Grade XII. We are following
-              State board syllabus.
-            </p>
-          </div>
-
-          <!-- Card 3: Red Card (Right) -->
-          <div
-            style="background: #396dc6; width: 360px; padding: 50px 40px 40px; text-align: center; border-radius: 20px; box-shadow: -5px 5px 20px rgba(0,0,0,0.15); position: relative; transform: translateY(0px);"
-            class="reveal-blur delay-400 magnetic-target hover-premium" data-tilt>
-            <div
-              style="width: 60px; height: 60px; background: rgba(255,255,255,0.3); border-radius: 12px; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
-              <i class="fa fa-lightbulb-o" style="font-size: 2rem; color: white;"></i>
-            </div>
-            <h3 style="color: white; font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 600;">Development</h3>
-            <p style="color: white; font-size: 1rem; line-height: 1.6; margin: 0 0 25px 0;">
-              An unique system of education focussing on holistic development system of a young learner is followed
-              from Kindergarten sessions.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="divSix">
-    <section class="overlay">
-      <!-- Floating Educational Icons -->
-      <div class="floating" style="position: absolute; top: 10%; left: 5%; font-size: 2.5rem; color: rgba(255, 255, 255, 0.1); transform: rotate(-20deg);">
-        <i class="fa fa-pencil"></i>
-      </div>
-      <div class="floating-delayed" style="position: absolute; top: 20%; right: 8%; font-size: 2rem; color: rgba(255, 255, 255, 0.1); transform: rotate(15deg);">
-        <i class="fa fa-book"></i>
-      </div>
-      <div class="floating" style="position: absolute; bottom: 15%; left: 10%; font-size: 3rem; color: rgba(255, 255, 255, 0.08); transform: rotate(30deg);">
-        <i class="fa fa-pencil"></i>
-      </div>
-      <div class="floating-delayed" style="position: absolute; bottom: 25%; right: 12%; font-size: 2.2rem; color: rgba(255, 255, 255, 0.09); transform: rotate(-25deg);">
-        <i class="fa fa-book"></i>
-      </div>
-      
-      <section class="mainSec">
-        <h1 class="theme-hero-text-school2">Enroll for our classes<br> anywhere..!</h1>
-        <a href="contact.html">Contact Us</a>
-      </section>
-    </section>
-  </div>
-
-  <!-- INSPIRING SPACES SECTION -->
-  <section class="inspiring-spaces-section reveal-section-right" style="background-color: #fffdec;">
-    <!-- Floating Educational Icons -->
-    <div class="floating" style="position: absolute; top: 5%; left: 3%; font-size: 2.2rem; color: rgba(35, 89, 182, 0.1); transform: rotate(-15deg);">
-      <i class="fa fa-book"></i>
-    </div>
-    <div class="floating-delayed" style="position: absolute; top: 15%; right: 5%; font-size: 2.8rem; color: rgba(35, 89, 182, 0.08); transform: rotate(20deg);">
-      <i class="fa fa-pencil"></i>
-    </div>
-    <div class="floating" style="position: absolute; bottom: 10%; left: 8%; font-size: 2rem; color: rgba(35, 89, 182, 0.09); transform: rotate(35deg);">
-      <i class="fa fa-book"></i>
-    </div>
-    <div class="floating-delayed" style="position: absolute; bottom: 20%; right: 10%; font-size: 2.5rem; color: rgba(35, 89, 182, 0.07); transform: rotate(-30deg);">
-      <i class="fa fa-pencil"></i>
-    </div>
-    
-    <div class="inspiring-container">
-
-      <!-- Left: Collage -->
-      <div class="inspiring-collage">
-        <div class="collage-grid">
-          <!-- Using different facility images -->
-          <div class="c-item item-1 reveal-blur">
-            <img src="img/infra5.jpeg" alt="Library" onclick="location.href='infrastructure.html'" style="cursor: pointer;">
-          </div>
-          <div class="c-item item-2 reveal-blur delay-200">
-            <img src="img/computer_lab.jpeg" alt="Computer Lab" onclick="location.href='infrastructure.html'" style="cursor: pointer;">
-          </div>
-          <div class="c-item item-3 reveal-blur delay-400">
-            <img src="img/chem_lab.png" alt="Chemistry Lab" onclick="location.href='infrastructure.html'" style="cursor: pointer;">
-          </div>
-          <div class="c-item item-4 reveal-blur delay-600">
-            <img src="img/phy_lab.jpg" alt="Physics Lab" onclick="location.href='infrastructure.html'" style="cursor: pointer;">
-          </div>
-          <!-- Badge -->
-          <div class="inspiring-badge">
-            <span class="text-inspiring">INSPIRING</span>
-            <span class="text-spaces">Spaces</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Content -->
-      <div class="inspiring-content">
-        <h2 class="inspiring-heading reveal-up theme-hero-text-school2" style="font-size:35px;margin-top:-50px;">Smart Classrooms<br>for Future Ready<br>Learning
+        style="flex: 0 0 40%; background: linear-gradient(135deg, #2f4596dd 0%, #2844a9e9 100%); padding: 60px 40px; display: flex; flex-direction: column; justify-content: center; color: white;">
+        <h2 style="font-size: 3rem; font-weight: 900; margin: 0 0 30px 0; line-height: 1.2; color: #f0e760;">Our
+          Statement
         </h2>
-<br>
-        <p class="inspiring-desc"style="font-size:16px;text-align:justify;">
-          At Bharathi kids Kshethralaya, each classroom is equipped with interactive digital boards,
-          high-speed connectivity, and collaborative learning tools, ensuring students receive a
-          tech-enabled, engaging education.
+        <p style="font-size: 1rem; line-height: 1.7; margin: 0; opacity: 0.95; color: white;">
+          Our Learning arena is characterized and structured to be <br>Learner - centred, knowledge - centred,
+          Assessment - centred and Community - centred.
         </p>
-
-        <p class="inspiring-desc"style="font-size:16px;text-align:justify;">
-          Beyond traditional classrooms, our collaborative workspaces foster creativity, discussion,
-          and innovation. Students engage in group projects and guided research within purpose-built
-          environments designed for real-world learning.
-        </p>
-        <a href="infrastructure.html" class="view-all-btn mt-4">View All <i class="fa fa-arrow-right"></i></a>
       </div>
-    </div>
-</section>
+      <!-- Left Side: Two Cards -->
+      <div
+        style="flex: 0 0 60%; padding: 40px 40px; display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap;">
 
-<!-- Events Section -->
-<section id="events" class="events-section-premium reveal-blur"
-  style="padding: 10px 5%; background: #e7eeff; overflow: hidden; position: relative;">
-  <!-- Floating Educational Icons -->
-  <div class="floating" style="position: absolute; top: 8%; left: 2%; font-size: 2.5rem; color: rgba(35, 89, 182, 0.08); transform: rotate(-25deg);">
-    <i class="fa fa-pencil"></i>
-  </div>
-  <div class="floating-delayed" style="position: absolute; top: 12%; right: 4%; font-size: 2.8rem; color: rgba(35, 89, 182, 0.06); transform: rotate(18deg);">
-    <i class="fa fa-book"></i>
-  </div>
-  <div class="floating" style="position: absolute; bottom: 15%; left: 6%; font-size: 2.3rem; color: rgba(35, 89, 182, 0.07); transform: rotate(40deg);">
-    <i class="fa fa-book"></i>
-  </div>
-  <div class="floating-delayed" style="position: absolute; bottom: 10%; right: 8%; font-size: 2.6rem; color: rgba(35, 89, 182, 0.05); transform: rotate(-35deg);">
-    <i class="fa fa-pencil"></i>
-  </div>
-  
-  <div
-    style="max-width: 1200px; margin: 0 auto; display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
-
-    <!-- Left side: Section Title -->
-    <div style="flex: 1 1 280px; min-width: 250px;"><br>
-      <h2 class="theme-hero-text-school2"
-        style="font-size: 3rem; font-weight: 900; line-height: 1.1; margin-bottom: 20px;">
-        Upcoming <br>Events
-      </h2>
-      <p style="color: #666; font-size: 1.1rem; line-height: 1.7; margin-bottom: 40px; max-width: 560px;">
-        Stay updated with our latest happenings, celebrations, and academic milestones.
-      </p>
-        <a href="events.html"
-          style="color: #2359b6; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 1.1rem;">
-          View All Events <i class="fa fa-arrow-right"></i>
-        </a>
-      </div>
-
-          <!-- Right side: Events List -->
-      <div style="flex: 1.5 1 350px; min-width: 300px; display: flex; flex-direction: column; gap: 50px;">
-        <!-- Event 1 -->
-        <div style="display: flex; gap: 20px; align-items: flex-start;" class="reveal-up">
-          <div style="text-align: center; min-width: 70px;">
-            <div style="font-size: 2.5rem; font-weight: 900; color: #ffcd16; line-height: 1;">14</div>
-            <div style="font-size: 1rem; font-weight: 900; color: #1a1a1a; text-transform: uppercase;">Nov</div>
-            <div style="width: 100%; height: 4px; background: #f5ac35; margin-top: 10px;"></div>
-          </div>
-          <div>
-            <h3 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 8px 0;">Children's Day
-              Celebration</h3>
-            <div style="display: flex; gap: 15px; color: #1a37dae1; font-weight: 600; font-size: 0.85rem; flex-wrap: wrap;">
-              <span style="white-space: nowrap;"><i class="fa fa-clock-o"></i> 9:00 am - 1:00 pm</span>
-              <span style="white-space: nowrap;"><i class="fa fa-map-marker"></i> School Campus</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event 2 -->
-        <div style="display: flex; gap: 20px; align-items: flex-start;" class="reveal-up delay-200">
-          <div style="text-align: center; min-width: 70px;">
-            <div style="font-size: 2.5rem; font-weight: 900; color: #fdcb17; line-height: 1;">25</div>
-            <div style="font-size: 1rem; font-weight: 900; color: #1a1a1a; text-transform: uppercase;">Oct</div>
-            <div style="width: 100%; height: 4px; background: #f3af11; margin-top: 10px;"></div>
-          </div>
-          <div>
-            <h3 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 8px 0;">Diwali Cultural Fest
-            </h3>
-            <div style="display: flex; gap: 15px; color: #1a37dae1; font-weight: 600; font-size: 0.85rem; flex-wrap: wrap;">
-              <span style="white-space: nowrap;"><i class="fa fa-clock-o"></i> 10:00 am - 4:00 pm</span>
-              <span style="white-space: nowrap;"><i class="fa fa-map-marker"></i> Main Auditorium</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event 3 -->
-        <div style="display: flex; gap: 20px; align-items: flex-start;" class="reveal-up delay-400">
-          <div style="text-align: center; min-width: 70px;">
-            <div style="font-size: 2.5rem; font-weight: 900; color: #ffcd16; line-height: 1;">15</div>
-            <div style="font-size: 1rem; font-weight: 900; color: #1a1a1a; text-transform: uppercase;">Aug</div>
-            <div style="width: 100%; height: 4px; background: #ffc61b; margin-top: 10px;"></div>
-          </div>
-          <div>
-            <h3 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 8px 0;">Independence Day Parade
-            </h3>
-            <div style="display: flex; gap: 15px; color: #1a37dae1; font-weight: 600; font-size: 0.85rem; flex-wrap: wrap;">
-              <span style="white-space: nowrap;"><i class="fa fa-clock-o"></i> 8:00 am - 11:30 am</span>
-              <span style="white-space: nowrap;"><i class="fa fa-map-marker"></i> Sports Ground</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right side: Featured Image -->
-      <div style="flex: 1 1 250px; min-width: 200px; position: relative;" class="reveal-blur delay-500">
-        <a href="https://www.instagram.com/reel/DThr49mEz82/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" aria-label="View Instagram reel">
-          <span class="sr-only">View Instagram reel</span>
+        <!-- Vision Card -->
+        <div
+          style="flex: 1; min-width: 280px; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);"
+          class="magnetic-target reveal-blur hover-premium" data-tilt>
+          <!-- Icon Header -->
           <div
-            style="width: 100%; height: 100%; min-height: 450px; background: url('img/pongal.png'); background-size: cover; background-position: center; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);"
-            class="hover-premium magnetic-target" data-tilt>
+            style="background: linear-gradient(135deg, #fdfa57 0%, #f9ff48 100%); padding: 30px; text-align: center;">
+            <i class="fa fa-eye" style="font-size: 2.5rem; color: #4b4949;"></i>
           </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Working Hours Section -->
-  <section class="working-hours-section reveal-section-right" style="padding: 40px 40px; background: #fffde5; position: relative;">
-    <!-- Floating Educational Icons -->
-    <div class="floating" style="position: absolute; top: 5%; left: 3%; font-size: 2.4rem; color: rgba(35, 89, 182, 0.07); transform: rotate(-30deg);">
-      <i class="fa fa-book"></i>
-    </div>
-    <div class="floating-delayed" style="position: absolute; top: 18%; right: 5%; font-size: 2.7rem; color: rgba(35, 89, 182, 0.05); transform: rotate(22deg);">
-      <i class="fa fa-pencil"></i>
-    </div>
-    <div class="floating" style="position: absolute; bottom: 12%; left: 7%; font-size: 2.2rem; color: rgba(35, 89, 182, 0.06); transform: rotate(38deg);">
-      <i class="fa fa-pencil"></i>
-    </div>
-    <div class="floating-delayed" style="position: absolute; bottom: 8%; right: 9%; font-size: 2.5rem; color: rgba(35, 89, 182, 0.04); transform: rotate(-28deg);">
-      <i class="fa fa-book"></i>
-    </div>
-    
-    <div style="max-width: 1200px; margin: auto;">
-      <h2
-        style="font-size: 2.5rem; font-weight: 900; color: #1a1a1a; margin-bottom: 50px; text-align: center; border-bottom: 4px solid #f9dc5d; width: fit-content; margin-left: auto; margin-right: auto; padding-bottom: 10px;">
-        WORKING HOURS</h2>
+          <!-- Title Bar -->
+          <div style="background: #393299e6; padding: 15px 20px; text-align: center;">
+            <h3 style="color: #f7f029; font-size: 1.2rem; margin: 0; font-weight: 700;">Vision</h3>
+          </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-        <!-- Office Hours -->
+          <!-- Content -->
+          <div style="padding: 25px 25px;">
+            <p style="color: #090909; font-size: 0.95rem; line-height: 1.91; margin: 0;">
+              Our ultimate aim in the educational arena is to teach our young minds how to think rather than what to
+              think.It is true that the whole purpose of education is to turn mirrors inot windows.We facilitate and
+              focus on building individuals with conviction, integrity, moral and socail responsibility, streching
+              beyond the limits of a classroom.We ensure that our students are well-equipped to face a friendly as well
+              as hostile world with the same temperament.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mission Card -->
         <div
-          style="background: #eff4fd; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #2359b6;">
-          <h3
-            style="color: #2359b6; margin-bottom: 25px; font-size: 1.5rem; display: flex; align-items: center; gap: 15px;">
-            <i class="fa fa-building"></i> Office Hours
-          </h3>
-          <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #ddd;">
-            <span style="font-weight: 600;">Week days</span>
-            <span>9.00 am - 5.00 pm</span>
+          style="flex: 1; min-width: 280px; background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);"
+          class="magnetic-target reveal-blur delay-200 hover-premium" data-tilt>
+          <!-- Icon Header -->
+          <div
+            style="background: linear-gradient(135deg, #fdfa57 0%, #f9ff48 100%); padding: 30px; text-align: center;">
+            <i class="fa fa-lightbulb-o" style="font-size: 2.5rem; color: #1a1a1a;"></i>
           </div>
-          <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #ddd;">
-            <span style="font-weight: 600;">Lunch</span>
-            <span>1.30 pm - 2.30 pm</span>
+
+          <!-- Title Bar -->
+          <div style="background: #241c90df; padding: 15px 20px; text-align: center;">
+            <h3 style="color: #fbed24; font-size: 1.2rem; margin: 0; font-weight: 700;">Mission</h3>
           </div>
-      
-<div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px;">
-            <span style="font-weight: 600;">(No transaction will be done during lunch time)</span> </div>
-          </div>
-            <!-- School Timings -->
-        <div
-          style="background: #eef2f9; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #f9dc5d;">
-          <h3
-            style="color: #1a1a1a; margin-bottom: 25px; font-size: 1.5rem; display: flex; align-items: center; gap: 15px;">
-            <i class="fa fa-clock-o"></i> School Timings
-          </h3>
-          <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #ccc;">
-            <span style="font-weight: 600;">Pre K.G</span>
-            <span>9.30 am - 12.30 pm</span>
-          </div>
-          <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #ccc;">
-            <span style="font-weight: 600;">LKG - Grade V</span>
-            <span>8.50 am - 3.30 pm</span>
-          </div>
-          <div style="display: flex; justify-content: space-between; padding: 10px 0;">
-            <span style="font-weight: 600;">Grade VI onwards</span>
-            <span>8.50 am - 4.20 pm</span>
+
+          <!-- Content -->
+          <div style="padding: 30px 25px;">
+            <p style="color: #1b1919; font-size: 0.95rem; line-height: 1.495; margin: 0 0 15px 0;text-align:justify;">
+              Bharathi kids Kshethralaya - Our Educational Hub is now 20 years old. Blessed with a dedicated team of
+              well-trained facilitators led by Experienced members of the management, who 'Inspire, Nurture and
+              Transform' the young minds leading them to excel in Academics, Behaviour, Character and all
+              aspects.<br><br>
+              To create and prepare young individualsto become lifelong learners and responsible citizens ready to meet
+              the challenges of the future by changing the world to suit their needs.
+            </p>
+
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-<section id="campus-showcase" class="campus-section fadeInUp" style="background-color: #ffffff; padding: 5px 40px;">
-        <div class="section-header">
-            <h2>Our Testimonials</h2>
-        </div>
+    </section>
 
-        <div class="stories-container">
-            <div class="stories-scroll">
-                <!-- Video Card 1 -->
-                <div class="story-card" data-index="0">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="videos/testi2.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
+    <div class="divTwo reveal reveal-up" style="background-color: #fffee1;">
+      <section class="headingSec">
+        <br>
+        <h1 style="font-size: 45px;" class="theme-hero-text-school2">Academics We Offer</h1>
 
-                <!-- Video Card 2 -->
-                <div class="story-card" data-index="1">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="videos/testi1.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
+        <!-- Academics Cards Section - Plain Background with Floating Pencils -->
+        <div style="position: relative; margin-top: 20px; padding: 20px 20px 40px 20px; overflow: hidden;">
+          <!-- Floating Pencil Decorations -->
+          <div class="floating"
+            style="position: absolute; top: 20px; left: 50px; font-size: 3rem; color: #2359b6; opacity: 0.2; transform: rotate(-15deg);">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div class="floating-delayed"
+            style="position: absolute; top: 60px; right: 80px; font-size: 2.5rem; color: #f9dc5d; opacity: 0.2; transform: rotate(25deg);">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div class="floating"
+            style="position: absolute; bottom: 40px; left: 100px; font-size: 2rem; color: #2359b6; opacity: 0.15; transform: rotate(45deg);">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div class="floating-delayed"
+            style="position: absolute; bottom: 80px; right: 120px; font-size: 2.8rem; color: #f9dc5d; opacity: 0.15; transform: rotate(-30deg);">
+            <i class="fa fa-pencil"></i>
+          </div>
 
-                <!-- Video Card 3 -->
-                <div class="story-card" data-index="2">
-                    <video class="story-video" playsinline muted loop>
-                        <source src="videos/testi3.mp4" type="video/mp4">
-                    </video>
-                    <div class="story-overlay">
-                        <button class="unmute-btn">UNMUTE 🔊</button>
-                    </div>
-                </div>
+          <div
+            style="max-width: 1400px; margin: auto; position: relative; display: flex; align-items: center; justify-content: center; gap: 20px; min-height: 400px;">
+
+            <!-- Card 1: Teal Card (Left) -->
+            <div
+              style="background: #3c6fc7; width: 360px; padding: 50px 40px 40px; text-align: center; border-radius: 20px; box-shadow: -5px 5px 20px rgba(0,0,0,0.15); position: relative; transform: translateY(0px);"
+              class="reveal-blur magnetic-target hover-premium" data-tilt>
+              <div
+                style="width: 60px; height: 60px; background: rgba(255,255,255,0.3); border-radius: 12px; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
+                <i class="fa fa-graduation-cap" style="font-size: 2rem; color: white;"></i>
+              </div>
+              <h3 style="color: rgb(255, 255, 255); font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 600;">Academic
+                days</h3>
+              <p style="color: rgb(255, 255, 255); font-size: 1rem; line-height: 1.6; margin: 0 0 25px 0;">
+                The Academic year at BKS ensues in the month of June and wraps up in the month of April of the following
+                <br> year.
+              </p>
             </div>
 
-           <!-- <div class="stories-progress-container">
+            <!-- Card 2: Yellow Card (Center) -->
+            <div
+              style="background: #f9dc5d; width: 360px; padding: 50px 40px 40px; text-align: center; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative; transform: translateY(0px); z-index: 10;"
+              class="reveal-blur delay-200 magnetic-target hover-premium" data-tilt>
+              <div
+                style="width: 60px; height: 60px; background: rgba(255,255,255,0.4); border-radius: 12px; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
+                <i class="fa fa-book" style="font-size: 2rem; color: #D4A017;"></i>
+              </div>
+              <h3 style="color: #2d2d2d; font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 600;">Syllabus</h3>
+              <p style="color: #2d2d2d; font-size: 1rem; line-height: 1.6; margin: 0 0 25px 0;">
+                Our school is recognized by the Government of Tamilnadu from Pre KG to Grade XII. We are following
+                State board syllabus.
+              </p>
+            </div>
+
+            <!-- Card 3: Red Card (Right) -->
+            <div
+              style="background: #396dc6; width: 360px; padding: 50px 40px 40px; text-align: center; border-radius: 20px; box-shadow: -5px 5px 20px rgba(0,0,0,0.15); position: relative; transform: translateY(0px);"
+              class="reveal-blur delay-400 magnetic-target hover-premium" data-tilt>
+              <div
+                style="width: 60px; height: 60px; background: rgba(255,255,255,0.3); border-radius: 12px; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center;">
+                <i class="fa fa-lightbulb-o" style="font-size: 2rem; color: white;"></i>
+              </div>
+              <h3 style="color: white; font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 600;">Development</h3>
+              <p style="color: white; font-size: 1rem; line-height: 1.6; margin: 0 0 25px 0;">
+                An unique system of education focussing on holistic development system of a young learner is followed
+                from Kindergarten sessions.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="divSix">
+      <section class="overlay">
+        <!-- Floating Educational Icons -->
+        <div class="floating"
+          style="position: absolute; top: 10%; left: 5%; font-size: 2.5rem; color: rgba(255, 255, 255, 0.1); transform: rotate(-20deg);">
+          <i class="fa fa-pencil"></i>
+        </div>
+        <div class="floating-delayed"
+          style="position: absolute; top: 20%; right: 8%; font-size: 2rem; color: rgba(255, 255, 255, 0.1); transform: rotate(15deg);">
+          <i class="fa fa-book"></i>
+        </div>
+        <div class="floating"
+          style="position: absolute; bottom: 15%; left: 10%; font-size: 3rem; color: rgba(255, 255, 255, 0.08); transform: rotate(30deg);">
+          <i class="fa fa-pencil"></i>
+        </div>
+        <div class="floating-delayed"
+          style="position: absolute; bottom: 25%; right: 12%; font-size: 2.2rem; color: rgba(255, 255, 255, 0.09); transform: rotate(-25deg);">
+          <i class="fa fa-book"></i>
+        </div>
+
+        <section class="mainSec">
+          <h1 class="theme-hero-text-school2">Enroll for our classes<br> anywhere..!</h1>
+          <a href="contact.html">Contact Us</a>
+        </section>
+      </section>
+    </div>
+
+    <!-- INSPIRING SPACES SECTION -->
+    <section class="inspiring-spaces-section reveal-section-right" style="background-color: #fffdec;">
+      <!-- Floating Educational Icons -->
+      <div class="floating"
+        style="position: absolute; top: 5%; left: 3%; font-size: 2.2rem; color: rgba(35, 89, 182, 0.1); transform: rotate(-15deg);">
+        <i class="fa fa-book"></i>
+      </div>
+      <div class="floating-delayed"
+        style="position: absolute; top: 15%; right: 5%; font-size: 2.8rem; color: rgba(35, 89, 182, 0.08); transform: rotate(20deg);">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <div class="floating"
+        style="position: absolute; bottom: 10%; left: 8%; font-size: 2rem; color: rgba(35, 89, 182, 0.09); transform: rotate(35deg);">
+        <i class="fa fa-book"></i>
+      </div>
+      <div class="floating-delayed"
+        style="position: absolute; bottom: 20%; right: 10%; font-size: 2.5rem; color: rgba(35, 89, 182, 0.07); transform: rotate(-30deg);">
+        <i class="fa fa-pencil"></i>
+      </div>
+
+      <div class="inspiring-container">
+
+        <!-- Left: Collage -->
+        <div class="inspiring-collage">
+          <div class="collage-grid">
+            <!-- Using different facility images -->
+            <div class="c-item item-1 reveal-blur">
+              <img src="img/infra5.jpeg" alt="Library" onclick="location.href='infrastructure.html'"
+                style="cursor: pointer;">
+            </div>
+            <div class="c-item item-2 reveal-blur delay-200">
+              <img src="img/computer_lab.jpeg" alt="Computer Lab" onclick="location.href='infrastructure.html'"
+                style="cursor: pointer;">
+            </div>
+            <div class="c-item item-3 reveal-blur delay-400">
+              <img src="img/chem_lab.png" alt="Chemistry Lab" onclick="location.href='infrastructure.html'"
+                style="cursor: pointer;">
+            </div>
+            <div class="c-item item-4 reveal-blur delay-600">
+              <img src="img/phy_lab.jpg" alt="Physics Lab" onclick="location.href='infrastructure.html'"
+                style="cursor: pointer;">
+            </div>
+            <!-- Badge -->
+            <div class="inspiring-badge">
+              <span class="text-inspiring">INSPIRING</span>
+              <span class="text-spaces">Spaces</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="inspiring-content">
+          <h2 class="inspiring-heading reveal-up theme-hero-text-school2" style="font-size:35px;margin-top:-50px;">Smart
+            Classrooms<br>for Future Ready<br>Learning
+          </h2>
+          <br>
+          <p class="inspiring-desc" style="font-size:16px;text-align:justify;">
+            At Bharathi kids Kshethralaya, each classroom is equipped with interactive digital boards,
+            high-speed connectivity, and collaborative learning tools, ensuring students receive a
+            tech-enabled, engaging education.
+          </p>
+
+          <p class="inspiring-desc" style="font-size:16px;text-align:justify;">
+            Beyond traditional classrooms, our collaborative workspaces foster creativity, discussion,
+            and innovation. Students engage in group projects and guided research within purpose-built
+            environments designed for real-world learning.
+          </p>
+          <a href="infrastructure.html" class="view-all-btn mt-4">View All <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section-premium reveal-blur"
+      style="padding: 10px 5%; background: #e7eeff; overflow: hidden; position: relative;">
+      <!-- Floating Educational Icons -->
+      <div class="floating"
+        style="position: absolute; top: 8%; left: 2%; font-size: 2.5rem; color: rgba(35, 89, 182, 0.08); transform: rotate(-25deg);">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <div class="floating-delayed"
+        style="position: absolute; top: 12%; right: 4%; font-size: 2.8rem; color: rgba(35, 89, 182, 0.06); transform: rotate(18deg);">
+        <i class="fa fa-book"></i>
+      </div>
+      <div class="floating"
+        style="position: absolute; bottom: 15%; left: 6%; font-size: 2.3rem; color: rgba(35, 89, 182, 0.07); transform: rotate(40deg);">
+        <i class="fa fa-book"></i>
+      </div>
+      <div class="floating-delayed"
+        style="position: absolute; bottom: 10%; right: 8%; font-size: 2.6rem; color: rgba(35, 89, 182, 0.05); transform: rotate(-35deg);">
+        <i class="fa fa-pencil"></i>
+      </div>
+
+      <div
+        style="max-width: 1200px; margin: 0 auto; display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; align-items: flex-start;">
+
+        <!-- Left side: Section Title -->
+        <div style="flex: 1 1 280px; min-width: 250px;"><br>
+          <h2 class="theme-hero-text-school2"
+            style="font-size: 3rem; font-weight: 900; line-height: 1.1; margin-bottom: 20px;">
+            Upcoming <br>Events
+          </h2>
+          <p style="color: #666; font-size: 1.1rem; line-height: 1.7; margin-bottom: 40px; max-width: 560px;">
+            Stay updated with our latest happenings, celebrations, and academic milestones.
+          </p>
+          <a href="events.html"
+            style="color: #2359b6; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; font-size: 1.1rem;">
+            View All Events <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Right side: Events List -->
+        <div style="flex: 1.5 1 350px; min-width: 300px; display: flex; flex-direction: column; gap: 50px;">
+          <!-- Event 1 -->
+          <div style="display: flex; gap: 20px; align-items: flex-start;" class="reveal-up">
+            <div style="text-align: center; min-width: 70px;">
+              <div style="font-size: 2.5rem; font-weight: 900; color: #ffcd16; line-height: 1;">14</div>
+              <div style="font-size: 1rem; font-weight: 900; color: #1a1a1a; text-transform: uppercase;">Nov</div>
+              <div style="width: 100%; height: 4px; background: #f5ac35; margin-top: 10px;"></div>
+            </div>
+            <div>
+              <h3 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 8px 0;">Children's Day
+                Celebration</h3>
+              <div
+                style="display: flex; gap: 15px; color: #1a37dae1; font-weight: 600; font-size: 0.85rem; flex-wrap: wrap;">
+                <span style="white-space: nowrap;"><i class="fa fa-clock-o"></i> 9:00 am - 1:00 pm</span>
+                <span style="white-space: nowrap;"><i class="fa fa-map-marker"></i> School Campus</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div style="display: flex; gap: 20px; align-items: flex-start;" class="reveal-up delay-200">
+            <div style="text-align: center; min-width: 70px;">
+              <div style="font-size: 2.5rem; font-weight: 900; color: #fdcb17; line-height: 1;">25</div>
+              <div style="font-size: 1rem; font-weight: 900; color: #1a1a1a; text-transform: uppercase;">Oct</div>
+              <div style="width: 100%; height: 4px; background: #f3af11; margin-top: 10px;"></div>
+            </div>
+            <div>
+              <h3 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 8px 0;">Diwali Cultural Fest
+              </h3>
+              <div
+                style="display: flex; gap: 15px; color: #1a37dae1; font-weight: 600; font-size: 0.85rem; flex-wrap: wrap;">
+                <span style="white-space: nowrap;"><i class="fa fa-clock-o"></i> 10:00 am - 4:00 pm</span>
+                <span style="white-space: nowrap;"><i class="fa fa-map-marker"></i> Main Auditorium</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div style="display: flex; gap: 20px; align-items: flex-start;" class="reveal-up delay-400">
+            <div style="text-align: center; min-width: 70px;">
+              <div style="font-size: 2.5rem; font-weight: 900; color: #ffcd16; line-height: 1;">15</div>
+              <div style="font-size: 1rem; font-weight: 900; color: #1a1a1a; text-transform: uppercase;">Aug</div>
+              <div style="width: 100%; height: 4px; background: #ffc61b; margin-top: 10px;"></div>
+            </div>
+            <div>
+              <h3 style="font-size: 1.3rem; font-weight: 900; color: #1a1a1a; margin: 0 0 8px 0;">Independence Day
+                Parade
+              </h3>
+              <div
+                style="display: flex; gap: 15px; color: #1a37dae1; font-weight: 600; font-size: 0.85rem; flex-wrap: wrap;">
+                <span style="white-space: nowrap;"><i class="fa fa-clock-o"></i> 8:00 am - 11:30 am</span>
+                <span style="white-space: nowrap;"><i class="fa fa-map-marker"></i> Sports Ground</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side: Featured Image -->
+        <div style="flex: 1 1 250px; min-width: 200px; position: relative;" class="reveal-blur delay-500">
+          <a href="https://www.instagram.com/reel/DThr49mEz82/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank" rel="noopener" aria-label="View Instagram reel">
+            <span class="sr-only">View Instagram reel</span>
+            <div
+              style="width: 100%; height: 100%; min-height: 450px; background: url('img/pongal.png'); background-size: cover; background-position: center; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);"
+              class="hover-premium magnetic-target" data-tilt>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Working Hours Section -->
+    <section class="working-hours-section reveal-section-right"
+      style="padding: 40px 40px; background: #fffde5; position: relative;">
+      <!-- Floating Educational Icons -->
+      <div class="floating"
+        style="position: absolute; top: 5%; left: 3%; font-size: 2.4rem; color: rgba(35, 89, 182, 0.07); transform: rotate(-30deg);">
+        <i class="fa fa-book"></i>
+      </div>
+      <div class="floating-delayed"
+        style="position: absolute; top: 18%; right: 5%; font-size: 2.7rem; color: rgba(35, 89, 182, 0.05); transform: rotate(22deg);">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <div class="floating"
+        style="position: absolute; bottom: 12%; left: 7%; font-size: 2.2rem; color: rgba(35, 89, 182, 0.06); transform: rotate(38deg);">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <div class="floating-delayed"
+        style="position: absolute; bottom: 8%; right: 9%; font-size: 2.5rem; color: rgba(35, 89, 182, 0.04); transform: rotate(-28deg);">
+        <i class="fa fa-book"></i>
+      </div>
+
+      <div style="max-width: 1200px; margin: auto;">
+        <h2
+          style="font-size: 2.5rem; font-weight: 900; color: #1a1a1a; margin-bottom: 50px; text-align: center; border-bottom: 4px solid #f9dc5d; width: fit-content; margin-left: auto; margin-right: auto; padding-bottom: 10px;">
+          WORKING HOURS</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+          <!-- Office Hours -->
+          <div
+            style="background: #eff4fd; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #2359b6;">
+            <h3
+              style="color: #2359b6; margin-bottom: 25px; font-size: 1.5rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa fa-building"></i> Office Hours
+            </h3>
+            <div
+              style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #ddd;">
+              <span style="font-weight: 600;">Week days</span>
+              <span>9.00 am - 5.00 pm</span>
+            </div>
+            <div
+              style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #ddd;">
+              <span style="font-weight: 600;">Lunch</span>
+              <span>1.30 pm - 2.30 pm</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px;">
+              <span style="font-weight: 600;">(No transaction will be done during lunch time)</span>
+            </div>
+          </div>
+          <!-- School Timings -->
+          <div
+            style="background: #eef2f9; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #f9dc5d;">
+            <h3
+              style="color: #1a1a1a; margin-bottom: 25px; font-size: 1.5rem; display: flex; align-items: center; gap: 15px;">
+              <i class="fa fa-clock-o"></i> School Timings
+            </h3>
+            <div
+              style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #ccc;">
+              <span style="font-weight: 600;">Pre K.G</span>
+              <span>9.30 am - 12.30 pm</span>
+            </div>
+            <div
+              style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #ccc;">
+              <span style="font-weight: 600;">LKG - Grade V</span>
+              <span>8.50 am - 3.30 pm</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+              <span style="font-weight: 600;">Grade VI onwards</span>
+              <span>8.50 am - 4.20 pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="campus-showcase" class="campus-section fadeInUp" style="background-color: #ffffff; padding: 5px 40px;">
+      <div class="section-header">
+        <h2>Our Testimonials</h2>
+      </div>
+
+      <div class="stories-container">
+        <div class="stories-scroll">
+          <!-- Video Card 1 -->
+          <div class="story-card" data-index="0">
+            <video class="story-video" playsinline muted loop>
+              <source src="videos/testi2.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
+            </div>
+          </div>
+
+          <!-- Video Card 2 -->
+          <div class="story-card" data-index="1">
+            <video class="story-video" playsinline muted loop>
+              <source src="videos/testi1.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
+            </div>
+          </div>
+
+          <!-- Video Card 3 -->
+          <div class="story-card" data-index="2">
+            <video class="story-video" playsinline muted loop>
+              <source src="videos/testi3.mp4" type="video/mp4">
+            </video>
+            <div class="story-overlay">
+              <button class="unmute-btn">UNMUTE 🔊</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="stories-progress-container">
                 <div id="stories-track" class="stories-track"></div>
             </div>-->
-        </div>
+      </div>
     </section>
 
-  <!-- Stats Counter -->
-  <section class="stats-section reveal" style="background-color: #fffdeb;">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <span class="stat-number text-yellow" data-target="20" data-suffix="+">0</span>
-        <span class="stat-label">Years of Excellence</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number text-blue" data-target="5000" data-suffix="+">0</span>
-        <span class="stat-label">Happy Students</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number text-yellow" data-target="100" data-suffix="%">0</span>
-        <span class="stat-label">Board Results</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number text-blue" data-target="50" data-suffix="+">0</span>
-        <span class="stat-label">Awards Won</span>
-      </div>
-    </div>
-  </section>
-  
-  <div class="divFour reveal" style="background-color: rgb(224, 235, 255);">
-    <!-- Facilities Section with Image and Content -->
-    <section style="background: #e5e9ff; padding: 30px 20px;">
-      <div
-        style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; margin-bottom: 60px;">
-
-        <!-- Left Content -->
-        <div>
-          <h1
-            style="color: #1a1a1a; font-size: 2.5rem; font-weight: 900; margin: 0 0 20px 0; text-transform: uppercase;">
-            Facilities</h1>
-          <p style="color: #666; font-size: 0.95rem; line-height: 1.8; margin: 0 0 30px 0;text-align: justify;">
-            Our classrooms are spacious, well-ventilated, and designed to create a comfortable learning environment for students. Each classroom is equipped with modern teaching aids, smart boards, and audio-visual facilities to make lessons interactive and engaging.
-          </p>
-          <p style="color: #666; font-size: 0.95rem; line-height: 1.8; margin: 0;text-align:justify;">
-            Comfortable seating arrangements and proper lighting ensure that students can focus and participate actively. The classrooms are maintained with high standards of cleanliness and safety, providing a positive and disciplined atmosphere for effective learning.
-          </p>
+    <!-- Stats Counter -->
+    <section class="stats-section reveal" style="background-color: #fffdeb;">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number text-yellow" data-target="20" data-suffix="+">0</span>
+          <span class="stat-label">Years of Excellence</span>
         </div>
-
-        <!-- Right Image -->
-        <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
-          <img src="img/library.jpeg" alt="School Facilities" style="width: 100%; height: 400px; object-fit: cover;">
+        <div class="stat-item">
+          <span class="stat-number text-blue" data-target="5000" data-suffix="+">0</span>
+          <span class="stat-label">Happy Students</span>
         </div>
-      </div>
-
-      <!-- Facilities Icon Cards Grid -->
-      <div
-        style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
-
-        <!-- Image 1: Biology Lab -->
-        <div style="text-align: center; padding: 30px;">
-          <div style="border: 4px solid #2359b6; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(35, 89, 182, 0.3); margin-bottom: 20px;">
-            <img src="img/bio_lab.png" alt="Biology Lab" onclick="location.href='infrastructure.html'" style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
-          </div>
-          <h3 style="color: #2359b6; font-size: 1.1rem; margin: 0 0 15px 0; font-weight: 700;">Biology Lab</h3>
-          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
-            Well-equipped biology laboratory with modern specimens and equipment for hands-on learning.
-          </p>
+        <div class="stat-item">
+          <span class="stat-number text-yellow" data-target="100" data-suffix="%">0</span>
+          <span class="stat-label">Board Results</span>
         </div>
-
-        <!-- Image 2: Computer Lab -->
-        <div style="text-align: center; padding: 30px;">
-          <div style="border: 4px solid #f9dc5d; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(249, 220, 93, 0.3); margin-bottom: 20px;">
-            <img src="img/computer_lab2.jpeg" alt="Computer Lab" onclick="location.href='infrastructure.html'" style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
-          </div>
-          <h3 style="color: #f9dc5d; font-size: 1.1rem; margin: 0 0 15px 0; font-weight: 700;">Computer Lab</h3>
-          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
-            State-of-the-art computer laboratory with high-speed internet and latest software.
-          </p>
-        </div>
-
-        <!-- Image 3: Chemistry Lab -->
-        <div style="text-align: center; padding: 30px;">
-          <div style="border: 4px solid #2359b6; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(35, 89, 182, 0.3); margin-bottom: 20px;">
-            <img src="img/chem_lab.png" alt="Chemistry Lab" onclick="location.href='infrastructure.html'" style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
-          </div>
-          <h3 style="color: #2359b6; font-size: 1.1rem; margin: 0 0 15px 0; font-weight: 700;">Chemistry Lab</h3>
-          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
-            Modern chemistry laboratory with safety equipment and comprehensive chemical supplies.
-          </p>
-        </div>
-
-        <div style="text-align: center; padding: 30px;">
-          <div style="border: 4px solid #f9dc5d; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(249, 220, 93, 0.3); margin-bottom: 20px;">
-            <img src="img/bus.JPG" alt="Transport" onclick="location.href='infrastructure.html'" style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
-          </div>
-          <h3 style="color: #f9dc5d; font-size: 1.1rem; margin: 0 0 15px 0; font-weight: 700;">Transport</h3>
-          <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
-            Safe, reliable school transport with trained drivers and GPS-enabled buses.
-          </p>
+        <div class="stat-item">
+          <span class="stat-number text-blue" data-target="50" data-suffix="+">0</span>
+          <span class="stat-label">Awards Won</span>
         </div>
       </div>
     </section>
-  </div>
 
- <!-- School Outfit Section -->
-  <section class="school-outfit-section reveal-section-right" style="padding: 25px 20px; background: #fffcee;">
-    <div style="max-width: 1200px; margin: auto;">
-      <h2
-        style="font-size: 2.5rem; font-weight: 900; color: #1a1a1a; margin-bottom: 50px; text-align: center; border-bottom: 4px solid #2359b6; width: fit-content; margin-left: auto; margin-right: auto; padding-bottom: 10px;">
-        SCHOOL OUTFIT</h2>
-
-      <!-- Pre-KG Schedule -->
-      <div
-        style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; border-top: 5px solid #f9dc5d;">
-        <h3 style="color: #1a1a1a; margin-bottom: 20px; font-size: 1.5rem;">PRE KG</h3>
-        <p style="color: #666; font-size: 1rem; margin-bottom: 25px;">There is no specific uniform for the toddlers. But
-          they are expected to follow the dress code prescribed herewith:</p>
-
-        <div style="overflow-x: auto;">
-          <table style="width: 100%; border-collapse: collapse; text-align: left;">
-            <thead>
-              <tr style="background: #f9dc5d; color: #1a1a1a;">
-                <th style="padding: 15px; border: 1px solid #ddd;">DAYS</th>
-                <th style="padding: 15px; border: 1px solid #ddd;">GIRLS</th>
-                <th style="padding: 15px; border: 1px solid #ddd;">BOYS</th>
-                <th style="padding: 15px; border: 1px solid #ddd;">FOOTWEAR</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">MONDAY</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Skirt with Tops</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Pants</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Shoes</td>
-              </tr>
-              <tr style="background: #fdfae7;">
-                <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">TUESDAY</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Pants</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Shorts</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Shoes</td>
-              </tr>
-              <tr>
-                <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">WEDNESDAY</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Frocks</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">3/4 Pants</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Sandals</td>
-              </tr>
-              <tr style="background: #fdfae7;">
-                <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">THURSDAY</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">3/4 Pants</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Suspenders</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Shoes</td>
-              </tr>
-              <tr>
-                <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">FRIDAY</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Full skirt</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Shorts</td>
-                <td style="padding: 15px; border: 1px solid #ddd;">Sandals</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- General Uniforms Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-
-        <!-- Kindergarten -->
+    <div class="divFour reveal" style="background-color: rgb(224, 235, 255);">
+      <!-- Facilities Section with Image and Content -->
+      <section style="background: #e5e9ff; padding: 30px 20px;">
         <div
-          style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #2359b6;">
-          <h3
-            style="color: #2359b6; margin-bottom: 20px; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-            Kindergarten</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; line-height: 2;">
-            <li><strong style="color: #1a1a1a;">Boys:</strong> Grey coloured shorts, Denim blue shirt</li>
-            <li><strong style="color: #1a1a1a;">Girls:</strong> Grey and Denim blue A-line frock</li>
-            <li><strong style="color: #1a1a1a;">Socks:</strong> Grey</li>
-            <li><strong style="color: #1a1a1a;">Shoes:</strong> Black shoes with Velcro</li>
-          </ul>
+          style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; margin-bottom: 60px;">
+
+          <!-- Left Content -->
+          <div>
+            <h1
+              style="color: #1a1a1a; font-size: 2.5rem; font-weight: 900; margin: 0 0 20px 0; text-transform: uppercase;">
+              Facilities</h1>
+            <p style="color: #666; font-size: 0.95rem; line-height: 1.8; margin: 0 0 30px 0;text-align: justify;">
+              Our classrooms are spacious, well-ventilated, and designed to create a comfortable learning environment
+              for students. Each classroom is equipped with modern teaching aids, smart boards, and audio-visual
+              facilities to make lessons interactive and engaging.
+            </p>
+            <p style="color: #666; font-size: 0.95rem; line-height: 1.8; margin: 0;text-align:justify;">
+              Comfortable seating arrangements and proper lighting ensure that students can focus and participate
+              actively. The classrooms are maintained with high standards of cleanliness and safety, providing a
+              positive and disciplined atmosphere for effective learning.
+            </p>
+          </div>
+
+          <!-- Right Image -->
+          <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+            <img src="img/library.jpeg" alt="School Facilities" style="width: 100%; height: 400px; object-fit: cover;">
+          </div>
         </div>
 
-        <!-- Grades I to V -->
-        <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #f9dc5d;">
-          <h3
-            style="color: #1a1a1a; margin-bottom: 20px; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-            Grades I to V</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; line-height: 2;">
-            <li><strong style="color: #1a1a1a;">Boys:</strong> Denim blue shirt, grey coloured shorts</li>
-            <li><strong style="color: #1a1a1a;">Girls:</strong> Grey coloured shirt, Denim blue pinafore</li>
-            <li><strong style="color: #1a1a1a;">Socks:</strong> Grey</li>
-            <li><strong style="color: #1a1a1a;">Shoes:</strong> Black shoes (Velcro till Grade II)</li>
-            <li style="padding-left: 20px; font-style: italic; color: #777;">Boys: Black shoes (laced) | Girls: Black
-              shoes (buckled)</li>
-          </ul>
-        </div>
+        <!-- Facilities Icon Cards Grid -->
+        <div style="max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
 
-        <!-- Grade VI Onwards -->
-        <div
-          style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #2359b6;">
-          <h3
-            style="color: #2359b6; margin-bottom: 20px; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-            Grade VI Onwards</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; line-height: 2;">
-            <li><strong style="color: #1a1a1a;">Boys:</strong> Denim blue shirt, Grey coloured full pants</li>
-            <li><strong style="color: #1a1a1a;">Girls:</strong> Grey coloured shirt, Denim blue pinafore</li>
-          </ul>
+          <!-- Image 1: Biology Lab -->
+          <div style="text-align: center; padding: 30px;">
+            <div
+              style="border: 4px solid #2359b6; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(35, 89, 182, 0.3); margin-bottom: 20px;">
+              <img src="img/bio_lab.png" alt="Biology Lab" onclick="location.href='infrastructure.html'"
+                style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
+            </div>
+            <h3 style="color: #2359b6; font-size: 1.1rem; margin: 0 0 15px 0; font-weight: 700;">Biology Lab</h3>
+            <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+              Well-equipped biology laboratory with modern specimens and equipment for hands-on learning.
+            </p>
+          </div>
+
+          <!-- Image 2: Computer Lab -->
+          <div style="text-align: center; padding: 30px;">
+            <div
+              style="border: 4px solid #f9dc5d; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(249, 220, 93, 0.3); margin-bottom: 20px;">
+              <img src="img/computer_lab2.jpeg" alt="Computer Lab" onclick="location.href='infrastructure.html'"
+                style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
+            </div>
+            <h3 style="color: #f9dc5d; font-size: 1.1rem; margin: 0 0 15px 0; font-weight: 700;">Computer Lab</h3>
+            <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+              State-of-the-art computer laboratory with high-speed internet and latest software.
+            </p>
+          </div>
+
+          <!-- Image 3: Chemistry Lab -->
+          <div style="text-align: center; padding: 30px;">
+            <div
+              style="border: 4px solid #2359b6; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(35, 89, 182, 0.3); margin-bottom: 20px;">
+              <img src="img/chem_lab.png" alt="Chemistry Lab" onclick="location.href='infrastructure.html'"
+                style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
+            </div>
+            <h3 style="color: #2359b6; font-size: 1.1rem; margin: 0 0 15px 0; font-weight: 700;">Chemistry Lab</h3>
+            <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+              Modern chemistry laboratory with safety equipment and comprehensive chemical supplies.
+            </p>
+          </div>
+
+          <div style="text-align: center; padding: 30px;">
+            <div
+              style="border: 4px solid #f9dc5d; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(249, 220, 93, 0.3); margin-bottom: 20px;">
+              <img src="img/bus.JPG" alt="Transport" onclick="location.href='infrastructure.html'"
+                style="width: 100%; height: 200px; object-fit: cover; cursor: pointer;">
+            </div>
+            <h3 style="color: #f9dc5d; font-size: 1.1rem; margin: 0 0 15px 0; font-weight: 700;">Transport</h3>
+            <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+              Safe, reliable school transport with trained drivers and GPS-enabled buses.
+            </p>
+          </div>
         </div>
-      </div>
-      </div>
       </section>
-<br>
-  <script src="js/index.js"></script>
-<script src="https://kit.fontawesome.com/ba1e04a511.js" crossorigin="anonymous"></script>
-<script src="../js/video-carousel.js"></script>
-<script src="../js/counter.js"></script>
-<script src="../js/school-faq-chatbot.js" defer></script>
-</main>
+    </div>
+
+    <!-- School Outfit Section -->
+    <section class="school-outfit-section reveal-section-right" style="padding: 25px 20px; background: #fffcee;">
+      <div style="max-width: 1200px; margin: auto;">
+        <h2
+          style="font-size: 2.5rem; font-weight: 900; color: #1a1a1a; margin-bottom: 50px; text-align: center; border-bottom: 4px solid #2359b6; width: fit-content; margin-left: auto; margin-right: auto; padding-bottom: 10px;">
+          SCHOOL OUTFIT</h2>
+
+        <!-- Pre-KG Schedule -->
+        <div
+          style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; border-top: 5px solid #f9dc5d;">
+          <h3 style="color: #1a1a1a; margin-bottom: 20px; font-size: 1.5rem;">PRE KG</h3>
+          <p style="color: #666; font-size: 1rem; margin-bottom: 25px;">There is no specific uniform for the toddlers.
+            But
+            they are expected to follow the dress code prescribed herewith:</p>
+
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+              <thead>
+                <tr style="background: #f9dc5d; color: #1a1a1a;">
+                  <th style="padding: 15px; border: 1px solid #ddd;">DAYS</th>
+                  <th style="padding: 15px; border: 1px solid #ddd;">GIRLS</th>
+                  <th style="padding: 15px; border: 1px solid #ddd;">BOYS</th>
+                  <th style="padding: 15px; border: 1px solid #ddd;">FOOTWEAR</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">MONDAY</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Skirt with Tops</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Pants</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Shoes</td>
+                </tr>
+                <tr style="background: #fdfae7;">
+                  <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">TUESDAY</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Pants</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Shorts</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Shoes</td>
+                </tr>
+                <tr>
+                  <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">WEDNESDAY</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Frocks</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">3/4 Pants</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Sandals</td>
+                </tr>
+                <tr style="background: #fdfae7;">
+                  <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">THURSDAY</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">3/4 Pants</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Suspenders</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Shoes</td>
+                </tr>
+                <tr>
+                  <td style="padding: 15px; border: 1px solid #ddd; font-weight: 600;">FRIDAY</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Full skirt</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Shorts</td>
+                  <td style="padding: 15px; border: 1px solid #ddd;">Sandals</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- General Uniforms Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+
+          <!-- Kindergarten -->
+          <div
+            style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #2359b6;">
+            <h3
+              style="color: #2359b6; margin-bottom: 20px; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+              Kindergarten</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; line-height: 2;">
+              <li><strong style="color: #1a1a1a;">Boys:</strong> Grey coloured shorts, Denim blue shirt</li>
+              <li><strong style="color: #1a1a1a;">Girls:</strong> Grey and Denim blue A-line frock</li>
+              <li><strong style="color: #1a1a1a;">Socks:</strong> Grey</li>
+              <li><strong style="color: #1a1a1a;">Shoes:</strong> Black shoes with Velcro</li>
+            </ul>
+          </div>
+
+          <!-- Grades I to V -->
+          <div
+            style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #f9dc5d;">
+            <h3
+              style="color: #1a1a1a; margin-bottom: 20px; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+              Grades I to V</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; line-height: 2;">
+              <li><strong style="color: #1a1a1a;">Boys:</strong> Denim blue shirt, grey coloured shorts</li>
+              <li><strong style="color: #1a1a1a;">Girls:</strong> Grey coloured shirt, Denim blue pinafore</li>
+              <li><strong style="color: #1a1a1a;">Socks:</strong> Grey</li>
+              <li><strong style="color: #1a1a1a;">Shoes:</strong> Black shoes (Velcro till Grade II)</li>
+              <li style="padding-left: 20px; font-style: italic; color: #777;">Boys: Black shoes (laced) | Girls: Black
+                shoes (buckled)</li>
+            </ul>
+          </div>
+
+          <!-- Grade VI Onwards -->
+          <div
+            style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-left: 5px solid #2359b6;">
+            <h3
+              style="color: #2359b6; margin-bottom: 20px; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+              Grade VI Onwards</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; line-height: 2;">
+              <li><strong style="color: #1a1a1a;">Boys:</strong> Denim blue shirt, Grey coloured full pants</li>
+              <li><strong style="color: #1a1a1a;">Girls:</strong> Grey coloured shirt, Denim blue pinafore</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/ba1e04a511.js" crossorigin="anonymous"></script>
+    <script src="../js/video-carousel.js"></script>
+    <script src="../js/counter.js"></script>
+    <script src="../js/school-faq-chatbot.js" defer></script>
+  </main>
   <footer class="footer">
     <div class="footer-container">
 
@@ -1692,7 +1853,7 @@ To create and prepare young individualsto become lifelong learners and responsib
         </p>
 
         <p class="footer-email">
-       MAIL : bharathikidskshethralaya@gmail.com
+          MAIL : bharathikidskshethralaya@gmail.com
         </p>
       </div>
 
@@ -1714,11 +1875,12 @@ To create and prepare young individualsto become lifelong learners and responsib
         <p>Stay connected with us on social media</p>
 
         <div class="footer-social">
-          <a href="https://www.instagram.com/bvkicse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+          <a href="https://www.instagram.com/bvkicse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
 
-           <a href="https://www.facebook.com/share/1AoRv4c7B7/" aria-label="Facebook">
+          <a href="https://www.facebook.com/share/1AoRv4c7B7/" aria-label="Facebook">
 
             <i class="fa-brands fa-facebook"></i>
           </a>
@@ -1789,19 +1951,19 @@ To create and prepare young individualsto become lifelong learners and responsib
 
     // Event listeners
     document.getElementById('closeAdmissionsModal').addEventListener('click', closeAdmissionsModal);
-    document.getElementById('contactAdmissionsButton').addEventListener('click', function() {
+    document.getElementById('contactAdmissionsButton').addEventListener('click', function () {
       window.location.href = 'contact.html';
     });
 
     // Close modal when clicking outside the content
-    document.getElementById('admissionsModal').addEventListener('click', function(e) {
+    document.getElementById('admissionsModal').addEventListener('click', function (e) {
       if (e.target === this) {
         closeAdmissionsModal();
       }
     });
 
     // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         const modal = document.getElementById('admissionsModal');
         if (modal.classList.contains('active')) {
@@ -1811,7 +1973,7 @@ To create and prepare young individualsto become lifelong learners and responsib
     });
 
     // Show popup automatically when page loads
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       // Small delay to ensure page is fully loaded
       setTimeout(showAdmissionsPopup, 500);
     });
@@ -1829,8 +1991,8 @@ To create and prepare young individualsto become lifelong learners and responsib
       // Disable custom cursor on touch devices for better UX
       if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
         document.body.style.cursor = 'auto';
-        if(cursorDot) cursorDot.style.display = 'none';
-        if(cursorOutline) cursorOutline.style.display = 'none';
+        if (cursorDot) cursorDot.style.display = 'none';
+        if (cursorOutline) cursorOutline.style.display = 'none';
         return;
       }
 
@@ -1865,4 +2027,5 @@ To create and prepare young individualsto become lifelong learners and responsib
     });
   </script>
 </body>
+
 </html>
