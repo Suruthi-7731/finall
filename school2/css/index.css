@@ -7,32 +7,37 @@
    padding-bottom: 12px;
    scroll-snap-type: x mandatory;
 }
+
 .testimonial-scroll-wrapper::-webkit-scrollbar {
    height: 8px;
    background: #eee;
 }
+
 .testimonial-scroll-wrapper::-webkit-scrollbar-thumb {
    background: #ccc;
    border-radius: 4px;
 }
+
 .testimonial-card {
    flex: 0 0 320px;
    max-width: 90vw;
    background: #fff;
    border-radius: 16px;
-   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
    scroll-snap-align: start;
    display: flex;
    flex-direction: column;
    align-items: center;
    padding: 12px 0 0 0;
 }
+
 .testimonial-card video,
 .testimonial-card img {
    width: 100%;
    border-radius: 16px 16px 0 0;
    object-fit: cover;
 }
+
 * {
    box-sizing: border-box;
    margin: 0;
@@ -113,10 +118,9 @@ p {
 @media (max-width: 768px) {
    .coverDiv {
       width: 100%;
-     
       background-attachment: scroll;
       background-position: center;
-      
+      background-size: 150% 100%;
    }
 }
 
@@ -275,13 +279,15 @@ p {
    border: 2px solid white;
 }
 
-html, body {
-        background-color: #e5e9ff;
-        min-height: 100vh;
-        cursor: auto;
-    }
+html,
+body {
+   background-color: #e5e9ff;
+   min-height: 100vh;
+   cursor: auto;
+}
+
 .coverDiv .mainDiv .mainSec>a::before {
-    transition: 0.5s;
+   transition: 0.5s;
 }
 
 .coverDiv .mainDiv .mainSec>a::after {
@@ -317,7 +323,7 @@ html, body {
       gap: clamp(2px, 0.35vw, 8px);
    }
 
-   .coverDiv .mainHeader .navItems > span > a {
+   .coverDiv .mainHeader .navItems>span>a {
       white-space: nowrap;
       font-size: clamp(0.8rem, 0.35vw + 0.62rem, 1rem);
       padding: 10px clamp(6px, 0.75vw, 14px);
@@ -334,14 +340,14 @@ html, body {
       padding-inline: 16px;
    }
 
-   .coverDiv .mainDiv .mainSec > h1 {
+   .coverDiv .mainDiv .mainSec>h1 {
       font-size: 70px;
       line-height: 1.12;
       margin: 0;
       text-wrap: balance;
    }
 
-   .coverDiv .mainDiv .mainSec > p {
+   .coverDiv .mainDiv .mainSec>p {
       width: min(90%, 900px);
       margin-top: 14px;
       font-size: clamp(1rem, 1.1vw, 1.5rem);
@@ -1018,7 +1024,7 @@ html, body {
 }
 
 @media (max-width: 768px) {
-   .events-section-premium > div {
+   .events-section-premium>div {
       justify-content: flex-start !important;
    }
 }
