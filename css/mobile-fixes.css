@@ -22,18 +22,18 @@ svg {
 @media (max-width: 1024px) {
   .mainHeader,
   .main-header {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding: 8px 16px !important;
+    height: auto !important;
   }
 
   .logoSec img,
   .logo img {
-    max-height: 52px;
+    max-height: 45px !important;
     width: auto;
   }
 
   .page-header {
-    padding: 120px 16px 36px !important;
+    padding: 100px 16px 36px !important;
   }
 
   .page-header h1 {
@@ -105,7 +105,7 @@ svg {
 
 @media (max-width: 480px) {
   .page-header {
-    padding-top: 106px !important;
+    padding-top: 90px !important;
   }
 
   .page-header h1 {

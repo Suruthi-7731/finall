@@ -11,33 +11,21 @@
   <link rel="stylesheet" href="css/interactive.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <style>
-    .page-header {
-      padding: 150px 20px 50px;
-      background: linear-gradient(rgba(0, 51, 255, 0.908), rgba(4, 42, 130, 0.982)), url('../school1.jpg');
-      text-align: center;
-      color: white;
+    :root {
+      --primary-blue: #003399;
+      --primary-gold: #FFD700;
+      --text-dark: #1a1a1a;
+      --text-muted: #555;
+      --bg-off-white: #fdfdfd;
     }
 
-
-
-    .content-section {
-      padding: 80px 10%;
-      line-height: 1.8;
-      color: #333;
-    }
-
-    .content-section h2 {
-      color: #003399;
-      margin-bottom: 20px;
-    }
-
+    /* --- ORIGINAL HEADER STYLE (REINSTATED) --- */
     .mainHeader {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
       background: #003399;
-      /* Solid Blue */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -60,45 +48,203 @@
       border-bottom: 2px solid #FFD700;
     }
 
+    /* --- ORIGINAL HERO STYLE (REINSTATED) --- */
+    .page-header {
+      padding: 150px 20px 50px;
+      background: linear-gradient(rgba(0, 51, 255, 0.908), rgba(4, 42, 130, 0.982)), url('../school1.jpg');
+      text-align: center;
+      color: white;
+    }
+
+    /* --- IMPROVED BODY STYLES --- */
+    .content-section {
+      padding: 80px 10% !important;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .content-section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: var(--bg-off-white);
+    }
+
+    .text-block {
+      flex: 1;
+    }
+
+    .visual-block {
+      flex: 1;
+      text-align: center;
+    }
+
+    .visual-block img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-label {
+      color: var(--primary-gold);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      color: var(--primary-blue);
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .mission-section {
+      text-align: center;
+      padding: 40px 15%;
+      background: #f0f4ff;
+    }
+
+    .mission-section p {
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .principle-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 40px 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0, 51, 153, 0.08);
+      text-align: center;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      overflow: hidden;
+    }
+
+    .principle-card::before {
+      content: attr(data-number);
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 5rem;
+      font-weight: 900;
+      color: var(--primary-blue);
+      opacity: 0.05;
+      line-height: 1;
+    }
+
+    .principle-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      background: white;
+      box-shadow: 0 20px 40px rgba(0, 51, 153, 0.12);
+      border-color: var(--primary-gold);
+    }
+
+    .principle-card .icon-wrapper {
+      width: 70px;
+      height: 70px;
+      background: var(--primary-blue-light, rgba(0, 51, 153, 0.05));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+    }
+
+    .principle-card:hover .icon-wrapper {
+      background: var(--primary-blue);
+      transform: rotateY(360deg);
+    }
+
+    .principle-card i {
+      font-size: 2rem;
+      color: var(--primary-blue);
+      transition: all 0.3s ease;
+    }
+
+    .principle-card:hover i {
+      color: var(--primary-gold);
+    }
+
+    .principle-card p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* --- ORIGINAL FOOTER STYLE (REINSTATED) --- */
     .footer {
       background: #003399;
       color: #FFD700;
-      padding: 60px 20px 20px;
+      padding: 20px 20px;
     }
 
-    .footer-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
+
 
     .footer-box h3 {
       color: #FFD700;
       margin-bottom: 20px;
     }
 
-    .footer-links {
-      list-style: none;
-      padding: 0;
-    }
+
 
     .footer-links li {
       margin-bottom: 10px;
     }
 
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-    }
 
-    .footer-links a:hover {
-      color: #FFD700;
+
+    /* --- MOBILE CENTERING & RESPONSIVENESS --- */
+    @media (max-width: 1024px) {
+
+      .content-section,
+      .content-section:nth-child(even) {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 30px !important;
+        padding: 40px 5% !important;
+      }
+
+      .visual-block {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        order: -1;
+      }
+
+      .visual-block img {
+        margin: 0 auto !important;
+        max-width: 100% !important;
+      }
+
+      .mission-section {
+        padding: 20px 5% !important;
+      }
+
+      .mission-section p {
+        font-size: 1.2rem !important;
+      }
     }
   </style>
-
-  <link rel='stylesheet' href='../mobile-fixes.css'>
+  <link rel='stylesheet' href='../css/mobile-fixes.css'>
 </head>
 
 <body>
@@ -112,7 +258,6 @@
     <nav class="navItems">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About Us</a>
-
       <a href="infrastructure.html">Infrastructure</a>
       <a href="gallery.html">Gallery</a>
       <a href="events.html">Events</a>
@@ -125,87 +270,121 @@
     <h1>About Us</h1>
     <p style="color:aliceblue;">Nurturing Excellence</p>
   </section>
-  <br>
-  <!-- Mission Statement -->
-  <h1 style="color:#FFD700;">&nbsp;&nbsp;&nbsp;&nbsp;MISSION STATEMENT</h1>
-  <div style="padding: 10px 25px;">
-    <p style="color: #1b1919; font-size: 0.95rem; line-height: 1.7; margin: 0 30px 10px 30px;text-align: justify;">
-      To create and prepare young individuals to become lifelong learners and responsible citizens
-      ready to meet the challenges of the future by changing the world to suit their needs.
-    </p>
-  </div>
-  <br>
-  <!-- Our Vision -->
-  <h1 style="color:#FFD700;">&nbsp;&nbsp;&nbsp;&nbsp;OUR VISION</h1>
-  <div style="padding: 10px 25px;">
-    <p style="color: #090909; font-size: 0.95rem; line-height: 1.9; margin: 0 30px 10px 30px;text-align:justify;">
-      Our ultimate aim in the educational arena is to teach our young minds how to think rather than what
-      to think. It is true that the whole purpose of education is to turn mirrors into windows. We
-      facilitate and focus on building individuals with conviction, integrity, moral and social
-      responsibility, stretching beyond the limits of a classroom. We ensure that our students are
-      well‑equipped to face a friendly as well as hostile world with the same temperament.
-    </p>
-  </div>
-  <br>
-  <!-- Guiding Principles -->
-  <h1 style="color:#FFD700;">&nbsp;&nbsp;&nbsp;&nbsp;GUIDING PRINCIPLES</h1>
-  <div style="padding: 20px 25px 10px;">
-    <p style="color: #333; font-size: 0.9rem; font-weight: 600; margin: 0 30px 10px 30px;">
-      At Bharathi Kids Kshethralaya, our guiding principles are to:
-    </p>
-    <ul style="margin: 0; padding-left: 60px; color: #292828; font-size: 0.95rem; line-height: 1.8;">
-      <li>Ensure our pupils are safe and happy.</li>
-      <li>Expect respectful, kind and well-mannered conduct.</li>
-      <li>Uphold the highest standards in all aspects.</li>
-      <li>Provide ultimate learning environment and experiences.</li>
-      <li>Accommodate and retain expert teaching professionals.</li>
-      <li>Inculcate the passion towards learning to pursue excellence.</li>
-      <li>Influence the community with optimism.</li>
-    </ul>
-  </div>
-  <br>
-  <!-- Our Organisation -->
-  <h1 style="color:#FFD700;">&nbsp;&nbsp;&nbsp;&nbsp;OUR ORGANISATION</h1>
-  <div style="padding: 10px 25px 30px;">
-    <p style="color: #090909; font-size: 0.95rem; line-height: 1.9; margin: 0 30px 10px 30px;text-align:justify;">
-      Bharathi Kids Kshethralaya – our educational hub – is now twenty years old. Blessed with a dedicated
-      team of well‑trained facilitators led by experienced members of the management, we strive to
-      “Inspire, Nurture and Transform” young minds, leading them to excel in Academics, Behaviour,
-      Character and all aspects.
-    </p>
-  </div>
-  <script src="../js/counter.js"></script>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-box">
-        <h3>BVK School</h3>
-        <p style="color:aliceblue;">Igniting minds, fostering excellence. Our community thrives on academic and personal
-          growth.</p>
+  <!-- Mission Statement -->
+  <section class="mission-section reveal">
+    <span class="section-label">Mission Statement</span>
+    <p>
+      &ldquo;To create and prepare young individuals to become lifelong learners and responsible citizens
+      ready to meet the challenges of the future by changing the world to suit their needs.&rdquo;
+    </p>
+  </section>
+
+  <!-- Our Vision -->
+  <section class="content-section reveal">
+    <div class="text-block">
+      <span class="section-label">Our Vision</span>
+      <h2 class="section-title">Shaping Future Thinkers</h2>
+      <p class="section-desc">
+        Our ultimate aim in the educational arena is to teach our young minds how to think rather than what
+        to think. It is true that the whole purpose of education is to turn mirrors into windows. We
+        facilitate and focus on building individuals with conviction, integrity, moral and social
+        responsibility, stretching beyond the limits of a classroom. We ensure that our students are
+        well‑equipped to face a friendly as well as hostile world with the same temperament.
+      </p>
+    </div>
+    <div class="visual-block">
+      <img src="img/infra.jpeg" alt="School Vision">
+    </div>
+  </section>
+
+  <!-- Guiding Principles -->
+  <section style="padding: 20px 0; background: linear-gradient(135deg, #f8faff 0%, #edf2ff 100%); overflow: hidden;"
+    class="reveal">
+    <div style="text-align: center; position: relative; z-index: 1;">
+      <span class="section-label">Our Values</span>
+      <h2 class="section-title">Guiding Principles</h2>
+      <div style="width: 60px; height: 4px; background: var(--primary-gold); margin: 0 auto;"></div>
+    </div>
+
+    <div class="principles-grid">
+      <div class="principle-card reveal-up" data-number="01">
+        <div class="icon-wrapper">
+          <i class="fa fa-heart"></i>
+        </div>
+        <p>Ensure our pupils are safe and happy.</p>
       </div>
-      <div class="footer-box">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="infrastructure.html">Infrastructure</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+
+      <div class="principle-card reveal-up" style="transition-delay: 0.1s;" data-number="02">
+        <div class="icon-wrapper">
+          <i class="fa fa-users"></i>
+        </div>
+        <p>Expect respectful, kind and well‑mannered conduct.</p>
       </div>
-      <div class="footer-box">
-        <h3>Contact</h3>
-        <p style="color:aliceblue;">📍 No.7 , College Road , Konganagiri Bus Stop , Tiruppur - 641602</p>
-        <p style="color:aliceblue;">📞 0421-2208573 , 0421-2239299</p>
+
+      <div class="principle-card reveal-up" style="transition-delay: 0.2s;" data-number="03">
+        <div class="icon-wrapper">
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Uphold the highest standards in all aspects.</p>
+      </div>
+
+      <div class="principle-card reveal-up" style="transition-delay: 0.3s;" data-number="04">
+        <div class="icon-wrapper">
+          <i class="fa fa-book"></i>
+        </div>
+        <p>Provide ultimate learning environment and experiences.</p>
+      </div>
+
+      <div class="principle-card reveal-up" style="transition-delay: 0.4s;" data-number="05">
+        <div class="icon-wrapper">
+          <i class="fa fa-graduation-cap"></i>
+        </div>
+        <p>Accommodate and retain expert teaching professionals.</p>
+      </div>
+
+      <div class="principle-card reveal-up" style="transition-delay: 0.5s;" data-number="06">
+        <div class="icon-wrapper">
+          <i class="fa fa-fire"></i>
+        </div>
+        <p>Inculcate the passion towards learning to pursue excellence.</p>
+      </div>
+
+      <div class="principle-card reveal-up" style="transition-delay: 0.6s;" data-number="07">
+        <div class="icon-wrapper">
+          <i class="fa fa-smile-o"></i>
+        </div>
+        <p>Influence the community with optimism.</p>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+  </section>
+
+  <!-- Our Organisation -->
+  <section class="content-section reveal">
+    <div class="text-block">
+      <span class="section-label">Our History</span>
+      <h2 class="section-title">20 Years of Educational Excellence</h2>
+      <p class="section-desc">
+        Bharathi Kids Kshethralaya – our educational hub is now twenty years old. Blessed with a dedicated
+        team of well‑trained facilitators led by experienced members of the management, we strive to
+        &ldquo;Inspire, Nurture and Transform&rdquo; young minds, leading them to excel in Academics, Behaviour,
+        Character and all aspects.
+      </p>
+    </div>
+    <div class="visual-block">
+      <img src="img/TON00006.JPG.jpeg" alt="Our Organisation">
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <div style="text-align: center; margin-top: 2px; padding-top: 10px;">
       <p style="color:aliceblue;">&copy; 2026 Bharathi Kids Kshethralaya. All Rights Reserved.</p>
     </div>
   </footer>
 
   <script src="../js/mobile-nav-school-pages.js"></script>
+  <script src="../js/scroll-animations.js"></script>
 </body>
 
 </html>

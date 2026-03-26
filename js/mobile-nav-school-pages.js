@@ -46,7 +46,7 @@
         max-height: calc(100vh - 78px);
         overflow-y: auto;
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         padding: 0 0 12px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         z-index: 1001;
@@ -64,6 +64,8 @@
         color: #fff;
         font-size: 1rem;
         font-weight: 700;
+        text-align: center;
+        width: 100%;
       }
 
       .mainHeader .mobile-menu-header .close-btn {
@@ -79,6 +81,8 @@
         margin: 0 !important;
         padding: 12px 18px;
         display: block;
+        width: 100%;
+        text-align: center;
       }
     }
   `;
